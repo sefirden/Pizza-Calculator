@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="youEatPizzaEdge">You eat pizza edge?</string>
+	<string name="yES">YES</string>
+	<string name="quantity">Quantity</string>
+	<string name="quantityPcs">Quantity, pcs</string>
+</resources>

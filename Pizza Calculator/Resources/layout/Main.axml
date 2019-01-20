@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:p1="http://schemas.android.com/apk/res/android"
+	p1:id="@+id/relativeLayout1"
+	p1:minWidth="150px"
+	p1:minHeight="150px"
+	p1:layout_height="fill_parent"
+	p1:layout_width="fill_parent">
+	<CheckBox
+		p1:text="I eat a pizza edge."
+		p1:layout_width="200.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/checkBox1"
+		p1:layout_marginLeft="14.0dp" />
+	<TextView
+		p1:text="Quantity, pcs"
+		p1:layout_width="115.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/textView1"
+		p1:layout_alignBottom="@+id/editText1"
+		p1:layout_marginBottom="5.0dp"
+		p1:layout_marginLeft="20.0dp" />
+	<EditText
+		p1:inputType="number"
+		p1:layout_width="75.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/editText1"
+		p1:layout_toRightOf="@id/textView1"
+		p1:layout_below="@id/checkBox1"
+		p1:maxLength="6"
+		p1:focusable="true"
+		p1:focusableInTouchMode="true" />
+	<TextView
+		p1:text="Diameter, cm"
+		p1:layout_width="115.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/textView2"
+		p1:layout_alignBottom="@+id/editText2"
+		p1:layout_marginBottom="5.0dp"
+		p1:layout_marginLeft="20.0dp" />
+	<EditText
+		p1:inputType="numberDecimal"
+		p1:layout_width="75.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/editText2"
+		p1:layout_toRightOf="@+id/textView2"
+		p1:layout_below="@+id/editText1"
+		p1:maxLength="7" />
+	<TextView
+		p1:text="Price, $"
+		p1:layout_width="115.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/textView3"
+		p1:layout_alignBottom="@+id/editText3"
+		p1:layout_marginBottom="5.0dp"
+		p1:layout_marginLeft="20.0dp" />
+	<EditText
+		p1:inputType="numberDecimal"
+		p1:layout_width="75.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/editText3"
+		p1:layout_toRightOf="@+id/textView3"
+		p1:layout_below="@+id/editText2"
+		p1:maxLength="7" />
+	<TextView
+		p1:text="Weight, gram"
+		p1:layout_width="115.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/textView4"
+		p1:layout_alignBottom="@+id/editText4"
+		p1:layout_marginBottom="5.0dp"
+		p1:layout_marginLeft="20.0dp" />
+	<EditText
+		p1:inputType="numberDecimal"
+		p1:layout_width="75.0dp"
+		p1:layout_height="wrap_content"
+		p1:id="@+id/editText4"
+		p1:layout_toRightOf="@+id/textView4"
+		p1:layout_below="@+id/editText3"
+		p1:maxLength="7" />
+	<Button
+		p1:text="Add to list"
+		p1:layout_width="wrap_content"
+		p1:layout_height="wrap_content"
+		p1:layout_toRightOf="@id/editText1"
+		p1:id="@+id/button1"
+		p1:layout_below="@+id/textView4"
+		p1:layout_alignLeft="@+id/textView4" />
+	<Button
+		p1:text="Compare"
+		p1:layout_width="wrap_content"
+		p1:layout_height="wrap_content"
+		p1:layout_toRightOf="@id/button1"
+		p1:id="@+id/button2"
+		p1:layout_below="@+id/textView4"
+		p1:layout_marginLeft="125.0dp" />
+	<ListView
+		p1:minWidth="25px"
+		p1:minHeight="25px"
+		p1:layout_width="wrap_content"
+		p1:layout_height="150dp"
+		p1:layout_below="@id/button2"
+		p1:id="@+id/listView1"
+		p1:layout_marginTop="20.0dp" />
+</RelativeLayout>

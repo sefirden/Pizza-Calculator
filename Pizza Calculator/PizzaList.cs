@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Pizza_Calculator
 {
-    class Pizza
+    public class PizzaList
     {
         public int quantity;//количество pizz
         public int Quantity//если количество введено 0 или меньше, то автоматически считает как для 1
@@ -26,11 +26,23 @@ namespace Pizza_Calculator
                     quantity = value;
             }
         }
-        public double diameter;//диаметр
-        public double price;//цена
-        public double weight;//вес
+        public double diameter
+        {
+            get;
+            set;
+        }   //диаметр
+        public double price
+        {
+            get;
+            set;
+        }   //цена
+        public double weight
+        {
+            get;
+            set;
+        }   //вес
 
-        public Pizza(int q, double d, double p, double w)//в таком порядке заполняем данные для пиццы
+        public PizzaList(int q, double d, double p, double w)//в таком порядке заполняем данные для пиццы
         {
             Quantity = q;
             diameter = d;

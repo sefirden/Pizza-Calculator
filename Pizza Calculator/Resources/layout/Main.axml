@@ -6,12 +6,15 @@
 	p1:minHeight="150px"
 	p1:layout_height="fill_parent"
 	p1:layout_width="fill_parent">
-	<CheckBox
-		p1:text="I eat a pizza edge."
-		p1:layout_width="200.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/checkBox1"
-		p1:layout_marginLeft="14.0dp" />
+    <CheckBox
+        p1:text="I eat a pizza edge."
+        p1:layout_width="200.0dp"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/checkBox1"
+        p1:layout_marginLeft="14.0dp"
+        p1:allowUndo="false"
+        p1:checked="true"
+        p1:layout_marginTop="14.0dp" />
 	<TextView
 		p1:text="Quantity, pcs"
 		p1:layout_width="115.0dp"
@@ -94,12 +97,11 @@
 		p1:id="@+id/button2"
 		p1:layout_below="@+id/textView4"
 		p1:layout_marginLeft="125.0dp" />
-	<ListView
-		p1:minWidth="25px"
-		p1:minHeight="25px"
-		p1:layout_width="wrap_content"
-		p1:layout_height="150dp"
+	<android.support.v7.widget.RecyclerView
+        p1:id="@+id/recyclerview"
+        p1:scrollbars="vertical"
+        p1:layout_width="fill_parent"
 		p1:layout_below="@id/button2"
-		p1:id="@+id/listView1"
+        p1:layout_height="fill_parent" 
 		p1:layout_marginTop="20.0dp" />
 </RelativeLayout>

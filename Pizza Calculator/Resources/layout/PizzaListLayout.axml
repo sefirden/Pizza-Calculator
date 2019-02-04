@@ -16,12 +16,12 @@
 	android:minHeight="150px"
 	android:layout_height="fill_parent"
 	android:layout_width="fill_parent">
-	<ImageView
-	android:layout_width="80.0dp"
-	android:layout_height="80.0dp"
-	android:layout_marginLeft="10.0dp"
-	android:layout_marginTop="2.0dp"
-	android:id="@+id/Pizza_image" />
+			<ImageView
+				android:layout_width="80.0dp"
+				android:layout_height="80.0dp"
+				android:layout_marginLeft="10.0dp"
+				android:layout_marginTop="2.0dp"
+				android:id="@+id/Pizza_image" />
 			<TextView
 				android:text="#"
 				android:layout_width="10.0dp"

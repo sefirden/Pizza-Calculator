@@ -42,12 +42,19 @@ namespace Pizza_Calculator
             set;
         }   //вес
 
-        public PizzaList(int q, double d, double p, double w)//в таком порядке заполняем данные для пиццы
+        public int picture
+        {
+            get;
+            set;
+        }
+
+        public PizzaList(int q, double d, double p, double w, int pic)//в таком порядке заполняем данные для пиццы
         {
             Quantity = q;
             diameter = d;
             price = p;
             weight = w;
+            picture = pic;
         }
         //считаем площадь пиццы, с учетом того едят ли борт пиццы или нет
         public double GetArea(string edge)

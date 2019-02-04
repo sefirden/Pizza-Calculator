@@ -76,6 +76,7 @@ namespace Pizza_Calculator
             this.Mitems = Mitems;
             NotifyDataSetChanged();
         }
+
         public class MyView : RecyclerView.ViewHolder
         {
             public View mainview
@@ -109,12 +110,19 @@ namespace Pizza_Calculator
                 set;
             }
 
+            public ImageView mpicture
+            {
+                get;
+                set;
+            }
+       
             public MyView(View view) : base(view)
             {
                 mainview = view;
             }
         }
-        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
+
+            public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             View listitem = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.PizzaListLayout, parent, false);
             TextView pizza_number_value = listitem.FindViewById<TextView>(Resource.Id.pizza_number_value);
@@ -122,6 +130,7 @@ namespace Pizza_Calculator
             TextView pizza_diameter_value = listitem.FindViewById<TextView>(Resource.Id.pizza_diameter_value);
             TextView pizza_price_value = listitem.FindViewById<TextView>(Resource.Id.pizza_price_value);
             TextView pizza_weight_value = listitem.FindViewById<TextView>(Resource.Id.pizza_weight_value);
+            ImageView Pizza_image = listitem.FindViewById<ImageView>(Resource.Id.Pizza_image);
 
             MyView view = new MyView(listitem)
             {
@@ -129,7 +138,8 @@ namespace Pizza_Calculator
                 mpizza_quantity_value = pizza_quantity_value,
                 mpizza_diameter_value = pizza_diameter_value,
                 mpizza_price_value = pizza_price_value,
-                mpizza_weight_value = pizza_weight_value
+                mpizza_weight_value = pizza_weight_value,
+                mpicture = Pizza_image
             };
             return view;
         }
@@ -141,6 +151,7 @@ namespace Pizza_Calculator
             myholder.mpizza_diameter_value.Text = Convert.ToString(Mitems[position].diameter);
             myholder.mpizza_price_value.Text = Convert.ToString(Mitems[position].price);
             myholder.mpizza_weight_value.Text = Convert.ToString(Mitems[position].weight);
+            myholder.mpicture.SetImageResource(Mitems[position].picture);
         }
         public override int ItemCount
         {

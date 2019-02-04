@@ -7,10 +7,11 @@ using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using System;
 using System.Globalization;
+using System.Linq;
 
 
 namespace Pizza_Calculator
-
+//некоторую часть кода я сас не до конца понимаю, но пока все работает как планировалось
 {
 
     [Activity(Label = "@string/app_name", MainLauncher = true)]
@@ -47,6 +48,13 @@ namespace Pizza_Calculator
             TextView test3 = FindViewById<TextView>(Resource.Id.textView3);
             TextView test4 = FindViewById<TextView>(Resource.Id.textView4);
 
+            //список картинок ниже
+
+            string[] photolist = { "pizza1", "pizza2", "pizza3" }; //вписываем названия картинок
+
+            var rnd = new Random();
+            photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток 
+
             List<PizzaList> pizza = new List<PizzaList>();
             PizzaListitems = new PizzaListAdapter<PizzaList>(); //это перенес из под кнопки
 
@@ -56,10 +64,13 @@ namespace Pizza_Calculator
             double diameter = 0;
             double price = 0;
             double weight = 0;
+            int i = 0; // индекс для картинок
+            int pic; //для передачи картинки в список
 
             ///// клик на кнопку "Add to list"
             addToList.Click += (o, e) =>
             {
+
 
                 //начало сбора данных с полей, если поле пустое или null, то присваиваем 0 
 
@@ -95,31 +106,28 @@ namespace Pizza_Calculator
                 //фокус на 1 строку
                 getQuantity.RequestFocus();
 
-
-                //начало вывода данных для проверки, потом удалить
-                test1.Text = Convert.ToString(quantity);
-                test2.Text = Convert.ToString(diameter);
-                test3.Text = Convert.ToString(price);
-                test4.Text = Convert.ToString(weight);
-                //конец вывода данных для проверки
+                string pictureName = photolist[i]; //присваиваем значение из перемашанного списка фоток
+                pic = Resources.GetIdentifier(pictureName, "drawable", PackageName); //присваиваем параметру pic картинку, используя название картинки из списка
 
 
                 //из полученных данных создаем обьект списка
-                /*pizza.Add(new PizzaList
-                {
-                    quantity = Convert.ToInt32(quantity),
-                    diameter = Convert.ToDouble(diameter),
-                    price = Convert.ToDouble(price),
-                    weight = Convert.ToDouble(weight)
-            });*/
-
-
-                pizza.Add(new PizzaList (quantity, diameter, price, weight ));
+                pizza.Add(new PizzaList(quantity, diameter, price, weight, pic));
 
                 PizzaListitems.Add(pizza[listNumber]);
                 //добаляем елемент в список на позицию 0, и на удивление это сработало :)
 
-                listNumber++; //каждый раз после добавления увеличиваем позицию на 1                
+                listNumber++; //каждый раз после добавления увеличиваем позицию на 1   
+
+                if (i < photolist.Length - 1) //если количество обьектов в списке будет больше чем список фоток, то еще раз перемешиваем список фоток
+                {
+                    i++; //следующая фотка из списка
+                }
+                else
+                {
+                    rnd = new Random();
+                    photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток
+                    i = 0; //индекс возвращаем к 0
+                }
 
                 recyclerview_adapter = new RecyclerAdapter(PizzaListitems);
                 recyclerview.SetAdapter(recyclerview_adapter);

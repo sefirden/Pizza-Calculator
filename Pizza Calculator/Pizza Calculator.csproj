@@ -115,6 +115,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="PizzaList.cs" />
     <Compile Include="PizzaListAdapter.cs" />
+    <Compile Include="PizzaPhoto.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

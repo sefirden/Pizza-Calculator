@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System;
 using System.Globalization;
 using System.Linq;
+using Android.Content;
+using Newtonsoft.Json;
 
 
 namespace Pizza_Calculator
@@ -24,6 +26,9 @@ namespace Pizza_Calculator
         RecyclerView.LayoutManager recyclerview_layoutmanger;
         private RecyclerView.Adapter recyclerview_adapter;
         private PizzaListAdapter<PizzaList> PizzaListitems;
+        List<PizzaList> pizza = new List<PizzaList>();
+
+
         protected override void OnCreate(Bundle bundle)
         {
 
@@ -35,7 +40,7 @@ namespace Pizza_Calculator
             //кнопки 
             Button addToList = FindViewById<Button>(Resource.Id.button1);
             Button compare = FindViewById<Button>(Resource.Id.button2);
-
+            
             //поля для ввода данных
             EditText getQuantity = FindViewById<EditText>(Resource.Id.editText1);
             EditText getDiameter = FindViewById<EditText>(Resource.Id.editText2);
@@ -55,7 +60,7 @@ namespace Pizza_Calculator
             var rnd = new Random();
             photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток 
 
-            List<PizzaList> pizza = new List<PizzaList>();
+           // List<PizzaList> pizza = new List<PizzaList>();
             PizzaListitems = new PizzaListAdapter<PizzaList>(); //это перенес из под кнопки
 
             // тут дописал----------
@@ -134,20 +139,22 @@ namespace Pizza_Calculator
                 // эти две строки переназначают адаптер, это обновляет список, но не совсем верно. На больших списках не использовать, пофиксить позже
             };
 
+            compare.Click += Button_Click; //запускаем активити со сравнением
 
-            compare.Click += (o, e) =>
-            {
-                test1.Text = Convert.ToString(pizza.Count);
-                test2.Text = Convert.ToString(PizzaListitems.Count);
-            };
-            ////конец
-
-
+            
             recyclerview_layoutmanger = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
             recyclerview.SetLayoutManager(recyclerview_layoutmanger);
             recyclerview_adapter = new RecyclerAdapter(PizzaListitems);
             recyclerview.SetAdapter(recyclerview_adapter);
 
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(CompareActivity));
+            string listAsString = JsonConvert.SerializeObject(pizza);
+            intent.PutExtra("saved_counter", listAsString);
+            this.StartActivity(intent);
         }
     }
 }

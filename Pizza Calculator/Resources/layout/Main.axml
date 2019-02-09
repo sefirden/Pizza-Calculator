@@ -96,7 +96,8 @@
 		p1:layout_toRightOf="@id/button1"
 		p1:id="@+id/button2"
 		p1:layout_below="@+id/textView4"
-		p1:layout_marginLeft="125.0dp" />
+		p1:layout_marginLeft="125.0dp"
+		p1:enabled="true" />
 	<android.support.v7.widget.RecyclerView
         p1:id="@+id/recyclerview"
         p1:scrollbars="vertical"

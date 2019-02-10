@@ -26,7 +26,308 @@ namespace Pizza_Calculator
 		
 		public static void UpdateIdValues()
 		{
-			global::Microcharts.Droid.Resource.String.library_name = global::Pizza_Calculator.Resource.String.library_name;
+			global::Com.Syncfusion.Charts.Resource.Animation.SfChart_Fade_In = global::Pizza_Calculator.Resource.Animation.SfChart_Fade_In;
+			global::Com.Syncfusion.Charts.Resource.Animation.SfChart_Fade_Out = global::Pizza_Calculator.Resource.Animation.SfChart_Fade_Out;
+			global::Com.Syncfusion.Charts.Resource.Animation.SfChart_Scale_In = global::Pizza_Calculator.Resource.Animation.SfChart_Scale_In;
+			global::Com.Syncfusion.Charts.Resource.Animation.SfChart_Scale_Out = global::Pizza_Calculator.Resource.Animation.SfChart_Scale_Out;
+			global::Com.Syncfusion.Charts.Resource.Attribute.colorPalette = global::Pizza_Calculator.Resource.Attribute.colorPalette;
+			global::Com.Syncfusion.Charts.Resource.Attribute.deferredUpdateDelay = global::Pizza_Calculator.Resource.Attribute.deferredUpdateDelay;
+			global::Com.Syncfusion.Charts.Resource.Attribute.deferredUpdateEnabled = global::Pizza_Calculator.Resource.Attribute.deferredUpdateEnabled;
+			global::Com.Syncfusion.Charts.Resource.Attribute.enableTooltip = global::Pizza_Calculator.Resource.Attribute.enableTooltip;
+			global::Com.Syncfusion.Charts.Resource.Attribute.enableTrackball = global::Pizza_Calculator.Resource.Attribute.enableTrackball;
+			global::Com.Syncfusion.Charts.Resource.Attribute.enableZooming = global::Pizza_Calculator.Resource.Attribute.enableZooming;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbBackground = global::Pizza_Calculator.Resource.Attribute.leftThumbBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbHeight = global::Pizza_Calculator.Resource.Attribute.leftThumbHeight;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbLineColor = global::Pizza_Calculator.Resource.Attribute.leftThumbLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbLineWidth = global::Pizza_Calculator.Resource.Attribute.leftThumbLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbStroke = global::Pizza_Calculator.Resource.Attribute.leftThumbStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbStrokeWidth = global::Pizza_Calculator.Resource.Attribute.leftThumbStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftThumbWidth = global::Pizza_Calculator.Resource.Attribute.leftThumbWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftTooltipBackgroundColor = global::Pizza_Calculator.Resource.Attribute.leftTooltipBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftTooltipMargin = global::Pizza_Calculator.Resource.Attribute.leftTooltipMargin;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftTooltipStrokeColor = global::Pizza_Calculator.Resource.Attribute.leftTooltipStrokeColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftTooltipStrokeWidth = global::Pizza_Calculator.Resource.Attribute.leftTooltipStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftTooltipTextColor = global::Pizza_Calculator.Resource.Attribute.leftTooltipTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.leftTooltipTextSize = global::Pizza_Calculator.Resource.Attribute.leftTooltipTextSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendDockPosition = global::Pizza_Calculator.Resource.Attribute.legendDockPosition;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendIconHeight = global::Pizza_Calculator.Resource.Attribute.legendIconHeight;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendIconWidth = global::Pizza_Calculator.Resource.Attribute.legendIconWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendItemMarginBottom = global::Pizza_Calculator.Resource.Attribute.legendItemMarginBottom;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendItemMarginLeft = global::Pizza_Calculator.Resource.Attribute.legendItemMarginLeft;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendItemMarginRight = global::Pizza_Calculator.Resource.Attribute.legendItemMarginRight;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendItemMarginTop = global::Pizza_Calculator.Resource.Attribute.legendItemMarginTop;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendOrientation = global::Pizza_Calculator.Resource.Attribute.legendOrientation;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendTitleText = global::Pizza_Calculator.Resource.Attribute.legendTitleText;
+			global::Com.Syncfusion.Charts.Resource.Attribute.legendVisibility = global::Pizza_Calculator.Resource.Attribute.legendVisibility;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleGridLineColor = global::Pizza_Calculator.Resource.Attribute.majorScaleGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleGridLineWidth = global::Pizza_Calculator.Resource.Attribute.majorScaleGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelAlignment = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelAlignment;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelBackground = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelFormat = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelFormat;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelMargin = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelStroke = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelStrokeWidth = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelTextColor = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleLabelTextSize = global::Pizza_Calculator.Resource.Attribute.majorScaleLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScalePosition = global::Pizza_Calculator.Resource.Attribute.majorScalePosition;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleSelectedLabelBackground = global::Pizza_Calculator.Resource.Attribute.majorScaleSelectedLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleSelectedLabelMargin = global::Pizza_Calculator.Resource.Attribute.majorScaleSelectedLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleSelectedLabelStroke = global::Pizza_Calculator.Resource.Attribute.majorScaleSelectedLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleSelectedLabelStrokeWidth = global::Pizza_Calculator.Resource.Attribute.majorScaleSelectedLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleSelectedLabelTextColor = global::Pizza_Calculator.Resource.Attribute.majorScaleSelectedLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleSelectedLabelTextSize = global::Pizza_Calculator.Resource.Attribute.majorScaleSelectedLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleTickColor = global::Pizza_Calculator.Resource.Attribute.majorScaleTickColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleTickWidth = global::Pizza_Calculator.Resource.Attribute.majorScaleTickWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.majorScaleVisibility = global::Pizza_Calculator.Resource.Attribute.majorScaleVisibility;
+			global::Com.Syncfusion.Charts.Resource.Attribute.maximumValue = global::Pizza_Calculator.Resource.Attribute.maximumValue;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minimumValue = global::Pizza_Calculator.Resource.Attribute.minimumValue;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleGridLineColor = global::Pizza_Calculator.Resource.Attribute.minorScaleGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleGridLineWidth = global::Pizza_Calculator.Resource.Attribute.minorScaleGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelAlignment = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelAlignment;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelBackground = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelFormat = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelFormat;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelMargin = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelStroke = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelStrokeWidth = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelTextColor = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleLabelTextSize = global::Pizza_Calculator.Resource.Attribute.minorScaleLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScalePosition = global::Pizza_Calculator.Resource.Attribute.minorScalePosition;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleSelectedLabelBackground = global::Pizza_Calculator.Resource.Attribute.minorScaleSelectedLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleSelectedLabelMargin = global::Pizza_Calculator.Resource.Attribute.minorScaleSelectedLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleSelectedLabelStroke = global::Pizza_Calculator.Resource.Attribute.minorScaleSelectedLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleSelectedLabelStrokeWidth = global::Pizza_Calculator.Resource.Attribute.minorScaleSelectedLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleSelectedLabelTextColor = global::Pizza_Calculator.Resource.Attribute.minorScaleSelectedLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleSelectedLabelTextSize = global::Pizza_Calculator.Resource.Attribute.minorScaleSelectedLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleTickColor = global::Pizza_Calculator.Resource.Attribute.minorScaleTickColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleTickWidth = global::Pizza_Calculator.Resource.Attribute.minorScaleTickWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.minorScaleVisibility = global::Pizza_Calculator.Resource.Attribute.minorScaleVisibility;
+			global::Com.Syncfusion.Charts.Resource.Attribute.overlayColor = global::Pizza_Calculator.Resource.Attribute.overlayColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbBackground = global::Pizza_Calculator.Resource.Attribute.rightThumbBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbHeight = global::Pizza_Calculator.Resource.Attribute.rightThumbHeight;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbLineColor = global::Pizza_Calculator.Resource.Attribute.rightThumbLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbLineWidth = global::Pizza_Calculator.Resource.Attribute.rightThumbLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbStroke = global::Pizza_Calculator.Resource.Attribute.rightThumbStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbStrokeWidth = global::Pizza_Calculator.Resource.Attribute.rightThumbStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightThumbWidth = global::Pizza_Calculator.Resource.Attribute.rightThumbWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightTooltipBackground = global::Pizza_Calculator.Resource.Attribute.rightTooltipBackground;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightTooltipMargin = global::Pizza_Calculator.Resource.Attribute.rightTooltipMargin;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightTooltipStroke = global::Pizza_Calculator.Resource.Attribute.rightTooltipStroke;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightTooltipStrokeWidth = global::Pizza_Calculator.Resource.Attribute.rightTooltipStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightTooltipTextColor = global::Pizza_Calculator.Resource.Attribute.rightTooltipTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.rightTooltipTextSize = global::Pizza_Calculator.Resource.Attribute.rightTooltipTextSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.showMajorGridLines = global::Pizza_Calculator.Resource.Attribute.showMajorGridLines;
+			global::Com.Syncfusion.Charts.Resource.Attribute.showMinorGridLines = global::Pizza_Calculator.Resource.Attribute.showMinorGridLines;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titleBackgroundColor = global::Pizza_Calculator.Resource.Attribute.titleBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titleColor = global::Pizza_Calculator.Resource.Attribute.titleColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titlePaddingBottom = global::Pizza_Calculator.Resource.Attribute.titlePaddingBottom;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titlePaddingLeft = global::Pizza_Calculator.Resource.Attribute.titlePaddingLeft;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titlePaddingRight = global::Pizza_Calculator.Resource.Attribute.titlePaddingRight;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titlePaddingTop = global::Pizza_Calculator.Resource.Attribute.titlePaddingTop;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titleSize = global::Pizza_Calculator.Resource.Attribute.titleSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.titleText = global::Pizza_Calculator.Resource.Attribute.titleText;
+			global::Com.Syncfusion.Charts.Resource.Attribute.tooltipDisplayMode = global::Pizza_Calculator.Resource.Attribute.tooltipDisplayMode;
+			global::Com.Syncfusion.Charts.Resource.Attribute.tooltipFormat = global::Pizza_Calculator.Resource.Attribute.tooltipFormat;
+			global::Com.Syncfusion.Charts.Resource.Attribute.viewRangeEnd = global::Pizza_Calculator.Resource.Attribute.viewRangeEnd;
+			global::Com.Syncfusion.Charts.Resource.Attribute.viewRangeStart = global::Pizza_Calculator.Resource.Attribute.viewRangeStart;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxis = global::Pizza_Calculator.Resource.Attribute.xAxis;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisLineColor = global::Pizza_Calculator.Resource.Attribute.xAxisLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisLineWidth = global::Pizza_Calculator.Resource.Attribute.xAxisLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisMajorGridLineColor = global::Pizza_Calculator.Resource.Attribute.xAxisMajorGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisMajorGridLineWidth = global::Pizza_Calculator.Resource.Attribute.xAxisMajorGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisTitleBackgroundColor = global::Pizza_Calculator.Resource.Attribute.xAxisTitleBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisTitleSize = global::Pizza_Calculator.Resource.Attribute.xAxisTitleSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisTitleText = global::Pizza_Calculator.Resource.Attribute.xAxisTitleText;
+			global::Com.Syncfusion.Charts.Resource.Attribute.xAxisTitleTextColor = global::Pizza_Calculator.Resource.Attribute.xAxisTitleTextColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxis = global::Pizza_Calculator.Resource.Attribute.yAxis;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisLineColor = global::Pizza_Calculator.Resource.Attribute.yAxisLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisLineWidth = global::Pizza_Calculator.Resource.Attribute.yAxisLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisMajorGridLineColor = global::Pizza_Calculator.Resource.Attribute.yAxisMajorGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisMajorGridLineWidth = global::Pizza_Calculator.Resource.Attribute.yAxisMajorGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisTitleBackgroundColor = global::Pizza_Calculator.Resource.Attribute.yAxisTitleBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisTitleSize = global::Pizza_Calculator.Resource.Attribute.yAxisTitleSize;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisTitleText = global::Pizza_Calculator.Resource.Attribute.yAxisTitleText;
+			global::Com.Syncfusion.Charts.Resource.Attribute.yAxisTitleTextColor = global::Pizza_Calculator.Resource.Attribute.yAxisTitleTextColor;
+			global::Com.Syncfusion.Charts.Resource.Id.always = global::Pizza_Calculator.Resource.Id.always;
+			global::Com.Syncfusion.Charts.Resource.Id.annotationLayout = global::Pizza_Calculator.Resource.Id.annotationLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.auto = global::Pizza_Calculator.Resource.Id.auto;
+			global::Com.Syncfusion.Charts.Resource.Id.axisLayout = global::Pizza_Calculator.Resource.Id.axisLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.bottom = global::Pizza_Calculator.Resource.Id.bottom;
+			global::Com.Syncfusion.Charts.Resource.Id.bottom_labels = global::Pizza_Calculator.Resource.Id.bottom_labels;
+			global::Com.Syncfusion.Charts.Resource.Id.category = global::Pizza_Calculator.Resource.Id.category;
+			global::Com.Syncfusion.Charts.Resource.Id.center = global::Pizza_Calculator.Resource.Id.center;
+			global::Com.Syncfusion.Charts.Resource.Id.chartBehaviorLayout = global::Pizza_Calculator.Resource.Id.chartBehaviorLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.chartLegendScrollView = global::Pizza_Calculator.Resource.Id.chartLegendScrollView;
+			global::Com.Syncfusion.Charts.Resource.Id.content = global::Pizza_Calculator.Resource.Id.content;
+			global::Com.Syncfusion.Charts.Resource.Id.custom = global::Pizza_Calculator.Resource.Id.custom;
+			global::Com.Syncfusion.Charts.Resource.Id.dataMarkerLayout = global::Pizza_Calculator.Resource.Id.dataMarkerLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.dateTime = global::Pizza_Calculator.Resource.Id.dateTime;
+			global::Com.Syncfusion.Charts.Resource.Id.dateTimeCategory = global::Pizza_Calculator.Resource.Id.dateTimeCategory;
+			global::Com.Syncfusion.Charts.Resource.Id.floating = global::Pizza_Calculator.Resource.Id.floating;
+			global::Com.Syncfusion.Charts.Resource.Id.gone = global::Pizza_Calculator.Resource.Id.gone;
+			global::Com.Syncfusion.Charts.Resource.Id.gridLineLayout = global::Pizza_Calculator.Resource.Id.gridLineLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.gridLinesLayout = global::Pizza_Calculator.Resource.Id.gridLinesLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.horizontal = global::Pizza_Calculator.Resource.Id.horizontal;
+			global::Com.Syncfusion.Charts.Resource.Id.iconView = global::Pizza_Calculator.Resource.Id.iconView;
+			global::Com.Syncfusion.Charts.Resource.Id.inside = global::Pizza_Calculator.Resource.Id.inside;
+			global::Com.Syncfusion.Charts.Resource.Id.label = global::Pizza_Calculator.Resource.Id.label;
+			global::Com.Syncfusion.Charts.Resource.Id.left = global::Pizza_Calculator.Resource.Id.left;
+			global::Com.Syncfusion.Charts.Resource.Id.legendHeader = global::Pizza_Calculator.Resource.Id.legendHeader;
+			global::Com.Syncfusion.Charts.Resource.Id.legendItemsLayout = global::Pizza_Calculator.Resource.Id.legendItemsLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.legendLayout = global::Pizza_Calculator.Resource.Id.legendLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.legendScrollView = global::Pizza_Calculator.Resource.Id.legendScrollView;
+			global::Com.Syncfusion.Charts.Resource.Id.legendViewGroup = global::Pizza_Calculator.Resource.Id.legendViewGroup;
+			global::Com.Syncfusion.Charts.Resource.Id.logarithmic = global::Pizza_Calculator.Resource.Id.logarithmic;
+			global::Com.Syncfusion.Charts.Resource.Id.metro = global::Pizza_Calculator.Resource.Id.metro;
+			global::Com.Syncfusion.Charts.Resource.Id.natural = global::Pizza_Calculator.Resource.Id.natural;
+			global::Com.Syncfusion.Charts.Resource.Id.none = global::Pizza_Calculator.Resource.Id.none;
+			global::Com.Syncfusion.Charts.Resource.Id.numerical = global::Pizza_Calculator.Resource.Id.numerical;
+			global::Com.Syncfusion.Charts.Resource.Id.onDemand = global::Pizza_Calculator.Resource.Id.onDemand;
+			global::Com.Syncfusion.Charts.Resource.Id.outside = global::Pizza_Calculator.Resource.Id.outside;
+			global::Com.Syncfusion.Charts.Resource.Id.pineapple = global::Pizza_Calculator.Resource.Id.pineapple;
+			global::Com.Syncfusion.Charts.Resource.Id.right = global::Pizza_Calculator.Resource.Id.right;
+			global::Com.Syncfusion.Charts.Resource.Id.rootLayout = global::Pizza_Calculator.Resource.Id.rootLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.seriesLayout = global::Pizza_Calculator.Resource.Id.seriesLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.stripLinesLayout = global::Pizza_Calculator.Resource.Id.stripLinesLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.technicalIndicatorLayout = global::Pizza_Calculator.Resource.Id.technicalIndicatorLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.thumbLayout = global::Pizza_Calculator.Resource.Id.thumbLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.titleLayout = global::Pizza_Calculator.Resource.Id.titleLayout;
+			global::Com.Syncfusion.Charts.Resource.Id.tomatoSpectrum = global::Pizza_Calculator.Resource.Id.tomatoSpectrum;
+			global::Com.Syncfusion.Charts.Resource.Id.top = global::Pizza_Calculator.Resource.Id.top;
+			global::Com.Syncfusion.Charts.Resource.Id.top_labels = global::Pizza_Calculator.Resource.Id.top_labels;
+			global::Com.Syncfusion.Charts.Resource.Id.vertical = global::Pizza_Calculator.Resource.Id.vertical;
+			global::Com.Syncfusion.Charts.Resource.Id.visible = global::Pizza_Calculator.Resource.Id.visible;
+			global::Com.Syncfusion.Charts.Resource.Layout.chart_layout = global::Pizza_Calculator.Resource.Layout.chart_layout;
+			global::Com.Syncfusion.Charts.Resource.Layout.chart_legend = global::Pizza_Calculator.Resource.Layout.chart_legend;
+			global::Com.Syncfusion.Charts.Resource.Layout.chart_legend_item = global::Pizza_Calculator.Resource.Layout.chart_legend_item;
+			global::Com.Syncfusion.Charts.Resource.Layout.range_navigator_layout = global::Pizza_Calculator.Resource.Layout.range_navigator_layout;
+			global::Com.Syncfusion.Charts.Resource.String.q = global::Pizza_Calculator.Resource.String.q;
+			global::Com.Syncfusion.Charts.Resource.String.quarter = global::Pizza_Calculator.Resource.String.quarter;
+			global::Com.Syncfusion.Charts.Resource.String.sfchart_close_label = global::Pizza_Calculator.Resource.String.sfchart_close_label;
+			global::Com.Syncfusion.Charts.Resource.String.sfchart_high_label = global::Pizza_Calculator.Resource.String.sfchart_high_label;
+			global::Com.Syncfusion.Charts.Resource.String.sfchart_low_label = global::Pizza_Calculator.Resource.String.sfchart_low_label;
+			global::Com.Syncfusion.Charts.Resource.String.sfchart_open_label = global::Pizza_Calculator.Resource.String.sfchart_open_label;
+			global::Com.Syncfusion.Charts.Resource.String.sfchart_others_label = global::Pizza_Calculator.Resource.String.sfchart_others_label;
+			global::Com.Syncfusion.Charts.Resource.String.w = global::Pizza_Calculator.Resource.String.w;
+			global::Com.Syncfusion.Charts.Resource.String.week = global::Pizza_Calculator.Resource.String.week;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart = global::Pizza_Calculator.Resource.Styleable.SfChart;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_colorPalette = global::Pizza_Calculator.Resource.Styleable.SfChart_colorPalette;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_enableTrackball = global::Pizza_Calculator.Resource.Styleable.SfChart_enableTrackball;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_enableZooming = global::Pizza_Calculator.Resource.Styleable.SfChart_enableZooming;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendDockPosition = global::Pizza_Calculator.Resource.Styleable.SfChart_legendDockPosition;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendIconHeight = global::Pizza_Calculator.Resource.Styleable.SfChart_legendIconHeight;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendIconWidth = global::Pizza_Calculator.Resource.Styleable.SfChart_legendIconWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendItemMarginBottom = global::Pizza_Calculator.Resource.Styleable.SfChart_legendItemMarginBottom;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendItemMarginLeft = global::Pizza_Calculator.Resource.Styleable.SfChart_legendItemMarginLeft;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendItemMarginRight = global::Pizza_Calculator.Resource.Styleable.SfChart_legendItemMarginRight;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendItemMarginTop = global::Pizza_Calculator.Resource.Styleable.SfChart_legendItemMarginTop;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendOrientation = global::Pizza_Calculator.Resource.Styleable.SfChart_legendOrientation;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendTitleText = global::Pizza_Calculator.Resource.Styleable.SfChart_legendTitleText;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_legendVisibility = global::Pizza_Calculator.Resource.Styleable.SfChart_legendVisibility;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titleBackgroundColor = global::Pizza_Calculator.Resource.Styleable.SfChart_titleBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titleColor = global::Pizza_Calculator.Resource.Styleable.SfChart_titleColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titlePaddingBottom = global::Pizza_Calculator.Resource.Styleable.SfChart_titlePaddingBottom;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titlePaddingLeft = global::Pizza_Calculator.Resource.Styleable.SfChart_titlePaddingLeft;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titlePaddingRight = global::Pizza_Calculator.Resource.Styleable.SfChart_titlePaddingRight;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titlePaddingTop = global::Pizza_Calculator.Resource.Styleable.SfChart_titlePaddingTop;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titleSize = global::Pizza_Calculator.Resource.Styleable.SfChart_titleSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_titleText = global::Pizza_Calculator.Resource.Styleable.SfChart_titleText;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxis = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxis;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisLineColor = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisLineWidth = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisMajorGridLineColor = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisMajorGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisMajorGridLineWidth = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisMajorGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisTitleBackgroundColor = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisTitleBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisTitleSize = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisTitleSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisTitleText = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisTitleText;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_xAxisTitleTextColor = global::Pizza_Calculator.Resource.Styleable.SfChart_xAxisTitleTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxis = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxis;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisLineColor = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisLineWidth = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisMajorGridLineColor = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisMajorGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisMajorGridLineWidth = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisMajorGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisTitleBackgroundColor = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisTitleBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisTitleSize = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisTitleSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisTitleText = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisTitleText;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfChart_yAxisTitleTextColor = global::Pizza_Calculator.Resource.Styleable.SfChart_yAxisTitleTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_deferredUpdateDelay = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_deferredUpdateDelay;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_deferredUpdateEnabled = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_deferredUpdateEnabled;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_enableTooltip = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_enableTooltip;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbHeight = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbHeight;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbLineColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbLineWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftThumbWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipBackgroundColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipBackgroundColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipMargin = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipMargin;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipStrokeColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipStrokeColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipTextColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipTextSize = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_leftTooltipTextSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleGridLineColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleGridLineWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelAlignment = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelAlignment;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelFormat = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelFormat;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelMargin = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelTextColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelTextSize = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScalePosition = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScalePosition;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelMargin = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelTextColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelTextSize = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleSelectedLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleTickColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleTickColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleTickWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleTickWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleVisibility = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_majorScaleVisibility;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_maximumValue = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_maximumValue;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minimumValue = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minimumValue;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleGridLineColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleGridLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleGridLineWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleGridLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelAlignment = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelAlignment;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelFormat = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelFormat;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelMargin = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelTextColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelTextSize = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScalePosition = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScalePosition;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelMargin = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelMargin;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelTextColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelTextSize = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleSelectedLabelTextSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleTickColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleTickColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleTickWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleTickWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleVisibility = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_minorScaleVisibility;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_overlayColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_overlayColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbHeight = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbHeight;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbLineColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbLineColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbLineWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbLineWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightThumbWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipBackground = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipBackground;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipMargin = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipMargin;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipStroke = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipStroke;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipStrokeWidth = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipStrokeWidth;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipTextColor = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipTextColor;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipTextSize = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_rightTooltipTextSize;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_showMajorGridLines = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_showMajorGridLines;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_showMinorGridLines = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_showMinorGridLines;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_tooltipDisplayMode = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_tooltipDisplayMode;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_tooltipFormat = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_tooltipFormat;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_viewRangeEnd = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_viewRangeEnd;
+			global::Com.Syncfusion.Charts.Resource.Styleable.SfDateTimeRangeNavigator_viewRangeStart = global::Pizza_Calculator.Resource.Styleable.SfDateTimeRangeNavigator_viewRangeStart;
 		}
 		
 		public partial class Animation
@@ -75,10 +376,22 @@ namespace Pizza_Calculator
 			public const int design_snackbar_out = 2130968589;
 			
 			// aapt resource value: 0x7f04000e
-			public const int tooltip_enter = 2130968590;
+			public const int SfChart_Fade_In = 2130968590;
 			
 			// aapt resource value: 0x7f04000f
-			public const int tooltip_exit = 2130968591;
+			public const int SfChart_Fade_Out = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int SfChart_Scale_In = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int SfChart_Scale_Out = 2130968593;
+			
+			// aapt resource value: 0x7f040012
+			public const int tooltip_enter = 2130968594;
+			
+			// aapt resource value: 0x7f040013
+			public const int tooltip_exit = 2130968595;
 			
 			static Animation()
 			{
@@ -400,6 +713,9 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0100bc
 			public const int colorError = 2130772156;
 			
+			// aapt resource value: 0x7f010189
+			public const int colorPalette = 2130772361;
+			
 			// aapt resource value: 0x7f01009a
 			public const int colorPrimary = 2130772122;
 			
@@ -472,6 +788,12 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0100df
 			public const int defaultQueryHint = 2130772191;
 			
+			// aapt resource value: 0x7f010195
+			public const int deferredUpdateDelay = 2130772373;
+			
+			// aapt resource value: 0x7f010194
+			public const int deferredUpdateEnabled = 2130772372;
+			
 			// aapt resource value: 0x7f010072
 			public const int dialogPreferredPadding = 2130772082;
 			
@@ -516,6 +838,15 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f010030
 			public const int elevation = 2130772016;
+			
+			// aapt resource value: 0x7f010191
+			public const int enableTooltip = 2130772369;
+			
+			// aapt resource value: 0x7f01018b
+			public const int enableTrackball = 2130772363;
+			
+			// aapt resource value: 0x7f01018a
+			public const int enableZooming = 2130772362;
 			
 			// aapt resource value: 0x7f010150
 			public const int errorEnabled = 2130772304;
@@ -712,6 +1043,75 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f01010e
 			public const int layout_scrollInterpolator = 2130772238;
 			
+			// aapt resource value: 0x7f010198
+			public const int leftThumbBackground = 2130772376;
+			
+			// aapt resource value: 0x7f01019a
+			public const int leftThumbHeight = 2130772378;
+			
+			// aapt resource value: 0x7f01019b
+			public const int leftThumbLineColor = 2130772379;
+			
+			// aapt resource value: 0x7f01019c
+			public const int leftThumbLineWidth = 2130772380;
+			
+			// aapt resource value: 0x7f010196
+			public const int leftThumbStroke = 2130772374;
+			
+			// aapt resource value: 0x7f010197
+			public const int leftThumbStrokeWidth = 2130772375;
+			
+			// aapt resource value: 0x7f010199
+			public const int leftThumbWidth = 2130772377;
+			
+			// aapt resource value: 0x7f0101d1
+			public const int leftTooltipBackgroundColor = 2130772433;
+			
+			// aapt resource value: 0x7f0101ce
+			public const int leftTooltipMargin = 2130772430;
+			
+			// aapt resource value: 0x7f0101d2
+			public const int leftTooltipStrokeColor = 2130772434;
+			
+			// aapt resource value: 0x7f0101d3
+			public const int leftTooltipStrokeWidth = 2130772435;
+			
+			// aapt resource value: 0x7f0101d0
+			public const int leftTooltipTextColor = 2130772432;
+			
+			// aapt resource value: 0x7f0101cf
+			public const int leftTooltipTextSize = 2130772431;
+			
+			// aapt resource value: 0x7f01017f
+			public const int legendDockPosition = 2130772351;
+			
+			// aapt resource value: 0x7f010179
+			public const int legendIconHeight = 2130772345;
+			
+			// aapt resource value: 0x7f01017a
+			public const int legendIconWidth = 2130772346;
+			
+			// aapt resource value: 0x7f01017b
+			public const int legendItemMarginBottom = 2130772347;
+			
+			// aapt resource value: 0x7f01017c
+			public const int legendItemMarginLeft = 2130772348;
+			
+			// aapt resource value: 0x7f01017d
+			public const int legendItemMarginRight = 2130772349;
+			
+			// aapt resource value: 0x7f01017e
+			public const int legendItemMarginTop = 2130772350;
+			
+			// aapt resource value: 0x7f010180
+			public const int legendOrientation = 2130772352;
+			
+			// aapt resource value: 0x7f010178
+			public const int legendTitleText = 2130772344;
+			
+			// aapt resource value: 0x7f010177
+			public const int legendVisibility = 2130772343;
+			
 			// aapt resource value: 0x7f010099
 			public const int listChoiceBackgroundIndicator = 2130772121;
 			
@@ -751,17 +1151,143 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f010102
 			public const int logoDescription = 2130772226;
 			
+			// aapt resource value: 0x7f0101b5
+			public const int majorScaleGridLineColor = 2130772405;
+			
+			// aapt resource value: 0x7f0101b6
+			public const int majorScaleGridLineWidth = 2130772406;
+			
+			// aapt resource value: 0x7f0101a7
+			public const int majorScaleLabelAlignment = 2130772391;
+			
+			// aapt resource value: 0x7f0101ab
+			public const int majorScaleLabelBackground = 2130772395;
+			
+			// aapt resource value: 0x7f0101a6
+			public const int majorScaleLabelFormat = 2130772390;
+			
+			// aapt resource value: 0x7f0101a8
+			public const int majorScaleLabelMargin = 2130772392;
+			
+			// aapt resource value: 0x7f0101ac
+			public const int majorScaleLabelStroke = 2130772396;
+			
+			// aapt resource value: 0x7f0101ad
+			public const int majorScaleLabelStrokeWidth = 2130772397;
+			
+			// aapt resource value: 0x7f0101aa
+			public const int majorScaleLabelTextColor = 2130772394;
+			
+			// aapt resource value: 0x7f0101a9
+			public const int majorScaleLabelTextSize = 2130772393;
+			
+			// aapt resource value: 0x7f0101a5
+			public const int majorScalePosition = 2130772389;
+			
+			// aapt resource value: 0x7f0101b1
+			public const int majorScaleSelectedLabelBackground = 2130772401;
+			
+			// aapt resource value: 0x7f0101ae
+			public const int majorScaleSelectedLabelMargin = 2130772398;
+			
+			// aapt resource value: 0x7f0101b2
+			public const int majorScaleSelectedLabelStroke = 2130772402;
+			
+			// aapt resource value: 0x7f0101b3
+			public const int majorScaleSelectedLabelStrokeWidth = 2130772403;
+			
+			// aapt resource value: 0x7f0101b0
+			public const int majorScaleSelectedLabelTextColor = 2130772400;
+			
+			// aapt resource value: 0x7f0101af
+			public const int majorScaleSelectedLabelTextSize = 2130772399;
+			
+			// aapt resource value: 0x7f0101b8
+			public const int majorScaleTickColor = 2130772408;
+			
+			// aapt resource value: 0x7f0101b7
+			public const int majorScaleTickWidth = 2130772407;
+			
+			// aapt resource value: 0x7f0101a4
+			public const int majorScaleVisibility = 2130772388;
+			
 			// aapt resource value: 0x7f01013d
 			public const int maxActionInlineWidth = 2130772285;
 			
 			// aapt resource value: 0x7f0100fc
 			public const int maxButtonHeight = 2130772220;
 			
+			// aapt resource value: 0x7f01018c
+			public const int maximumValue = 2130772364;
+			
 			// aapt resource value: 0x7f0100c9
 			public const int measureWithLargestChild = 2130772169;
 			
 			// aapt resource value: 0x7f010135
 			public const int menu = 2130772277;
+			
+			// aapt resource value: 0x7f01018d
+			public const int minimumValue = 2130772365;
+			
+			// aapt resource value: 0x7f0101ca
+			public const int minorScaleGridLineColor = 2130772426;
+			
+			// aapt resource value: 0x7f0101cb
+			public const int minorScaleGridLineWidth = 2130772427;
+			
+			// aapt resource value: 0x7f0101bc
+			public const int minorScaleLabelAlignment = 2130772412;
+			
+			// aapt resource value: 0x7f0101c0
+			public const int minorScaleLabelBackground = 2130772416;
+			
+			// aapt resource value: 0x7f0101bb
+			public const int minorScaleLabelFormat = 2130772411;
+			
+			// aapt resource value: 0x7f0101bd
+			public const int minorScaleLabelMargin = 2130772413;
+			
+			// aapt resource value: 0x7f0101c1
+			public const int minorScaleLabelStroke = 2130772417;
+			
+			// aapt resource value: 0x7f0101c2
+			public const int minorScaleLabelStrokeWidth = 2130772418;
+			
+			// aapt resource value: 0x7f0101bf
+			public const int minorScaleLabelTextColor = 2130772415;
+			
+			// aapt resource value: 0x7f0101be
+			public const int minorScaleLabelTextSize = 2130772414;
+			
+			// aapt resource value: 0x7f0101ba
+			public const int minorScalePosition = 2130772410;
+			
+			// aapt resource value: 0x7f0101c6
+			public const int minorScaleSelectedLabelBackground = 2130772422;
+			
+			// aapt resource value: 0x7f0101c3
+			public const int minorScaleSelectedLabelMargin = 2130772419;
+			
+			// aapt resource value: 0x7f0101c7
+			public const int minorScaleSelectedLabelStroke = 2130772423;
+			
+			// aapt resource value: 0x7f0101c8
+			public const int minorScaleSelectedLabelStrokeWidth = 2130772424;
+			
+			// aapt resource value: 0x7f0101c5
+			public const int minorScaleSelectedLabelTextColor = 2130772421;
+			
+			// aapt resource value: 0x7f0101c4
+			public const int minorScaleSelectedLabelTextSize = 2130772420;
+			
+			// aapt resource value: 0x7f0101cd
+			public const int minorScaleTickColor = 2130772429;
+			
+			// aapt resource value: 0x7f0101cc
+			public const int minorScaleTickWidth = 2130772428;
+			
+			// aapt resource value: 0x7f0101b9
+			public const int minorScaleVisibility = 2130772409;
 			
 			// aapt resource value: 0x7f010037
 			public const int multiChoiceItemLayout = 2130772023;
@@ -780,6 +1306,9 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f0100d8
 			public const int overlapAnchor = 2130772184;
+			
+			// aapt resource value: 0x7f010190
+			public const int overlayColor = 2130772368;
 			
 			// aapt resource value: 0x7f0100da
 			public const int paddingBottomNoButtons = 2130772186;
@@ -859,6 +1388,45 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f010002
 			public const int reverseLayout = 2130771970;
 			
+			// aapt resource value: 0x7f01019f
+			public const int rightThumbBackground = 2130772383;
+			
+			// aapt resource value: 0x7f0101a1
+			public const int rightThumbHeight = 2130772385;
+			
+			// aapt resource value: 0x7f0101a2
+			public const int rightThumbLineColor = 2130772386;
+			
+			// aapt resource value: 0x7f0101a3
+			public const int rightThumbLineWidth = 2130772387;
+			
+			// aapt resource value: 0x7f01019d
+			public const int rightThumbStroke = 2130772381;
+			
+			// aapt resource value: 0x7f01019e
+			public const int rightThumbStrokeWidth = 2130772382;
+			
+			// aapt resource value: 0x7f0101a0
+			public const int rightThumbWidth = 2130772384;
+			
+			// aapt resource value: 0x7f0101d7
+			public const int rightTooltipBackground = 2130772439;
+			
+			// aapt resource value: 0x7f0101d4
+			public const int rightTooltipMargin = 2130772436;
+			
+			// aapt resource value: 0x7f0101d8
+			public const int rightTooltipStroke = 2130772440;
+			
+			// aapt resource value: 0x7f0101d9
+			public const int rightTooltipStrokeWidth = 2130772441;
+			
+			// aapt resource value: 0x7f0101d6
+			public const int rightTooltipTextColor = 2130772438;
+			
+			// aapt resource value: 0x7f0101d5
+			public const int rightTooltipTextSize = 2130772437;
+			
 			// aapt resource value: 0x7f01012e
 			public const int rippleColor = 2130772270;
 			
@@ -891,6 +1459,12 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f0100ca
 			public const int showDividers = 2130772170;
+			
+			// aapt resource value: 0x7f0101b4
+			public const int showMajorGridLines = 2130772404;
+			
+			// aapt resource value: 0x7f0101c9
+			public const int showMinorGridLines = 2130772425;
 			
 			// aapt resource value: 0x7f0100f3
 			public const int showText = 2130772211;
@@ -1087,6 +1661,12 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f010017
 			public const int title = 2130771991;
 			
+			// aapt resource value: 0x7f010184
+			public const int titleBackgroundColor = 2130772356;
+			
+			// aapt resource value: 0x7f010182
+			public const int titleColor = 2130772354;
+			
 			// aapt resource value: 0x7f010120
 			public const int titleEnabled = 2130772256;
 			
@@ -1108,6 +1688,24 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0100fb
 			public const int titleMargins = 2130772219;
 			
+			// aapt resource value: 0x7f010188
+			public const int titlePaddingBottom = 2130772360;
+			
+			// aapt resource value: 0x7f010185
+			public const int titlePaddingLeft = 2130772357;
+			
+			// aapt resource value: 0x7f010186
+			public const int titlePaddingRight = 2130772358;
+			
+			// aapt resource value: 0x7f010187
+			public const int titlePaddingTop = 2130772359;
+			
+			// aapt resource value: 0x7f010183
+			public const int titleSize = 2130772355;
+			
+			// aapt resource value: 0x7f010181
+			public const int titleText = 2130772353;
+			
 			// aapt resource value: 0x7f0100f4
 			public const int titleTextAppearance = 2130772212;
 			
@@ -1126,8 +1724,14 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f010081
 			public const int toolbarStyle = 2130772097;
 			
+			// aapt resource value: 0x7f010192
+			public const int tooltipDisplayMode = 2130772370;
+			
 			// aapt resource value: 0x7f0100bb
 			public const int tooltipForegroundColor = 2130772155;
+			
+			// aapt resource value: 0x7f010193
+			public const int tooltipFormat = 2130772371;
 			
 			// aapt resource value: 0x7f0100ba
 			public const int tooltipFrameBackground = 2130772154;
@@ -1146,6 +1750,12 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f010132
 			public const int useCompatPadding = 2130772274;
+			
+			// aapt resource value: 0x7f01018f
+			public const int viewRangeEnd = 2130772367;
+			
+			// aapt resource value: 0x7f01018e
+			public const int viewRangeStart = 2130772366;
 			
 			// aapt resource value: 0x7f0100e4
 			public const int voiceIcon = 2130772196;
@@ -1179,6 +1789,60 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f010049
 			public const int windowNoTitle = 2130772041;
+			
+			// aapt resource value: 0x7f010165
+			public const int xAxis = 2130772325;
+			
+			// aapt resource value: 0x7f010171
+			public const int xAxisLineColor = 2130772337;
+			
+			// aapt resource value: 0x7f010172
+			public const int xAxisLineWidth = 2130772338;
+			
+			// aapt resource value: 0x7f01016f
+			public const int xAxisMajorGridLineColor = 2130772335;
+			
+			// aapt resource value: 0x7f010170
+			public const int xAxisMajorGridLineWidth = 2130772336;
+			
+			// aapt resource value: 0x7f01016a
+			public const int xAxisTitleBackgroundColor = 2130772330;
+			
+			// aapt resource value: 0x7f010169
+			public const int xAxisTitleSize = 2130772329;
+			
+			// aapt resource value: 0x7f010167
+			public const int xAxisTitleText = 2130772327;
+			
+			// aapt resource value: 0x7f010168
+			public const int xAxisTitleTextColor = 2130772328;
+			
+			// aapt resource value: 0x7f010166
+			public const int yAxis = 2130772326;
+			
+			// aapt resource value: 0x7f010175
+			public const int yAxisLineColor = 2130772341;
+			
+			// aapt resource value: 0x7f010176
+			public const int yAxisLineWidth = 2130772342;
+			
+			// aapt resource value: 0x7f010173
+			public const int yAxisMajorGridLineColor = 2130772339;
+			
+			// aapt resource value: 0x7f010174
+			public const int yAxisMajorGridLineWidth = 2130772340;
+			
+			// aapt resource value: 0x7f01016e
+			public const int yAxisTitleBackgroundColor = 2130772334;
+			
+			// aapt resource value: 0x7f01016d
+			public const int yAxisTitleSize = 2130772333;
+			
+			// aapt resource value: 0x7f01016b
+			public const int yAxisTitleText = 2130772331;
+			
+			// aapt resource value: 0x7f01016c
+			public const int yAxisTitleTextColor = 2130772332;
 			
 			static Attribute()
 			{
@@ -2385,32 +3049,17 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070033
 			public const int CTRL = 2131165235;
 			
-			// aapt resource value: 0x7f07008c
-			public const int Chart2 = 2131165324;
-			
-			// aapt resource value: 0x7f07008d
-			public const int Chart3 = 2131165325;
-			
-			// aapt resource value: 0x7f07008e
-			public const int Chart4 = 2131165326;
-			
-			// aapt resource value: 0x7f07008f
-			public const int Chart5 = 2131165327;
-			
-			// aapt resource value: 0x7f070090
-			public const int Chart6 = 2131165328;
-			
 			// aapt resource value: 0x7f070034
 			public const int FUNCTION = 2131165236;
 			
 			// aapt resource value: 0x7f070035
 			public const int META = 2131165237;
 			
-			// aapt resource value: 0x7f0700c0
-			public const int Pizza_image = 2131165376;
+			// aapt resource value: 0x7f0700de
+			public const int Pizza_image = 2131165406;
 			
-			// aapt resource value: 0x7f0700bf
-			public const int Pizza_list_Layout = 2131165375;
+			// aapt resource value: 0x7f0700dd
+			public const int Pizza_list_Layout = 2131165405;
 			
 			// aapt resource value: 0x7f070036
 			public const int SHIFT = 2131165238;
@@ -2418,41 +3067,41 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070037
 			public const int SYM = 2131165239;
 			
-			// aapt resource value: 0x7f0700af
-			public const int action0 = 2131165359;
+			// aapt resource value: 0x7f0700cd
+			public const int action0 = 2131165389;
 			
-			// aapt resource value: 0x7f07007c
-			public const int action_bar = 2131165308;
+			// aapt resource value: 0x7f07008d
+			public const int action_bar = 2131165325;
 			
 			// aapt resource value: 0x7f070001
 			public const int action_bar_activity_content = 2131165185;
 			
-			// aapt resource value: 0x7f07007b
-			public const int action_bar_container = 2131165307;
+			// aapt resource value: 0x7f07008c
+			public const int action_bar_container = 2131165324;
 			
-			// aapt resource value: 0x7f070077
-			public const int action_bar_root = 2131165303;
+			// aapt resource value: 0x7f070088
+			public const int action_bar_root = 2131165320;
 			
 			// aapt resource value: 0x7f070002
 			public const int action_bar_spinner = 2131165186;
 			
-			// aapt resource value: 0x7f07005b
-			public const int action_bar_subtitle = 2131165275;
+			// aapt resource value: 0x7f07006d
+			public const int action_bar_subtitle = 2131165293;
 			
-			// aapt resource value: 0x7f07005a
-			public const int action_bar_title = 2131165274;
+			// aapt resource value: 0x7f07006c
+			public const int action_bar_title = 2131165292;
 			
-			// aapt resource value: 0x7f0700ac
-			public const int action_container = 2131165356;
+			// aapt resource value: 0x7f0700ca
+			public const int action_container = 2131165386;
 			
-			// aapt resource value: 0x7f07007d
-			public const int action_context_bar = 2131165309;
+			// aapt resource value: 0x7f07008e
+			public const int action_context_bar = 2131165326;
 			
-			// aapt resource value: 0x7f0700b3
-			public const int action_divider = 2131165363;
+			// aapt resource value: 0x7f0700d1
+			public const int action_divider = 2131165393;
 			
-			// aapt resource value: 0x7f0700ad
-			public const int action_image = 2131165357;
+			// aapt resource value: 0x7f0700cb
+			public const int action_image = 2131165387;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2460,29 +3109,29 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070004
 			public const int action_menu_presenter = 2131165188;
 			
-			// aapt resource value: 0x7f070079
-			public const int action_mode_bar = 2131165305;
+			// aapt resource value: 0x7f07008a
+			public const int action_mode_bar = 2131165322;
 			
-			// aapt resource value: 0x7f070078
-			public const int action_mode_bar_stub = 2131165304;
+			// aapt resource value: 0x7f070089
+			public const int action_mode_bar_stub = 2131165321;
 			
-			// aapt resource value: 0x7f07005c
-			public const int action_mode_close_button = 2131165276;
+			// aapt resource value: 0x7f07006e
+			public const int action_mode_close_button = 2131165294;
 			
-			// aapt resource value: 0x7f0700ae
-			public const int action_text = 2131165358;
+			// aapt resource value: 0x7f0700cc
+			public const int action_text = 2131165388;
 			
-			// aapt resource value: 0x7f0700bc
-			public const int actions = 2131165372;
+			// aapt resource value: 0x7f0700da
+			public const int actions = 2131165402;
 			
-			// aapt resource value: 0x7f07005d
-			public const int activity_chooser_view_content = 2131165277;
+			// aapt resource value: 0x7f07006f
+			public const int activity_chooser_view_content = 2131165295;
 			
 			// aapt resource value: 0x7f070027
 			public const int add = 2131165223;
 			
-			// aapt resource value: 0x7f070070
-			public const int alertTitle = 2131165296;
+			// aapt resource value: 0x7f070081
+			public const int alertTitle = 2131165313;
 			
 			// aapt resource value: 0x7f070052
 			public const int all = 2131165266;
@@ -2490,11 +3139,17 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070038
 			public const int always = 2131165240;
 			
+			// aapt resource value: 0x7f0700a6
+			public const int annotationLayout = 2131165350;
+			
 			// aapt resource value: 0x7f070056
 			public const int async = 2131165270;
 			
 			// aapt resource value: 0x7f070044
 			public const int auto = 2131165252;
+			
+			// aapt resource value: 0x7f0700a3
+			public const int axisLayout = 2131165347;
 			
 			// aapt resource value: 0x7f07002f
 			public const int beginning = 2131165231;
@@ -2505,17 +3160,23 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f07003d
 			public const int bottom = 2131165245;
 			
-			// aapt resource value: 0x7f0700a9
-			public const int button1 = 2131165353;
+			// aapt resource value: 0x7f0700ea
+			public const int bottom_labels = 2131165418;
 			
-			// aapt resource value: 0x7f0700aa
-			public const int button2 = 2131165354;
+			// aapt resource value: 0x7f0700c7
+			public const int button1 = 2131165383;
 			
-			// aapt resource value: 0x7f070063
-			public const int buttonPanel = 2131165283;
+			// aapt resource value: 0x7f0700c8
+			public const int button2 = 2131165384;
 			
-			// aapt resource value: 0x7f0700b0
-			public const int cancel_action = 2131165360;
+			// aapt resource value: 0x7f070075
+			public const int buttonPanel = 2131165301;
+			
+			// aapt resource value: 0x7f0700ce
+			public const int cancel_action = 2131165390;
+			
+			// aapt resource value: 0x7f07005a
+			public const int category = 2131165274;
 			
 			// aapt resource value: 0x7f070045
 			public const int center = 2131165253;
@@ -2526,17 +3187,20 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070047
 			public const int center_vertical = 2131165255;
 			
-			// aapt resource value: 0x7f07008b
-			public const int chartView = 2131165323;
+			// aapt resource value: 0x7f0700a5
+			public const int chartBehaviorLayout = 2131165349;
 			
-			// aapt resource value: 0x7f0700a0
-			public const int checkBox1 = 2131165344;
+			// aapt resource value: 0x7f0700a9
+			public const int chartLegendScrollView = 2131165353;
 			
-			// aapt resource value: 0x7f070073
-			public const int checkbox = 2131165299;
+			// aapt resource value: 0x7f0700be
+			public const int checkBox1 = 2131165374;
 			
-			// aapt resource value: 0x7f0700b8
-			public const int chronometer = 2131165368;
+			// aapt resource value: 0x7f070084
+			public const int checkbox = 2131165316;
+			
+			// aapt resource value: 0x7f0700d6
+			public const int chronometer = 2131165398;
 			
 			// aapt resource value: 0x7f07004e
 			public const int clip_horizontal = 2131165262;
@@ -2547,65 +3211,77 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070039
 			public const int collapseActionView = 2131165241;
 			
-			// aapt resource value: 0x7f070093
-			public const int container = 2131165331;
+			// aapt resource value: 0x7f0700b1
+			public const int container = 2131165361;
 			
-			// aapt resource value: 0x7f070066
-			public const int contentPanel = 2131165286;
+			// aapt resource value: 0x7f0700eb
+			public const int content = 2131165419;
 			
-			// aapt resource value: 0x7f070094
-			public const int coordinator = 2131165332;
+			// aapt resource value: 0x7f070078
+			public const int contentPanel = 2131165304;
 			
-			// aapt resource value: 0x7f07006d
-			public const int custom = 2131165293;
+			// aapt resource value: 0x7f0700b2
+			public const int coordinator = 2131165362;
 			
-			// aapt resource value: 0x7f07006c
-			public const int customPanel = 2131165292;
+			// aapt resource value: 0x7f070064
+			public const int custom = 2131165284;
 			
-			// aapt resource value: 0x7f07007a
-			public const int decor_content_parent = 2131165306;
+			// aapt resource value: 0x7f07007e
+			public const int customPanel = 2131165310;
 			
-			// aapt resource value: 0x7f070060
-			public const int default_activity_button = 2131165280;
+			// aapt resource value: 0x7f0700a1
+			public const int dataMarkerLayout = 2131165345;
 			
-			// aapt resource value: 0x7f070096
-			public const int design_bottom_sheet = 2131165334;
+			// aapt resource value: 0x7f07005b
+			public const int dateTime = 2131165275;
 			
-			// aapt resource value: 0x7f07009d
-			public const int design_menu_item_action_area = 2131165341;
+			// aapt resource value: 0x7f07005c
+			public const int dateTimeCategory = 2131165276;
 			
-			// aapt resource value: 0x7f07009c
-			public const int design_menu_item_action_area_stub = 2131165340;
+			// aapt resource value: 0x7f07008b
+			public const int decor_content_parent = 2131165323;
 			
-			// aapt resource value: 0x7f07009b
-			public const int design_menu_item_text = 2131165339;
+			// aapt resource value: 0x7f070072
+			public const int default_activity_button = 2131165298;
 			
-			// aapt resource value: 0x7f07009a
-			public const int design_navigation_view = 2131165338;
+			// aapt resource value: 0x7f0700b4
+			public const int design_bottom_sheet = 2131165364;
+			
+			// aapt resource value: 0x7f0700bb
+			public const int design_menu_item_action_area = 2131165371;
+			
+			// aapt resource value: 0x7f0700ba
+			public const int design_menu_item_action_area_stub = 2131165370;
+			
+			// aapt resource value: 0x7f0700b9
+			public const int design_menu_item_text = 2131165369;
+			
+			// aapt resource value: 0x7f0700b8
+			public const int design_navigation_view = 2131165368;
 			
 			// aapt resource value: 0x7f070020
 			public const int disableHome = 2131165216;
 			
-			// aapt resource value: 0x7f0700a2
-			public const int editText1 = 2131165346;
+			// aapt resource value: 0x7f0700c0
+			public const int editText1 = 2131165376;
 			
-			// aapt resource value: 0x7f0700a4
-			public const int editText2 = 2131165348;
+			// aapt resource value: 0x7f0700c2
+			public const int editText2 = 2131165378;
 			
-			// aapt resource value: 0x7f0700a6
-			public const int editText3 = 2131165350;
+			// aapt resource value: 0x7f0700c4
+			public const int editText3 = 2131165380;
 			
-			// aapt resource value: 0x7f0700a8
-			public const int editText4 = 2131165352;
+			// aapt resource value: 0x7f0700c6
+			public const int editText4 = 2131165382;
 			
-			// aapt resource value: 0x7f07007e
-			public const int edit_query = 2131165310;
+			// aapt resource value: 0x7f07008f
+			public const int edit_query = 2131165327;
 			
 			// aapt resource value: 0x7f070030
 			public const int end = 2131165232;
 			
-			// aapt resource value: 0x7f0700be
-			public const int end_padder = 2131165374;
+			// aapt resource value: 0x7f0700dc
+			public const int end_padder = 2131165404;
 			
 			// aapt resource value: 0x7f07003f
 			public const int enterAlways = 2131165247;
@@ -2616,11 +3292,11 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070041
 			public const int exitUntilCollapsed = 2131165249;
 			
-			// aapt resource value: 0x7f07005e
-			public const int expand_activities_button = 2131165278;
+			// aapt resource value: 0x7f070070
+			public const int expand_activities_button = 2131165296;
 			
-			// aapt resource value: 0x7f070072
-			public const int expanded_menu = 2131165298;
+			// aapt resource value: 0x7f070083
+			public const int expanded_menu = 2131165315;
 			
 			// aapt resource value: 0x7f070050
 			public const int fill = 2131165264;
@@ -2634,11 +3310,23 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070054
 			public const int @fixed = 2131165268;
 			
+			// aapt resource value: 0x7f070061
+			public const int floating = 2131165281;
+			
 			// aapt resource value: 0x7f070058
 			public const int forever = 2131165272;
 			
 			// aapt resource value: 0x7f07000a
 			public const int ghost_view = 2131165194;
+			
+			// aapt resource value: 0x7f07005f
+			public const int gone = 2131165279;
+			
+			// aapt resource value: 0x7f07009e
+			public const int gridLineLayout = 2131165342;
+			
+			// aapt resource value: 0x7f0700ec
+			public const int gridLinesLayout = 2131165420;
 			
 			// aapt resource value: 0x7f070005
 			public const int home = 2131165189;
@@ -2647,19 +3335,28 @@ namespace Pizza_Calculator
 			public const int homeAsUp = 2131165217;
 			
 			// aapt resource value: 0x7f070062
-			public const int icon = 2131165282;
+			public const int horizontal = 2131165282;
 			
-			// aapt resource value: 0x7f0700bd
-			public const int icon_group = 2131165373;
+			// aapt resource value: 0x7f070074
+			public const int icon = 2131165300;
+			
+			// aapt resource value: 0x7f0700ac
+			public const int iconView = 2131165356;
+			
+			// aapt resource value: 0x7f0700db
+			public const int icon_group = 2131165403;
 			
 			// aapt resource value: 0x7f07003a
 			public const int ifRoom = 2131165242;
 			
-			// aapt resource value: 0x7f07005f
-			public const int image = 2131165279;
+			// aapt resource value: 0x7f070071
+			public const int image = 2131165297;
 			
-			// aapt resource value: 0x7f0700b9
-			public const int info = 2131165369;
+			// aapt resource value: 0x7f0700d7
+			public const int info = 2131165399;
+			
+			// aapt resource value: 0x7f07006a
+			public const int inside = 2131165290;
 			
 			// aapt resource value: 0x7f070059
 			public const int italic = 2131165273;
@@ -2667,11 +3364,29 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
 			
-			// aapt resource value: 0x7f070092
-			public const int largeLabel = 2131165330;
+			// aapt resource value: 0x7f0700ad
+			public const int label = 2131165357;
+			
+			// aapt resource value: 0x7f0700b0
+			public const int largeLabel = 2131165360;
 			
 			// aapt resource value: 0x7f070049
 			public const int left = 2131165257;
+			
+			// aapt resource value: 0x7f0700a8
+			public const int legendHeader = 2131165352;
+			
+			// aapt resource value: 0x7f0700ab
+			public const int legendItemsLayout = 2131165355;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int legendLayout = 2131165348;
+			
+			// aapt resource value: 0x7f0700aa
+			public const int legendScrollView = 2131165354;
+			
+			// aapt resource value: 0x7f0700a7
+			public const int legendViewGroup = 2131165351;
 			
 			// aapt resource value: 0x7f070017
 			public const int line1 = 2131165207;
@@ -2682,17 +3397,23 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f07001d
 			public const int listMode = 2131165213;
 			
-			// aapt resource value: 0x7f070061
-			public const int list_item = 2131165281;
+			// aapt resource value: 0x7f070073
+			public const int list_item = 2131165299;
 			
-			// aapt resource value: 0x7f0700cd
-			public const int masked = 2131165389;
+			// aapt resource value: 0x7f07005d
+			public const int logarithmic = 2131165277;
 			
-			// aapt resource value: 0x7f0700b2
-			public const int media_actions = 2131165362;
+			// aapt resource value: 0x7f0700ef
+			public const int masked = 2131165423;
 			
-			// aapt resource value: 0x7f0700cb
-			public const int message = 2131165387;
+			// aapt resource value: 0x7f0700d0
+			public const int media_actions = 2131165392;
+			
+			// aapt resource value: 0x7f0700ee
+			public const int message = 2131165422;
+			
+			// aapt resource value: 0x7f070065
+			public const int metro = 2131165285;
 			
 			// aapt resource value: 0x7f070031
 			public const int middle = 2131165233;
@@ -2703,8 +3424,11 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070028
 			public const int multiply = 2131165224;
 			
-			// aapt resource value: 0x7f070099
-			public const int navigation_header_container = 2131165337;
+			// aapt resource value: 0x7f070066
+			public const int natural = 2131165286;
+			
+			// aapt resource value: 0x7f0700b7
+			public const int navigation_header_container = 2131165367;
 			
 			// aapt resource value: 0x7f07003b
 			public const int never = 2131165243;
@@ -2715,20 +3439,29 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f07001e
 			public const int normal = 2131165214;
 			
-			// aapt resource value: 0x7f0700bb
-			public const int notification_background = 2131165371;
+			// aapt resource value: 0x7f0700d9
+			public const int notification_background = 2131165401;
 			
-			// aapt resource value: 0x7f0700b5
-			public const int notification_main_column = 2131165365;
+			// aapt resource value: 0x7f0700d3
+			public const int notification_main_column = 2131165395;
 			
-			// aapt resource value: 0x7f0700b4
-			public const int notification_main_column_container = 2131165364;
+			// aapt resource value: 0x7f0700d2
+			public const int notification_main_column_container = 2131165394;
+			
+			// aapt resource value: 0x7f07005e
+			public const int numerical = 2131165278;
+			
+			// aapt resource value: 0x7f070069
+			public const int onDemand = 2131165289;
+			
+			// aapt resource value: 0x7f07006b
+			public const int outside = 2131165291;
 			
 			// aapt resource value: 0x7f07004c
 			public const int parallax = 2131165260;
 			
-			// aapt resource value: 0x7f070065
-			public const int parentPanel = 2131165285;
+			// aapt resource value: 0x7f070077
+			public const int parentPanel = 2131165303;
 			
 			// aapt resource value: 0x7f07000b
 			public const int parent_matrix = 2131165195;
@@ -2736,35 +3469,38 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f07004d
 			public const int pin = 2131165261;
 			
-			// aapt resource value: 0x7f0700c7
-			public const int pizza_diameter_text = 2131165383;
+			// aapt resource value: 0x7f070067
+			public const int pineapple = 2131165287;
 			
-			// aapt resource value: 0x7f0700c8
-			public const int pizza_diameter_value = 2131165384;
+			// aapt resource value: 0x7f0700e5
+			public const int pizza_diameter_text = 2131165413;
 			
-			// aapt resource value: 0x7f0700c1
-			public const int pizza_number_text = 2131165377;
+			// aapt resource value: 0x7f0700e6
+			public const int pizza_diameter_value = 2131165414;
 			
-			// aapt resource value: 0x7f0700c3
-			public const int pizza_number_value = 2131165379;
+			// aapt resource value: 0x7f0700df
+			public const int pizza_number_text = 2131165407;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int pizza_price_text = 2131165378;
+			// aapt resource value: 0x7f0700e1
+			public const int pizza_number_value = 2131165409;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int pizza_price_value = 2131165382;
+			// aapt resource value: 0x7f0700e0
+			public const int pizza_price_text = 2131165408;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int pizza_quantity_text = 2131165380;
+			// aapt resource value: 0x7f0700e4
+			public const int pizza_price_value = 2131165412;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int pizza_quantity_value = 2131165381;
+			// aapt resource value: 0x7f0700e2
+			public const int pizza_quantity_text = 2131165410;
 			
-			// aapt resource value: 0x7f0700c9
-			public const int pizza_weight_text = 2131165385;
+			// aapt resource value: 0x7f0700e3
+			public const int pizza_quantity_value = 2131165411;
 			
-			// aapt resource value: 0x7f0700ca
-			public const int pizza_weight_value = 2131165386;
+			// aapt resource value: 0x7f0700e7
+			public const int pizza_weight_text = 2131165415;
+			
+			// aapt resource value: 0x7f0700e8
+			public const int pizza_weight_value = 2131165416;
 			
 			// aapt resource value: 0x7f070006
 			public const int progress_circular = 2131165190;
@@ -2772,23 +3508,26 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070007
 			public const int progress_horizontal = 2131165191;
 			
-			// aapt resource value: 0x7f070075
-			public const int radio = 2131165301;
+			// aapt resource value: 0x7f070086
+			public const int radio = 2131165318;
 			
-			// aapt resource value: 0x7f0700ab
-			public const int recyclerview = 2131165355;
+			// aapt resource value: 0x7f0700c9
+			public const int recyclerview = 2131165385;
 			
-			// aapt resource value: 0x7f07009f
-			public const int relativeLayout1 = 2131165343;
+			// aapt resource value: 0x7f0700bd
+			public const int relativeLayout1 = 2131165373;
 			
 			// aapt resource value: 0x7f07004a
 			public const int right = 2131165258;
 			
-			// aapt resource value: 0x7f0700ba
-			public const int right_icon = 2131165370;
+			// aapt resource value: 0x7f0700d8
+			public const int right_icon = 2131165400;
 			
-			// aapt resource value: 0x7f0700b6
-			public const int right_side = 2131165366;
+			// aapt resource value: 0x7f0700d4
+			public const int right_side = 2131165396;
+			
+			// aapt resource value: 0x7f07009c
+			public const int rootLayout = 2131165340;
 			
 			// aapt resource value: 0x7f07000c
 			public const int save_image_matrix = 2131165196;
@@ -2805,53 +3544,59 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070042
 			public const int scroll = 2131165250;
 			
-			// aapt resource value: 0x7f07006b
-			public const int scrollIndicatorDown = 2131165291;
+			// aapt resource value: 0x7f07007d
+			public const int scrollIndicatorDown = 2131165309;
 			
-			// aapt resource value: 0x7f070067
-			public const int scrollIndicatorUp = 2131165287;
+			// aapt resource value: 0x7f070079
+			public const int scrollIndicatorUp = 2131165305;
 			
-			// aapt resource value: 0x7f070068
-			public const int scrollView = 2131165288;
+			// aapt resource value: 0x7f07007a
+			public const int scrollView = 2131165306;
 			
 			// aapt resource value: 0x7f070055
 			public const int scrollable = 2131165269;
 			
-			// aapt resource value: 0x7f070080
-			public const int search_badge = 2131165312;
+			// aapt resource value: 0x7f070091
+			public const int search_badge = 2131165329;
 			
-			// aapt resource value: 0x7f07007f
-			public const int search_bar = 2131165311;
+			// aapt resource value: 0x7f070090
+			public const int search_bar = 2131165328;
 			
-			// aapt resource value: 0x7f070081
-			public const int search_button = 2131165313;
+			// aapt resource value: 0x7f070092
+			public const int search_button = 2131165330;
 			
-			// aapt resource value: 0x7f070086
-			public const int search_close_btn = 2131165318;
+			// aapt resource value: 0x7f070097
+			public const int search_close_btn = 2131165335;
 			
-			// aapt resource value: 0x7f070082
-			public const int search_edit_frame = 2131165314;
+			// aapt resource value: 0x7f070093
+			public const int search_edit_frame = 2131165331;
 			
-			// aapt resource value: 0x7f070088
-			public const int search_go_btn = 2131165320;
+			// aapt resource value: 0x7f070099
+			public const int search_go_btn = 2131165337;
 			
-			// aapt resource value: 0x7f070083
-			public const int search_mag_icon = 2131165315;
+			// aapt resource value: 0x7f070094
+			public const int search_mag_icon = 2131165332;
 			
-			// aapt resource value: 0x7f070084
-			public const int search_plate = 2131165316;
+			// aapt resource value: 0x7f070095
+			public const int search_plate = 2131165333;
+			
+			// aapt resource value: 0x7f070096
+			public const int search_src_text = 2131165334;
+			
+			// aapt resource value: 0x7f07009a
+			public const int search_voice_btn = 2131165338;
+			
+			// aapt resource value: 0x7f07009b
+			public const int select_dialog_listview = 2131165339;
+			
+			// aapt resource value: 0x7f0700a0
+			public const int seriesLayout = 2131165344;
+			
+			// aapt resource value: 0x7f0700ae
+			public const int sfChart1 = 2131165358;
 			
 			// aapt resource value: 0x7f070085
-			public const int search_src_text = 2131165317;
-			
-			// aapt resource value: 0x7f070089
-			public const int search_voice_btn = 2131165321;
-			
-			// aapt resource value: 0x7f07008a
-			public const int select_dialog_listview = 2131165322;
-			
-			// aapt resource value: 0x7f070074
-			public const int shortcut = 2131165300;
+			public const int shortcut = 2131165317;
 			
 			// aapt resource value: 0x7f070023
 			public const int showCustom = 2131165219;
@@ -2862,20 +3607,20 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070025
 			public const int showTitle = 2131165221;
 			
-			// aapt resource value: 0x7f070091
-			public const int smallLabel = 2131165329;
+			// aapt resource value: 0x7f0700af
+			public const int smallLabel = 2131165359;
 			
-			// aapt resource value: 0x7f070098
-			public const int snackbar_action = 2131165336;
+			// aapt resource value: 0x7f0700b6
+			public const int snackbar_action = 2131165366;
 			
-			// aapt resource value: 0x7f070097
-			public const int snackbar_text = 2131165335;
+			// aapt resource value: 0x7f0700b5
+			public const int snackbar_text = 2131165365;
 			
 			// aapt resource value: 0x7f070043
 			public const int snap = 2131165251;
 			
-			// aapt resource value: 0x7f070064
-			public const int spacer = 2131165284;
+			// aapt resource value: 0x7f070076
+			public const int spacer = 2131165302;
 			
 			// aapt resource value: 0x7f070008
 			public const int split_action_bar = 2131165192;
@@ -2892,14 +3637,17 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f07004b
 			public const int start = 2131165259;
 			
-			// aapt resource value: 0x7f0700b1
-			public const int status_bar_latest_event_content = 2131165361;
+			// aapt resource value: 0x7f0700cf
+			public const int status_bar_latest_event_content = 2131165391;
 			
-			// aapt resource value: 0x7f070076
-			public const int submenuarrow = 2131165302;
+			// aapt resource value: 0x7f07009f
+			public const int stripLinesLayout = 2131165343;
 			
 			// aapt resource value: 0x7f070087
-			public const int submit_area = 2131165319;
+			public const int submenuarrow = 2131165319;
+			
+			// aapt resource value: 0x7f070098
+			public const int submit_area = 2131165336;
 			
 			// aapt resource value: 0x7f07001f
 			public const int tabMode = 2131165215;
@@ -2907,32 +3655,35 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070019
 			public const int tag_transition_group = 2131165209;
 			
+			// aapt resource value: 0x7f0700a2
+			public const int technicalIndicatorLayout = 2131165346;
+			
 			// aapt resource value: 0x7f07001a
 			public const int text = 2131165210;
 			
 			// aapt resource value: 0x7f07001b
 			public const int text2 = 2131165211;
 			
-			// aapt resource value: 0x7f07006a
-			public const int textSpacerNoButtons = 2131165290;
+			// aapt resource value: 0x7f07007c
+			public const int textSpacerNoButtons = 2131165308;
 			
-			// aapt resource value: 0x7f070069
-			public const int textSpacerNoTitle = 2131165289;
+			// aapt resource value: 0x7f07007b
+			public const int textSpacerNoTitle = 2131165307;
 			
-			// aapt resource value: 0x7f0700a1
-			public const int textView1 = 2131165345;
+			// aapt resource value: 0x7f0700bf
+			public const int textView1 = 2131165375;
 			
-			// aapt resource value: 0x7f0700a3
-			public const int textView2 = 2131165347;
+			// aapt resource value: 0x7f0700c1
+			public const int textView2 = 2131165377;
 			
-			// aapt resource value: 0x7f0700a5
-			public const int textView3 = 2131165349;
+			// aapt resource value: 0x7f0700c3
+			public const int textView3 = 2131165379;
 			
-			// aapt resource value: 0x7f0700a7
-			public const int textView4 = 2131165351;
+			// aapt resource value: 0x7f0700c5
+			public const int textView4 = 2131165381;
 			
-			// aapt resource value: 0x7f07009e
-			public const int text_input_password_toggle = 2131165342;
+			// aapt resource value: 0x7f0700bc
+			public const int text_input_password_toggle = 2131165372;
 			
 			// aapt resource value: 0x7f070014
 			public const int textinput_counter = 2131165204;
@@ -2940,26 +3691,38 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070015
 			public const int textinput_error = 2131165205;
 			
-			// aapt resource value: 0x7f0700b7
-			public const int time = 2131165367;
+			// aapt resource value: 0x7f0700ed
+			public const int thumbLayout = 2131165421;
+			
+			// aapt resource value: 0x7f0700d5
+			public const int time = 2131165397;
 			
 			// aapt resource value: 0x7f07001c
 			public const int title = 2131165212;
 			
-			// aapt resource value: 0x7f070071
-			public const int titleDividerNoCustom = 2131165297;
+			// aapt resource value: 0x7f070082
+			public const int titleDividerNoCustom = 2131165314;
 			
-			// aapt resource value: 0x7f07006f
-			public const int title_template = 2131165295;
+			// aapt resource value: 0x7f07009d
+			public const int titleLayout = 2131165341;
+			
+			// aapt resource value: 0x7f070080
+			public const int title_template = 2131165312;
+			
+			// aapt resource value: 0x7f070068
+			public const int tomatoSpectrum = 2131165288;
 			
 			// aapt resource value: 0x7f07003e
 			public const int top = 2131165246;
 			
-			// aapt resource value: 0x7f07006e
-			public const int topPanel = 2131165294;
+			// aapt resource value: 0x7f07007f
+			public const int topPanel = 2131165311;
 			
-			// aapt resource value: 0x7f070095
-			public const int touch_outside = 2131165333;
+			// aapt resource value: 0x7f0700e9
+			public const int top_labels = 2131165417;
+			
+			// aapt resource value: 0x7f0700b3
+			public const int touch_outside = 2131165363;
 			
 			// aapt resource value: 0x7f07000f
 			public const int transition_current_scene = 2131165199;
@@ -2985,11 +3748,14 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f070026
 			public const int useLogo = 2131165222;
 			
+			// aapt resource value: 0x7f070063
+			public const int vertical = 2131165283;
+			
 			// aapt resource value: 0x7f070016
 			public const int view_offset_helper = 2131165206;
 			
-			// aapt resource value: 0x7f0700cc
-			public const int visible = 2131165388;
+			// aapt resource value: 0x7f070060
+			public const int visible = 2131165280;
 			
 			// aapt resource value: 0x7f07003c
 			public const int withText = 2131165244;
@@ -3132,115 +3898,127 @@ namespace Pizza_Calculator
 			public const int abc_select_dialog_material = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int Compare = 2130903066;
+			public const int chart_layout = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int design_bottom_navigation_item = 2130903067;
+			public const int chart_legend = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int design_bottom_sheet_dialog = 2130903068;
+			public const int chart_legend_item = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int design_layout_snackbar = 2130903069;
+			public const int Compare = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int design_layout_snackbar_include = 2130903070;
+			public const int design_bottom_navigation_item = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int design_layout_tab_icon = 2130903071;
+			public const int design_bottom_sheet_dialog = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int design_layout_tab_text = 2130903072;
+			public const int design_layout_snackbar = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int design_menu_item_action_area = 2130903073;
+			public const int design_layout_snackbar_include = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int design_navigation_item = 2130903074;
+			public const int design_layout_tab_icon = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int design_navigation_item_header = 2130903075;
+			public const int design_layout_tab_text = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int design_navigation_item_separator = 2130903076;
+			public const int design_menu_item_action_area = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int design_navigation_item_subheader = 2130903077;
+			public const int design_navigation_item = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int design_navigation_menu = 2130903078;
+			public const int design_navigation_item_header = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int design_navigation_menu_item = 2130903079;
+			public const int design_navigation_item_separator = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int design_text_input_password_icon = 2130903080;
+			public const int design_navigation_item_subheader = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int Main = 2130903081;
+			public const int design_navigation_menu = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_action = 2130903082;
+			public const int design_navigation_menu_item = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_action_tombstone = 2130903083;
+			public const int design_text_input_password_icon = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int notification_media_action = 2130903084;
+			public const int Main = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int notification_media_cancel_action = 2130903085;
+			public const int notification_action = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int notification_template_big_media = 2130903086;
+			public const int notification_action_tombstone = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int notification_template_big_media_custom = 2130903087;
+			public const int notification_media_action = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int notification_template_big_media_narrow = 2130903088;
+			public const int notification_media_cancel_action = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int notification_template_big_media_narrow_custom = 2130903089;
+			public const int notification_template_big_media = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int notification_template_custom_big = 2130903090;
+			public const int notification_template_big_media_custom = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_template_icon_group = 2130903091;
+			public const int notification_template_big_media_narrow = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_template_lines_media = 2130903092;
+			public const int notification_template_big_media_narrow_custom = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_template_media = 2130903093;
+			public const int notification_template_custom_big = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_template_media_custom = 2130903094;
+			public const int notification_template_icon_group = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_part_chronometer = 2130903095;
+			public const int notification_template_lines_media = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int notification_template_part_time = 2130903096;
+			public const int notification_template_media = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int PizzaListLayout = 2130903097;
+			public const int notification_template_media_custom = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int select_dialog_item_material = 2130903098;
+			public const int notification_template_part_chronometer = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int select_dialog_multichoice_material = 2130903099;
+			public const int notification_template_part_time = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int select_dialog_singlechoice_material = 2130903100;
+			public const int PizzaListLayout = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int support_simple_spinner_dropdown_item = 2130903101;
+			public const int range_navigator_layout = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int tooltip = 2130903102;
+			public const int select_dialog_item_material = 2130903102;
+			
+			// aapt resource value: 0x7f03003f
+			public const int select_dialog_multichoice_material = 2130903103;
+			
+			// aapt resource value: 0x7f030040
+			public const int select_dialog_singlechoice_material = 2130903104;
+			
+			// aapt resource value: 0x7f030041
+			public const int support_simple_spinner_dropdown_item = 2130903105;
+			
+			// aapt resource value: 0x7f030042
+			public const int tooltip = 2130903106;
 			
 			static Layout()
 			{
@@ -3342,8 +4120,8 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0a0010
 			public const int abc_toolbar_collapse_description = 2131361808;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int app_name = 2131361832;
+			// aapt resource value: 0x7f0a0030
+			public const int app_name = 2131361840;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int appbar_scrolling_view_behavior = 2131361822;
@@ -3353,9 +4131,6 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f0a0020
 			public const int character_counter_pattern = 2131361824;
-			
-			// aapt resource value: 0x7f0a0027
-			public const int library_name = 2131361831;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int password_toggle_content_description = 2131361825;
@@ -3372,23 +4147,50 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0a0025
 			public const int path_password_strike_through = 2131361829;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int quantity = 2131361835;
+			// aapt resource value: 0x7f0a0028
+			public const int q = 2131361832;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int quantityPcs = 2131361836;
+			// aapt resource value: 0x7f0a0033
+			public const int quantity = 2131361843;
+			
+			// aapt resource value: 0x7f0a0034
+			public const int quantityPcs = 2131361844;
+			
+			// aapt resource value: 0x7f0a0027
+			public const int quarter = 2131361831;
 			
 			// aapt resource value: 0x7f0a0011
 			public const int search_menu_title = 2131361809;
+			
+			// aapt resource value: 0x7f0a002e
+			public const int sfchart_close_label = 2131361838;
+			
+			// aapt resource value: 0x7f0a002b
+			public const int sfchart_high_label = 2131361835;
+			
+			// aapt resource value: 0x7f0a002c
+			public const int sfchart_low_label = 2131361836;
+			
+			// aapt resource value: 0x7f0a002d
+			public const int sfchart_open_label = 2131361837;
+			
+			// aapt resource value: 0x7f0a002f
+			public const int sfchart_others_label = 2131361839;
 			
 			// aapt resource value: 0x7f0a0026
 			public const int status_bar_notification_info_overflow = 2131361830;
 			
 			// aapt resource value: 0x7f0a002a
-			public const int yES = 2131361834;
+			public const int w = 2131361834;
 			
 			// aapt resource value: 0x7f0a0029
-			public const int youEatPizzaEdge = 2131361833;
+			public const int week = 2131361833;
+			
+			// aapt resource value: 0x7f0a0032
+			public const int yES = 2131361842;
+			
+			// aapt resource value: 0x7f0a0031
+			public const int youEatPizzaEdge = 2131361841;
 			
 			static String()
 			{
@@ -6215,6 +7017,478 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 12
 			public const int SearchView_voiceIcon = 12;
+			
+			public static int[] SfChart = new int[] {
+					2130772325,
+					2130772326,
+					2130772327,
+					2130772328,
+					2130772329,
+					2130772330,
+					2130772331,
+					2130772332,
+					2130772333,
+					2130772334,
+					2130772335,
+					2130772336,
+					2130772337,
+					2130772338,
+					2130772339,
+					2130772340,
+					2130772341,
+					2130772342,
+					2130772343,
+					2130772344,
+					2130772345,
+					2130772346,
+					2130772347,
+					2130772348,
+					2130772349,
+					2130772350,
+					2130772351,
+					2130772352,
+					2130772353,
+					2130772354,
+					2130772355,
+					2130772356,
+					2130772357,
+					2130772358,
+					2130772359,
+					2130772360,
+					2130772361,
+					2130772362,
+					2130772363};
+			
+			// aapt resource value: 36
+			public const int SfChart_colorPalette = 36;
+			
+			// aapt resource value: 38
+			public const int SfChart_enableTrackball = 38;
+			
+			// aapt resource value: 37
+			public const int SfChart_enableZooming = 37;
+			
+			// aapt resource value: 26
+			public const int SfChart_legendDockPosition = 26;
+			
+			// aapt resource value: 20
+			public const int SfChart_legendIconHeight = 20;
+			
+			// aapt resource value: 21
+			public const int SfChart_legendIconWidth = 21;
+			
+			// aapt resource value: 22
+			public const int SfChart_legendItemMarginBottom = 22;
+			
+			// aapt resource value: 23
+			public const int SfChart_legendItemMarginLeft = 23;
+			
+			// aapt resource value: 24
+			public const int SfChart_legendItemMarginRight = 24;
+			
+			// aapt resource value: 25
+			public const int SfChart_legendItemMarginTop = 25;
+			
+			// aapt resource value: 27
+			public const int SfChart_legendOrientation = 27;
+			
+			// aapt resource value: 19
+			public const int SfChart_legendTitleText = 19;
+			
+			// aapt resource value: 18
+			public const int SfChart_legendVisibility = 18;
+			
+			// aapt resource value: 31
+			public const int SfChart_titleBackgroundColor = 31;
+			
+			// aapt resource value: 29
+			public const int SfChart_titleColor = 29;
+			
+			// aapt resource value: 35
+			public const int SfChart_titlePaddingBottom = 35;
+			
+			// aapt resource value: 32
+			public const int SfChart_titlePaddingLeft = 32;
+			
+			// aapt resource value: 33
+			public const int SfChart_titlePaddingRight = 33;
+			
+			// aapt resource value: 34
+			public const int SfChart_titlePaddingTop = 34;
+			
+			// aapt resource value: 30
+			public const int SfChart_titleSize = 30;
+			
+			// aapt resource value: 28
+			public const int SfChart_titleText = 28;
+			
+			// aapt resource value: 0
+			public const int SfChart_xAxis = 0;
+			
+			// aapt resource value: 12
+			public const int SfChart_xAxisLineColor = 12;
+			
+			// aapt resource value: 13
+			public const int SfChart_xAxisLineWidth = 13;
+			
+			// aapt resource value: 10
+			public const int SfChart_xAxisMajorGridLineColor = 10;
+			
+			// aapt resource value: 11
+			public const int SfChart_xAxisMajorGridLineWidth = 11;
+			
+			// aapt resource value: 5
+			public const int SfChart_xAxisTitleBackgroundColor = 5;
+			
+			// aapt resource value: 4
+			public const int SfChart_xAxisTitleSize = 4;
+			
+			// aapt resource value: 2
+			public const int SfChart_xAxisTitleText = 2;
+			
+			// aapt resource value: 3
+			public const int SfChart_xAxisTitleTextColor = 3;
+			
+			// aapt resource value: 1
+			public const int SfChart_yAxis = 1;
+			
+			// aapt resource value: 16
+			public const int SfChart_yAxisLineColor = 16;
+			
+			// aapt resource value: 17
+			public const int SfChart_yAxisLineWidth = 17;
+			
+			// aapt resource value: 14
+			public const int SfChart_yAxisMajorGridLineColor = 14;
+			
+			// aapt resource value: 15
+			public const int SfChart_yAxisMajorGridLineWidth = 15;
+			
+			// aapt resource value: 9
+			public const int SfChart_yAxisTitleBackgroundColor = 9;
+			
+			// aapt resource value: 8
+			public const int SfChart_yAxisTitleSize = 8;
+			
+			// aapt resource value: 6
+			public const int SfChart_yAxisTitleText = 6;
+			
+			// aapt resource value: 7
+			public const int SfChart_yAxisTitleTextColor = 7;
+			
+			public static int[] SfDateTimeRangeNavigator = new int[] {
+					2130772364,
+					2130772365,
+					2130772366,
+					2130772367,
+					2130772368,
+					2130772369,
+					2130772370,
+					2130772371,
+					2130772372,
+					2130772373,
+					2130772374,
+					2130772375,
+					2130772376,
+					2130772377,
+					2130772378,
+					2130772379,
+					2130772380,
+					2130772381,
+					2130772382,
+					2130772383,
+					2130772384,
+					2130772385,
+					2130772386,
+					2130772387,
+					2130772388,
+					2130772389,
+					2130772390,
+					2130772391,
+					2130772392,
+					2130772393,
+					2130772394,
+					2130772395,
+					2130772396,
+					2130772397,
+					2130772398,
+					2130772399,
+					2130772400,
+					2130772401,
+					2130772402,
+					2130772403,
+					2130772404,
+					2130772405,
+					2130772406,
+					2130772407,
+					2130772408,
+					2130772409,
+					2130772410,
+					2130772411,
+					2130772412,
+					2130772413,
+					2130772414,
+					2130772415,
+					2130772416,
+					2130772417,
+					2130772418,
+					2130772419,
+					2130772420,
+					2130772421,
+					2130772422,
+					2130772423,
+					2130772424,
+					2130772425,
+					2130772426,
+					2130772427,
+					2130772428,
+					2130772429,
+					2130772430,
+					2130772431,
+					2130772432,
+					2130772433,
+					2130772434,
+					2130772435,
+					2130772436,
+					2130772437,
+					2130772438,
+					2130772439,
+					2130772440,
+					2130772441};
+			
+			// aapt resource value: 9
+			public const int SfDateTimeRangeNavigator_deferredUpdateDelay = 9;
+			
+			// aapt resource value: 8
+			public const int SfDateTimeRangeNavigator_deferredUpdateEnabled = 8;
+			
+			// aapt resource value: 5
+			public const int SfDateTimeRangeNavigator_enableTooltip = 5;
+			
+			// aapt resource value: 12
+			public const int SfDateTimeRangeNavigator_leftThumbBackground = 12;
+			
+			// aapt resource value: 14
+			public const int SfDateTimeRangeNavigator_leftThumbHeight = 14;
+			
+			// aapt resource value: 15
+			public const int SfDateTimeRangeNavigator_leftThumbLineColor = 15;
+			
+			// aapt resource value: 16
+			public const int SfDateTimeRangeNavigator_leftThumbLineWidth = 16;
+			
+			// aapt resource value: 10
+			public const int SfDateTimeRangeNavigator_leftThumbStroke = 10;
+			
+			// aapt resource value: 11
+			public const int SfDateTimeRangeNavigator_leftThumbStrokeWidth = 11;
+			
+			// aapt resource value: 13
+			public const int SfDateTimeRangeNavigator_leftThumbWidth = 13;
+			
+			// aapt resource value: 69
+			public const int SfDateTimeRangeNavigator_leftTooltipBackgroundColor = 69;
+			
+			// aapt resource value: 66
+			public const int SfDateTimeRangeNavigator_leftTooltipMargin = 66;
+			
+			// aapt resource value: 70
+			public const int SfDateTimeRangeNavigator_leftTooltipStrokeColor = 70;
+			
+			// aapt resource value: 71
+			public const int SfDateTimeRangeNavigator_leftTooltipStrokeWidth = 71;
+			
+			// aapt resource value: 68
+			public const int SfDateTimeRangeNavigator_leftTooltipTextColor = 68;
+			
+			// aapt resource value: 67
+			public const int SfDateTimeRangeNavigator_leftTooltipTextSize = 67;
+			
+			// aapt resource value: 41
+			public const int SfDateTimeRangeNavigator_majorScaleGridLineColor = 41;
+			
+			// aapt resource value: 42
+			public const int SfDateTimeRangeNavigator_majorScaleGridLineWidth = 42;
+			
+			// aapt resource value: 27
+			public const int SfDateTimeRangeNavigator_majorScaleLabelAlignment = 27;
+			
+			// aapt resource value: 31
+			public const int SfDateTimeRangeNavigator_majorScaleLabelBackground = 31;
+			
+			// aapt resource value: 26
+			public const int SfDateTimeRangeNavigator_majorScaleLabelFormat = 26;
+			
+			// aapt resource value: 28
+			public const int SfDateTimeRangeNavigator_majorScaleLabelMargin = 28;
+			
+			// aapt resource value: 32
+			public const int SfDateTimeRangeNavigator_majorScaleLabelStroke = 32;
+			
+			// aapt resource value: 33
+			public const int SfDateTimeRangeNavigator_majorScaleLabelStrokeWidth = 33;
+			
+			// aapt resource value: 30
+			public const int SfDateTimeRangeNavigator_majorScaleLabelTextColor = 30;
+			
+			// aapt resource value: 29
+			public const int SfDateTimeRangeNavigator_majorScaleLabelTextSize = 29;
+			
+			// aapt resource value: 25
+			public const int SfDateTimeRangeNavigator_majorScalePosition = 25;
+			
+			// aapt resource value: 37
+			public const int SfDateTimeRangeNavigator_majorScaleSelectedLabelBackground = 37;
+			
+			// aapt resource value: 34
+			public const int SfDateTimeRangeNavigator_majorScaleSelectedLabelMargin = 34;
+			
+			// aapt resource value: 38
+			public const int SfDateTimeRangeNavigator_majorScaleSelectedLabelStroke = 38;
+			
+			// aapt resource value: 39
+			public const int SfDateTimeRangeNavigator_majorScaleSelectedLabelStrokeWidth = 39;
+			
+			// aapt resource value: 36
+			public const int SfDateTimeRangeNavigator_majorScaleSelectedLabelTextColor = 36;
+			
+			// aapt resource value: 35
+			public const int SfDateTimeRangeNavigator_majorScaleSelectedLabelTextSize = 35;
+			
+			// aapt resource value: 44
+			public const int SfDateTimeRangeNavigator_majorScaleTickColor = 44;
+			
+			// aapt resource value: 43
+			public const int SfDateTimeRangeNavigator_majorScaleTickWidth = 43;
+			
+			// aapt resource value: 24
+			public const int SfDateTimeRangeNavigator_majorScaleVisibility = 24;
+			
+			// aapt resource value: 0
+			public const int SfDateTimeRangeNavigator_maximumValue = 0;
+			
+			// aapt resource value: 1
+			public const int SfDateTimeRangeNavigator_minimumValue = 1;
+			
+			// aapt resource value: 62
+			public const int SfDateTimeRangeNavigator_minorScaleGridLineColor = 62;
+			
+			// aapt resource value: 63
+			public const int SfDateTimeRangeNavigator_minorScaleGridLineWidth = 63;
+			
+			// aapt resource value: 48
+			public const int SfDateTimeRangeNavigator_minorScaleLabelAlignment = 48;
+			
+			// aapt resource value: 52
+			public const int SfDateTimeRangeNavigator_minorScaleLabelBackground = 52;
+			
+			// aapt resource value: 47
+			public const int SfDateTimeRangeNavigator_minorScaleLabelFormat = 47;
+			
+			// aapt resource value: 49
+			public const int SfDateTimeRangeNavigator_minorScaleLabelMargin = 49;
+			
+			// aapt resource value: 53
+			public const int SfDateTimeRangeNavigator_minorScaleLabelStroke = 53;
+			
+			// aapt resource value: 54
+			public const int SfDateTimeRangeNavigator_minorScaleLabelStrokeWidth = 54;
+			
+			// aapt resource value: 51
+			public const int SfDateTimeRangeNavigator_minorScaleLabelTextColor = 51;
+			
+			// aapt resource value: 50
+			public const int SfDateTimeRangeNavigator_minorScaleLabelTextSize = 50;
+			
+			// aapt resource value: 46
+			public const int SfDateTimeRangeNavigator_minorScalePosition = 46;
+			
+			// aapt resource value: 58
+			public const int SfDateTimeRangeNavigator_minorScaleSelectedLabelBackground = 58;
+			
+			// aapt resource value: 55
+			public const int SfDateTimeRangeNavigator_minorScaleSelectedLabelMargin = 55;
+			
+			// aapt resource value: 59
+			public const int SfDateTimeRangeNavigator_minorScaleSelectedLabelStroke = 59;
+			
+			// aapt resource value: 60
+			public const int SfDateTimeRangeNavigator_minorScaleSelectedLabelStrokeWidth = 60;
+			
+			// aapt resource value: 57
+			public const int SfDateTimeRangeNavigator_minorScaleSelectedLabelTextColor = 57;
+			
+			// aapt resource value: 56
+			public const int SfDateTimeRangeNavigator_minorScaleSelectedLabelTextSize = 56;
+			
+			// aapt resource value: 65
+			public const int SfDateTimeRangeNavigator_minorScaleTickColor = 65;
+			
+			// aapt resource value: 64
+			public const int SfDateTimeRangeNavigator_minorScaleTickWidth = 64;
+			
+			// aapt resource value: 45
+			public const int SfDateTimeRangeNavigator_minorScaleVisibility = 45;
+			
+			// aapt resource value: 4
+			public const int SfDateTimeRangeNavigator_overlayColor = 4;
+			
+			// aapt resource value: 19
+			public const int SfDateTimeRangeNavigator_rightThumbBackground = 19;
+			
+			// aapt resource value: 21
+			public const int SfDateTimeRangeNavigator_rightThumbHeight = 21;
+			
+			// aapt resource value: 22
+			public const int SfDateTimeRangeNavigator_rightThumbLineColor = 22;
+			
+			// aapt resource value: 23
+			public const int SfDateTimeRangeNavigator_rightThumbLineWidth = 23;
+			
+			// aapt resource value: 17
+			public const int SfDateTimeRangeNavigator_rightThumbStroke = 17;
+			
+			// aapt resource value: 18
+			public const int SfDateTimeRangeNavigator_rightThumbStrokeWidth = 18;
+			
+			// aapt resource value: 20
+			public const int SfDateTimeRangeNavigator_rightThumbWidth = 20;
+			
+			// aapt resource value: 75
+			public const int SfDateTimeRangeNavigator_rightTooltipBackground = 75;
+			
+			// aapt resource value: 72
+			public const int SfDateTimeRangeNavigator_rightTooltipMargin = 72;
+			
+			// aapt resource value: 76
+			public const int SfDateTimeRangeNavigator_rightTooltipStroke = 76;
+			
+			// aapt resource value: 77
+			public const int SfDateTimeRangeNavigator_rightTooltipStrokeWidth = 77;
+			
+			// aapt resource value: 74
+			public const int SfDateTimeRangeNavigator_rightTooltipTextColor = 74;
+			
+			// aapt resource value: 73
+			public const int SfDateTimeRangeNavigator_rightTooltipTextSize = 73;
+			
+			// aapt resource value: 40
+			public const int SfDateTimeRangeNavigator_showMajorGridLines = 40;
+			
+			// aapt resource value: 61
+			public const int SfDateTimeRangeNavigator_showMinorGridLines = 61;
+			
+			// aapt resource value: 6
+			public const int SfDateTimeRangeNavigator_tooltipDisplayMode = 6;
+			
+			// aapt resource value: 7
+			public const int SfDateTimeRangeNavigator_tooltipFormat = 7;
+			
+			// aapt resource value: 3
+			public const int SfDateTimeRangeNavigator_viewRangeEnd = 3;
+			
+			// aapt resource value: 2
+			public const int SfDateTimeRangeNavigator_viewRangeStart = 2;
 			
 			public static int[] SnackbarLayout = new int[] {
 					16843039,

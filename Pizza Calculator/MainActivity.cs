@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Linq;
 using Android.Content;
 using Newtonsoft.Json;
+using Com.Syncfusion.Charts;
 
 
 namespace Pizza_Calculator
@@ -31,6 +32,8 @@ namespace Pizza_Calculator
 
         protected override void OnCreate(Bundle bundle)
         {
+
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Njc1MDVAMzEzNjJlMzQyZTMwa2VZM2hTaE1FNXlyOU0yeUVtVXZmNm5HMnhRQjdWTHNWSk51ZGMxL3p5Zz0="); //лицензия на графики
 
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);

@@ -57,16 +57,10 @@ namespace Pizza_Calculator
             picture = pic;
         }
         //считаем площадь пиццы, с учетом того едят ли борт пиццы или нет
-        public double GetArea(string edge)
+        public double GetArea()
         {
-            if (edge == "no" || edge == "нет") //sololearn не понимает ввод кирилицы
-            {
-                return (diameter <= 0) ? 0 : Math.Round(Quantity * ((Math.Pow(diameter - 3.5, 2) * Math.PI) / 4), 2);//если диаметр <=0, то сразу выводим 0, иначе считаем по формуле и округляем до 2 знаков после запятой. 
-            }
-            else
-            {
                 return (diameter <= 0) ? 0 : Math.Round(Quantity * ((Math.Pow(diameter, 2) * Math.PI) / 4), 2);
-            }
+
         }
         //считаем блину борта, для тех пицц где он бывает с сыром или мясом
         public double GetEdgeLength()
@@ -74,9 +68,9 @@ namespace Pizza_Calculator
             return (diameter <= 0) ? 0 : Math.Round(Quantity * (Math.PI * diameter), 2);//см выше про  GetArea
         }
         //считаем соотношение цены к площади, сколько $ надо заплатить за м²
-        public double PriceToArea(string edge)
+        public double PriceToArea()
         {
-            double x = GetArea(edge);
+            double x = GetArea();
             return (price <= 0) ? 0 : Math.Round((Quantity * price) / x * 10000, 2);//см выше про GetArea
         }
         //считаем соотношение цены к весу, сколько $ надо заплатить за 1 кг

@@ -1,12 +1,38 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/scroll" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content">
+	<RelativeLayout
+	xmlns:p1="http://schemas.android.com/apk/res/android"
+	p1:id="@+id/relativeLayout1"
+	p1:minWidth="150px"
+	p1:minHeight="150px"
+	p1:layout_height="fill_parent"
+	p1:layout_width="fill_parent">
+<LinearLayout
     android:orientation=    "vertical"
     android:layout_width=    "match_parent"
-    android:layout_height=    "match_parent">
-	<Com.Syncfusion.Charts.SfChart
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:layout_width="match_parent"
-		android:id="@+id/sfChart1"
-		android:layout_height="200dp">
-	</Com.Syncfusion.Charts.SfChart>
-</LinearLayout>
+    android:layout_height=    "230dp"
+	android:id="@+id/LayoutChartArea"/>
+
+<LinearLayout
+    android:orientation=    "vertical"
+    android:layout_width=    "match_parent"
+    android:layout_height=    "230dp"
+	android:id="@+id/LayoutChartEdgeLength"
+	android:layout_below="@+id/LayoutChartArea"/>
+<LinearLayout
+    android:orientation=    "vertical"
+    android:layout_width=    "match_parent"
+    android:layout_height=    "230dp"
+	android:id="@+id/LayoutChartPriceToArea"
+	android:layout_below="@+id/LayoutChartEdgeLength"/>
+<LinearLayout
+    android:orientation=    "vertical"
+    android:layout_width=    "match_parent"
+    android:layout_height=    "230dp"
+	android:id="@+id/LayoutChartPriceToWeight"
+	android:layout_below="@+id/LayoutChartPriceToArea"/>
+</RelativeLayout>
+</ScrollView> 

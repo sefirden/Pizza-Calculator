@@ -6,15 +6,6 @@
 	p1:minHeight="150px"
 	p1:layout_height="fill_parent"
 	p1:layout_width="fill_parent">
-    <CheckBox
-        p1:text="I eat a pizza edge."
-        p1:layout_width="200.0dp"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/checkBox1"
-        p1:layout_marginLeft="14.0dp"
-        p1:allowUndo="false"
-        p1:checked="true"
-        p1:layout_marginTop="14.0dp" />
 	<TextView
 		p1:text="Quantity, pcs"
 		p1:layout_width="115.0dp"
@@ -29,7 +20,6 @@
 		p1:layout_height="wrap_content"
 		p1:id="@+id/editText1"
 		p1:layout_toRightOf="@id/textView1"
-		p1:layout_below="@id/checkBox1"
 		p1:maxLength="6"
 		p1:focusable="true"
 		p1:focusableInTouchMode="true" />

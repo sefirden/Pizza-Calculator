@@ -17,7 +17,7 @@ namespace Pizza_Calculator
 //некоторую часть кода я сас не до конца понимаю, но пока все работает как планировалось
 {
 
-    [Activity(Label = "@string/app_name", MainLauncher = true)]
+    [Activity(Theme = "@android:style/Theme.Material.Light.NoActionBar.TranslucentDecor", Label = "@string/app_name", MainLauncher = true)]
 
     public class MainActivity : Activity
 
@@ -29,6 +29,23 @@ namespace Pizza_Calculator
         private PizzaListAdapter<PizzaList> PizzaListitems;
         List<PizzaList> pizza = new List<PizzaList>();
 
+        long lastPress;
+
+        public override void OnBackPressed()
+        {
+
+            long currentTime = DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond;
+
+            if (currentTime - lastPress > 5000)
+            {
+                Toast.MakeText(this, "Нажмите еще раз для выхода", ToastLength.Long).Show();
+                lastPress = currentTime;
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+        }
 
         protected override void OnCreate(Bundle bundle)
         {

@@ -56,10 +56,10 @@ namespace Pizza_Calculator
             weight = w;
             picture = pic;
         }
-        //считаем площадь пиццы, с учетом того едят ли борт пиццы или нет
+        //считаем площадь пиццы
         public double GetArea()
         {
-                return (diameter <= 0) ? 0 : Math.Round(Quantity * ((Math.Pow(diameter, 2) * Math.PI) / 4), 2);
+                return (diameter <= 0) ? 0 : Math.Round(Quantity * ((Math.Pow(diameter, 2) * Math.PI) / 40000), 4);
 
         }
         //считаем блину борта, для тех пицц где он бывает с сыром или мясом
@@ -71,7 +71,7 @@ namespace Pizza_Calculator
         public double PriceToArea()
         {
             double x = GetArea();
-            return (price <= 0) ? 0 : Math.Round((Quantity * price) / x * 10000, 2);//см выше про GetArea
+            return (price <= 0) ? 0 : Math.Round((Quantity * price) / x, 2);//см выше про GetArea
         }
         //считаем соотношение цены к весу, сколько $ надо заплатить за 1 кг
         public double PriceToWeight()

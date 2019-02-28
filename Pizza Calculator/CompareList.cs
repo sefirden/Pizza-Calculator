@@ -39,13 +39,21 @@ namespace Pizza_Calculator
             get;
             set;
         }
-        public CompareList(string n, double a, double el, double pa, double pw)//в таком порядке заполняем данные для пиццы
+
+        public double InPercent
+        {
+            get;
+            set;
+        }
+        public CompareList(string n, double a, double el, double pa, double pw, double ip)//в таком порядке заполняем данные для пиццы
         {
             Name = n;
             Area = a;
             EdgeLength = el;
             PriceToArea = pa;
             PriceToWeight = pw;
+            InPercent = ip;
         }
+
     }
 }

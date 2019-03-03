@@ -1,98 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-	xmlns:p1="http://schemas.android.com/apk/res/android"
-	p1:id="@+id/relativeLayout1"
-	p1:minWidth="150px"
-	p1:minHeight="150px"
-	p1:layout_height="fill_parent"
-	p1:layout_width="fill_parent">
-	<TextView
-		p1:text="Quantity, pcs"
-		p1:layout_width="115.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/textView1"
-		p1:layout_alignBottom="@+id/editText1"
-		p1:layout_marginBottom="5.0dp"
-		p1:layout_marginLeft="20.0dp" />
-	<EditText
-		p1:inputType="number"
-		p1:layout_width="75.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/editText1"
-		p1:layout_toRightOf="@id/textView1"
-		p1:maxLength="6"
-		p1:focusable="true"
-		p1:focusableInTouchMode="true" />
-	<TextView
-		p1:text="Diameter, cm"
-		p1:layout_width="115.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/textView2"
-		p1:layout_alignBottom="@+id/editText2"
-		p1:layout_marginBottom="5.0dp"
-		p1:layout_marginLeft="20.0dp" />
-	<EditText
-		p1:inputType="numberDecimal"
-		p1:layout_width="75.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/editText2"
-		p1:layout_toRightOf="@+id/textView2"
-		p1:layout_below="@+id/editText1"
-		p1:maxLength="7" />
-	<TextView
-		p1:text="Price, $"
-		p1:layout_width="115.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/textView3"
-		p1:layout_alignBottom="@+id/editText3"
-		p1:layout_marginBottom="5.0dp"
-		p1:layout_marginLeft="20.0dp" />
-	<EditText
-		p1:inputType="numberDecimal"
-		p1:layout_width="75.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/editText3"
-		p1:layout_toRightOf="@+id/textView3"
-		p1:layout_below="@+id/editText2"
-		p1:maxLength="7" />
-	<TextView
-		p1:text="Weight, gram"
-		p1:layout_width="115.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/textView4"
-		p1:layout_alignBottom="@+id/editText4"
-		p1:layout_marginBottom="5.0dp"
-		p1:layout_marginLeft="20.0dp" />
-	<EditText
-		p1:inputType="numberDecimal"
-		p1:layout_width="75.0dp"
-		p1:layout_height="wrap_content"
-		p1:id="@+id/editText4"
-		p1:layout_toRightOf="@+id/textView4"
-		p1:layout_below="@+id/editText3"
-		p1:maxLength="7" />
-	<Button
-		p1:text="Add to list"
-		p1:layout_width="wrap_content"
-		p1:layout_height="wrap_content"
-		p1:layout_toRightOf="@id/editText1"
-		p1:id="@+id/button1"
-		p1:layout_below="@+id/textView4"
-		p1:layout_alignLeft="@+id/textView4" />
-	<Button
-		p1:text="Compare"
-		p1:layout_width="wrap_content"
-		p1:layout_height="wrap_content"
-		p1:layout_toRightOf="@id/button1"
-		p1:id="@+id/button2"
-		p1:layout_below="@+id/textView4"
-		p1:layout_marginLeft="125.0dp"
-		p1:enabled="true" />
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/relativeLayout1"
+	android:minWidth="150px"
+	android:minHeight="150px"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+	
 	<android.support.v7.widget.RecyclerView
-        p1:id="@+id/recyclerview"
-        p1:scrollbars="vertical"
-        p1:layout_width="fill_parent"
-		p1:layout_below="@id/button2"
-        p1:layout_height="fill_parent" 
-		p1:layout_marginTop="20.0dp" />
+        android:id="@+id/recyclerview"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+		android:layout_marginTop="5.0dp" />
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/add"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|right"
+		android:src="@drawable/ic_add"
+		android:layout_marginRight="15dp"
+		android:layout_marginBottom="15dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		app:backgroundTint="#ff4caf50"/>
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/compare"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|left"
+		android:src="@drawable/ic_bar_chart"
+		android:layout_marginLeft="15dp"
+		android:layout_marginBottom="15dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		app:backgroundTint="#ffff9800"/>
 </RelativeLayout>

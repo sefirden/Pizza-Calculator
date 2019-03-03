@@ -11,10 +11,11 @@ using Android.Widget;
 using Newtonsoft.Json;
 using Com.Syncfusion.Charts;
 using Android.Graphics;
+using Android.Content.PM;
 
 namespace Pizza_Calculator
 {
-    [Activity(Theme = "@android:style/Theme.Material.Light.NoActionBar.TranslucentDecor", Label = "CompareActivity")]
+    [Activity(ScreenOrientation = ScreenOrientation.Portrait, Label = "CompareActivity")]
     public class CompareActivity : Activity
     {
         //добавляем расчеты в клас

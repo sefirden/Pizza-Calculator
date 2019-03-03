@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using System;
@@ -11,13 +12,15 @@ using System.Linq;
 using Android.Content;
 using Newtonsoft.Json;
 using Com.Syncfusion.Charts;
+using Android.Views;
+using Android.Content.PM;
 
 
 namespace Pizza_Calculator
-//некоторую часть кода я сас не до конца понимаю, но пока все работает как планировалось
+//некоторую часть кода я сам не до конца понимаю, но пока все работает как планировалось
 {
 
-    [Activity(Theme = "@android:style/Theme.Material.Light.NoActionBar.TranslucentDecor", Label = "@string/app_name", MainLauncher = true)]
+    [Activity(ScreenOrientation = ScreenOrientation.Portrait, Label = "@string/app_name", MainLauncher = true)]
 
     public class MainActivity : Activity
 
@@ -28,6 +31,8 @@ namespace Pizza_Calculator
         private RecyclerView.Adapter recyclerview_adapter;
         private PizzaListAdapter<PizzaList> PizzaListitems;
         List<PizzaList> pizza = new List<PizzaList>();
+        FloatingActionButton fabAdd;
+        FloatingActionButton fabCompare;
 
         long lastPress;
 
@@ -58,21 +63,8 @@ namespace Pizza_Calculator
             recyclerview = FindViewById<RecyclerView>(Resource.Id.recyclerview);//область прокрутки
 
             //кнопки 
-            Button addToList = FindViewById<Button>(Resource.Id.button1);
-            Button compare = FindViewById<Button>(Resource.Id.button2);
-            
-            //поля для ввода данных
-            EditText getQuantity = FindViewById<EditText>(Resource.Id.editText1);
-            EditText getDiameter = FindViewById<EditText>(Resource.Id.editText2);
-            EditText getPrice = FindViewById<EditText>(Resource.Id.editText3);
-            EditText getWeight = FindViewById<EditText>(Resource.Id.editText4);
-
-            //название полей и они же тестовые заплатки для проверки
-            TextView test1 = FindViewById<TextView>(Resource.Id.textView1);
-            TextView test2 = FindViewById<TextView>(Resource.Id.textView2);
-            TextView test3 = FindViewById<TextView>(Resource.Id.textView3);
-            TextView test4 = FindViewById<TextView>(Resource.Id.textView4);
-
+            fabAdd = FindViewById<FloatingActionButton>(Resource.Id.add);
+            fabCompare = FindViewById<FloatingActionButton>(Resource.Id.compare);
             //список картинок ниже
 
             string[] photolist = { "pizza1", "pizza2", "pizza3" }; //вписываем названия картинок
@@ -80,7 +72,6 @@ namespace Pizza_Calculator
             var rnd = new Random();
             photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток 
 
-           // List<PizzaList> pizza = new List<PizzaList>();
             PizzaListitems = new PizzaListAdapter<PizzaList>(); //это перенес из под кнопки
 
             // тут дописал----------
@@ -92,75 +83,85 @@ namespace Pizza_Calculator
             int i = 0; // индекс для картинок
             int pic; //для передачи картинки в список
 
-            ///// клик на кнопку "Add to list"
-            addToList.Click += (o, e) =>
-            {
+            fabAdd.Click += delegate {
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
+                View view = layoutInflater.Inflate(Resource.Layout.user_input_dialog_box, null);
+                Android.Support.V7.App.AlertDialog.Builder alertbuilder = new Android.Support.V7.App.AlertDialog.Builder(this);
+                alertbuilder.SetView(view);
+                var getQuantity = view.FindViewById<EditText>(Resource.Id.edit_Quantity);
+                var getDiameter = view.FindViewById<EditText>(Resource.Id.edit_Diameter);
+                var getPrice = view.FindViewById<EditText>(Resource.Id.edit_Price);
+                var getWeight = view.FindViewById<EditText>(Resource.Id.edit_Weight); 
 
 
-                //начало сбора данных с полей, если поле пустое или null, то присваиваем 0 
-
-                //quantity
-                if (getQuantity.Text == "" || getQuantity.Text == null)
-                { quantity = 0; }
-                else { quantity = Convert.ToInt32(getQuantity.Text); }
-
-                //diameter
-                if (getDiameter.Text == "" || getDiameter.Text == null)
-                { diameter = 0; }
-                else { double.TryParse(getDiameter.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out diameter); }
-
-                //price
-                if (getPrice.Text == "" || getPrice.Text == null)
-                { price = 0; }
-                else { double.TryParse(getPrice.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out price); }
-
-                //weight
-                if (getWeight.Text == "" || getWeight.Text == null)
-                { weight = 0; }
-                else { double.TryParse(getWeight.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out weight); }
-
-                //конец сбора данных
-
-                //сброс данных в полях
-                getQuantity.Text = null;
-                getDiameter.Text = null;
-                getPrice.Text = null;
-                getWeight.Text = null;
-
-
-                //фокус на 1 строку
-                getQuantity.RequestFocus();
-
-                string pictureName = photolist[i]; //присваиваем значение из перемашанного списка фоток
-                pic = Resources.GetIdentifier(pictureName, "drawable", PackageName); //присваиваем параметру pic картинку, используя название картинки из списка
-
-
-                //из полученных данных создаем обьект списка
-                pizza.Add(new PizzaList(quantity, diameter, price, weight, pic));
-
-                PizzaListitems.Add(pizza[listNumber]);
-                //добаляем елемент в список на позицию 0, и на удивление это сработало :)
-
-                listNumber++; //каждый раз после добавления увеличиваем позицию на 1   
-
-                if (i < photolist.Length - 1) //если количество обьектов в списке будет больше чем список фоток, то еще раз перемешиваем список фоток
+            alertbuilder.SetCancelable(false)
+                .SetPositiveButton("Submit", delegate
                 {
-                    i++; //следующая фотка из списка
-                }
-                else
-                {
-                    rnd = new Random();
-                    photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток
-                    i = 0; //индекс возвращаем к 0
-                }
+                                                         
+                    //quantity
+                    if (getQuantity.Text == "" || getQuantity.Text == null)
+                    { quantity = 0; }
+                    else { quantity = Convert.ToInt32(getQuantity.Text); }
 
-                recyclerview_adapter = new RecyclerAdapter(PizzaListitems);
-                recyclerview.SetAdapter(recyclerview_adapter);
-                // эти две строки переназначают адаптер, это обновляет список, но не совсем верно. На больших списках не использовать, пофиксить позже
+                    //diameter
+                    if (getDiameter.Text == "" || getDiameter.Text == null)
+                    { diameter = 0; }
+                    else { double.TryParse(getDiameter.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out diameter); }
+
+                    //price
+                    if (getPrice.Text == "" || getPrice.Text == null)
+                    { price = 0; }
+                    else { double.TryParse(getPrice.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out price); }
+
+                    //weight
+                    if (getWeight.Text == "" || getWeight.Text == null)
+                    { weight = 0; }
+                    else { double.TryParse(getWeight.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out weight); }
+
+                    //конец сбора данных
+
+                    string pictureName = photolist[i]; //присваиваем значение из перемешенного списка фоток
+                    pic = Resources.GetIdentifier(pictureName, "drawable", PackageName); //присваиваем параметру pic картинку, используя название картинки из списка
+
+
+                    //из полученных данных создаем обьект списка
+                    pizza.Add(new PizzaList(quantity, diameter, price, weight, pic));
+
+                    PizzaListitems.Add(pizza[listNumber]);
+                    //добаляем елемент в список на позицию 0, и на удивление это сработало :)
+
+                    listNumber++; //каждый раз после добавления увеличиваем позицию на 1   
+
+                    if (i < photolist.Length - 1) //если количество обьектов в списке будет больше чем список фоток, то еще раз перемешиваем список фоток
+                    {
+                        i++; //следующая фотка из списка
+                    }
+                    else
+                    {
+                        rnd = new Random();
+                        photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток
+                        i = 0; //индекс возвращаем к 0
+                    }
+
+                    recyclerview_adapter = new RecyclerAdapter(PizzaListitems);
+                    recyclerview.SetAdapter(recyclerview_adapter);
+                    // эти две строки переназначают адаптер, это обновляет список, но не совсем верно. На больших списках не использовать, пофиксить позже
+
+
+
+                })
+                .SetNegativeButton("Cancel", delegate
+                {
+                    alertbuilder.Dispose();
+                });
+                Android.Support.V7.App.AlertDialog dialog = alertbuilder.Create();
+                dialog.Show();
             };
 
-            compare.Click += Button_Click; //запускаем активити со сравнением
+            //конец диалогового окна и добавления пицы в список
 
+
+            fabCompare.Click += Button_Click; //запускаем активити со сравнением                   
             
             recyclerview_layoutmanger = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
             recyclerview.SetLayoutManager(recyclerview_layoutmanger);

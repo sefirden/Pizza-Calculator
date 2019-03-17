@@ -1,87 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>  
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
-    android:layout_width="match_parent"  
-    android:layout_height="match_parent">  
-    <TextView  
-        android:id="@+id/dialogTitle"  
-        android:layout_width="wrap_content"  
-        android:layout_height="wrap_content"  
-        android:text="Enter pizza data:"
-		android:layout_marginLeft="20.0dp"
-		android:layout_marginTop="25.0dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />  
-<TextView
-		android:text="Quantity, pcs"
-		android:layout_width="115.0dp"
-		android:layout_height="wrap_content"
-		android:id="@+id/text_Quantity"
-		android:layout_below="@id/dialogTitle"
-		android:layout_marginTop="25.0dp"
-		android:layout_marginLeft="20.0dp" />
-	<EditText
-		android:inputType="number"
-		android:layout_width="115.0dp"
-		android:layout_height="40dp"
-		android:id="@+id/edit_Quantity"
-		android:layout_toRightOf="@id/text_Quantity"
-		android:layout_below="@id/dialogTitle"
-		android:maxLength="6"
-		android:focusable="true"
-		android:focusableInTouchMode="true"
-		android:layout_marginLeft="20.0dp"
-		android:layout_marginTop="15.0dp"/>
-	<TextView
-		android:text="Diameter, cm"
-		android:layout_width="115.0dp"
-		android:layout_height="wrap_content"
-		android:id="@+id/text_Diameter"
-		android:layout_below="@id/text_Quantity"
-		android:layout_marginTop="25.0dp"
-		android:layout_marginLeft="20.0dp" />
-	<EditText
-		android:inputType="numberDecimal"
-		android:layout_width="115.0dp"
-		android:layout_height="40dp"
-		android:id="@+id/edit_Diameter"
-		android:layout_toRightOf="@id/text_Diameter"
-		android:layout_below="@id/text_Quantity"
-		android:maxLength="7"
-		android:layout_marginLeft="20.0dp"
-		android:layout_marginTop="15.0dp"/>
-	<TextView
-		android:text="Price, $"
-		android:layout_width="115.0dp"
-		android:layout_height="wrap_content"
-		android:id="@+id/text_Price"
-		android:layout_below="@id/text_Diameter"
-		android:layout_marginTop="25.0dp"
-		android:layout_marginLeft="20.0dp" />
-	<EditText
-		android:inputType="numberDecimal"
-		android:layout_width="115.0dp"
-		android:layout_height="40dp"
-		android:id="@+id/edit_Price"
-		android:layout_toRightOf="@id/text_Diameter"
-		android:layout_below="@id/text_Diameter"
-		android:maxLength="7" 
-		android:layout_marginLeft="20.0dp"
-		android:layout_marginTop="15.0dp"/>
-	<TextView
-		android:text="Weight, gram"
-		android:layout_width="115.0dp"
-		android:layout_height="wrap_content"
-		android:id="@+id/text_Weight"
-		android:layout_below="@id/text_Price"
-		android:layout_marginTop="25.0dp"
-		android:layout_marginLeft="20.0dp" />
-	<EditText
-		android:inputType="numberDecimal"
-		android:layout_width="115.0dp"
-		android:layout_height="40dp"
-		android:id="@+id/edit_Weight"
-		android:layout_toRightOf="@id/text_Diameter"
-		android:layout_below="@id/text_Price"
-		android:maxLength="7" 
-		android:layout_marginLeft="20.0dp"
-		android:layout_marginTop="15.0dp"/>
-</RelativeLayout>  
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        style="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_pizza_data"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_Quantity"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/enter_pizza_quantity"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Quantity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_Diameter"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/enter_pizza_diameter"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Diameter"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_Price"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/enter_pizza_price"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Price"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_Weight"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/enter_pizza_weight"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Weight"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="text_Quantity,text_Diameter,text_Price,text_Weight"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <EditText
+        android:id="@+id/edit_Quantity"
+        android:layout_width="75.0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:maxLength="4"
+		android:textStyle="bold"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        app:layout_constraintStart_toEndOf="@+id/barrier4"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitle" />
+
+    <EditText
+        android:id="@+id/edit_Diameter"
+        android:layout_width="75.0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+		android:textStyle="bold"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        app:layout_constraintStart_toEndOf="@+id/barrier4"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Quantity" />
+
+    <EditText
+        android:id="@+id/edit_Price"
+        android:layout_width="75.0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+		android:textStyle="bold"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        app:layout_constraintStart_toEndOf="@+id/barrier4"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Diameter" />
+
+    <EditText
+        android:id="@+id/edit_Weight"
+        android:layout_width="75.0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+		android:textStyle="bold"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        app:layout_constraintStart_toEndOf="@+id/barrier4"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Price" />
+
+</android.support.constraint.ConstraintLayout>

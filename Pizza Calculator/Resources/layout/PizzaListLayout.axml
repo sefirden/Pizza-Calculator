@@ -1,138 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout 
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content">
-	<android.support.v7.widget.CardView
-		android:layout_width="match_parent"
-		android:layout_height="250dp"
-		card_view:cardElevation="2dp"
-		card_view:cardUseCompatPadding="true"
-		card_view:cardCornerRadius="10dp">
-		<RelativeLayout
-			xmlns:android="http://schemas.android.com/apk/res/android"
-			android:id="@+id/Pizza_list_Layout"
-			android:minWidth="150px"
-			android:minHeight="150px"
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent">
-			<ImageView
-				android:layout_width="match_parent"
-				android:layout_height="140.0dp"
-				android:id="@+id/Pizza_image" />
-			<TextView
-				android:text="#"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_number_text"
-				android:layout_below="@+id/Pizza_image"
-				android:layout_marginLeft="10.0dp"
-				android:layout_marginTop="8.0dp"
-				android:textStyle="bold"
-				android:textSize="17dp"/>
-			<TextView
-				android:layout_width="70.0dp"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_number_value"
-				android:layout_below="@+id/Pizza_image"
-				android:layout_toRightOf="@+id/pizza_number_text"
-				android:layout_marginTop="8.0dp"
-				android:layout_marginLeft="3.0dp"
-				android:textSize="17dp"/>
-			<Button
-				android:text="@string/vertical_ellipsis"
-				android:layout_height="37dp"
-				android:layout_width="30dp"
-				android:layout_toRightOf="@id/pizza_number_value"
-				android:id="@+id/menuButton"
-				android:layout_below="@id/Pizza_image"
-				android:textStyle="normal|bold"
-				android:layout_marginLeft="225dp"
-				android:layout_marginRight="0.0dp"
-				android:backgroundTintMode="screen"
-				android:background="@android:color/transparent"
-				android:textSize="25dp"
-				android:textColor="#ff757575"/>
-			<TextView
-				android:text="Количество:"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_quantity_text"
-				android:layout_below="@+id/pizza_number_text"
-				android:layout_marginLeft="11dp"
-				android:layout_marginTop="8.0dp"
-				android:textSize="17dp"
-				android:textStyle="bold"/>
-			<TextView
-				android:layout_width="70.0dp"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_quantity_value"
-				android:layout_below="@+id/pizza_number_text"
-				android:layout_toRightOf="@+id/pizza_quantity_text"
-				android:layout_marginTop="8.0dp"
-				android:layout_marginLeft="3.0dp"
-				android:textSize="17dp"/>
-			<TextView
-				android:text="Цена:"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_price_text"
-				android:layout_below="@+id/pizza_quantity_value"
-				android:layout_marginLeft="10.0dp"
-				android:layout_marginTop="5.0dp"
-				android:textStyle="bold"
-				android:textSize="17dp"/>
-			<TextView
-				android:layout_width="70.0dp"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_price_value"
-				android:layout_below="@+id/pizza_quantity_value"
-				android:layout_toRightOf="@+id/pizza_price_text"
-				android:layout_marginLeft="3.0dp"
-				android:layout_marginTop="5.0dp"
-				android:textSize="17dp"/>
-			<TextView
-				android:text="Диаметр:"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_diameter_text"
-				android:layout_toRightOf="@+id/pizza_quantity_value"
-				android:layout_below="@+id/pizza_number_text"
-				android:layout_marginTop="8.0dp"
-				android:layout_marginLeft="3.0dp"
-				android:textStyle="bold"
-				android:textSize="17dp"/>
-			<TextView
-				android:layout_width="70.0dp"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_diameter_value"
-				android:layout_below="@+id/pizza_number_text"
-				android:layout_toRightOf="@+id/pizza_diameter_text"
-				android:layout_marginTop="8.0dp"
-				android:layout_marginLeft="3.0dp"
-				android:layout_marginRight="11.0dp"
-				android:textSize="17dp"/>
-			<TextView
-				android:text="Вес:"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_weight_text"
-				android:layout_toRightOf="@+id/pizza_price_value"
-				android:layout_below="@+id/pizza_diameter_value"
-				android:layout_marginLeft="58.0dp"
-				android:layout_marginTop="5.0dp"
-				android:textStyle="bold"
-				android:textSize="17dp"/>
-			<TextView
-				android:layout_width="70.0dp"
-				android:layout_height="wrap_content"
-				android:id="@+id/pizza_weight_value"
-				android:layout_below="@+id/pizza_diameter_value"
-				android:layout_toRightOf="@+id/pizza_weight_text"
-				android:layout_marginLeft="3.0dp"
-				android:layout_marginTop="5.0dp"
-				android:textSize="17dp"/>
-		</RelativeLayout>
-	</android.support.v7.widget.CardView>
-</FrameLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintDimensionRatio="0,1:0.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Pizza_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pizza_number_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/num"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/pizza_quantity_text"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <TextView
+                android:id="@+id/pizza_quantity_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_quantity"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/pizza_price_text"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_number_text" />
+
+            <TextView
+                android:id="@+id/pizza_price_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_price"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_quantity_text" />
+
+            <TextView
+                android:id="@+id/pizza_quantity_value"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_quantity_text"
+                app:layout_constraintStart_toEndOf="@+id/pizza_quantity_text" />
+
+            <TextView
+                android:id="@+id/pizza_price_value"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_price_text"
+                app:layout_constraintStart_toEndOf="@+id/pizza_price_text" />
+
+            <TextView
+                android:id="@+id/pizza_number_value"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_number_text"
+                app:layout_constraintStart_toEndOf="@+id/pizza_number_text" />
+
+            <TextView
+                android:id="@+id/pizza_diameter_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_diameter"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_quantity_text"
+                app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+            <TextView
+                android:id="@+id/pizza_diameter_value"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_quantity_text"
+                app:layout_constraintStart_toEndOf="@+id/pizza_diameter_text" />
+
+            <TextView
+                android:id="@+id/pizza_weight_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pizza_weight"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_price_text"
+                app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+            <TextView
+                android:id="@+id/pizza_weight_value"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pizza_price_text"
+                app:layout_constraintStart_toEndOf="@+id/pizza_weight_text" />
+
+            <Button
+                android:id="@+id/menuButton"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:backgroundTintMode="screen"
+                android:gravity="end"
+                android:text="@string/vertical_ellipsis"
+                android:textColor="#ff757575"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/pizza_diameter_text"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.0371" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9629" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.59" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6236" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9664" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

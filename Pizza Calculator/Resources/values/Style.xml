@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Ваша AppTheme или другие темы и стили здесь -->
+  <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+  </style>
+
+  <style name="MyTheme" parent="MyTheme.Base">
+    <!-- <item name="android:fontFamily">@font/notosans</item> -->
+  
+  </style>
+  
+  <!-- Кастомная AppTheme.Launcher. Устанавливает в качестве фона вашу drawable -->
+  <style name="MyTheme.Launcher">
+    <item name="android:windowBackground">@drawable/launch_screen</item>
+    <!-- для Android 5+ вы можете поменять цвет colorPrimaryDark, чтобы соответствовать цвету windowBackground -->
+    <item name="colorPrimaryDark">@android:color/white</item>
+  </style>
+
+  <!-- <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
+    <item name="android:fontFamily">@font/notosans</item>
+</style> -->
+
+</resources>

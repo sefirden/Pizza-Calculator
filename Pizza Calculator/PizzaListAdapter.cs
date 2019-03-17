@@ -10,11 +10,14 @@ using Android.Views;
 using Android.Widget;
 using System;
 
+
+
 namespace Pizza_Calculator
 {
+
     public class PizzaListAdapter<T>
     {
-        readonly List<T> mItems;
+        List<T> mItems;
         RecyclerView.Adapter mAdapter;
         public PizzaListAdapter()
         {
@@ -44,7 +47,7 @@ namespace Pizza_Calculator
             mItems.RemoveAt(position);
             if (Adapter != null)
             {
-                Adapter.NotifyItemRemoved(0);
+                Adapter.NotifyItemRemoved(position);
             }
         }
         public T this[int index]
@@ -70,11 +73,12 @@ namespace Pizza_Calculator
     public class RecyclerAdapter : RecyclerView.Adapter
     {
         private PizzaListAdapter<PizzaList> Mitems;
-        Context context;
-        public RecyclerAdapter(PizzaListAdapter<PizzaList> Mitems)
+        Context mContext;
+        public RecyclerAdapter(PizzaListAdapter<PizzaList> Mitems, Context context)
         {
             this.Mitems = Mitems;
             NotifyDataSetChanged();
+            this.mContext = context;
         }
 
         public class MyView : RecyclerView.ViewHolder
@@ -115,7 +119,9 @@ namespace Pizza_Calculator
                 get;
                 set;
             }
-       
+
+            public Button mmenu;
+                                   
             public MyView(View view) : base(view)
             {
                 mainview = view;
@@ -131,6 +137,9 @@ namespace Pizza_Calculator
             TextView pizza_price_value = listitem.FindViewById<TextView>(Resource.Id.pizza_price_value);
             TextView pizza_weight_value = listitem.FindViewById<TextView>(Resource.Id.pizza_weight_value);
             ImageView Pizza_image = listitem.FindViewById<ImageView>(Resource.Id.Pizza_image);
+            Button menu = listitem.FindViewById<Button>(Resource.Id.menuButton);
+
+           // List<PizzaList> pizza = new List<PizzaList>();
 
             MyView view = new MyView(listitem)
             {
@@ -139,8 +148,40 @@ namespace Pizza_Calculator
                 mpizza_diameter_value = pizza_diameter_value,
                 mpizza_price_value = pizza_price_value,
                 mpizza_weight_value = pizza_weight_value,
-                mpicture = Pizza_image
+                mpicture = Pizza_image,
+                mmenu = menu
             };
+
+            //ниже кусок с кнопкой
+            view.mmenu.Click += (o, e) =>
+            {
+
+            Android.Widget.PopupMenu popup = new Android.Widget.PopupMenu(view.mmenu.Context, view.mmenu);
+            // Call inflate directly on the menu:
+            popup.Inflate(Resource.Menu.options_menu);
+                
+            popup.MenuItemClick += (s, args) =>
+            {
+                switch (args.Item.ItemId)
+                {
+                    case Resource.Id.delete:
+                        int num = view.AdapterPosition+1;
+                        Toast.MakeText(Application.Context, "Pizza #" + num.ToString() + " deleted!", ToastLength.Short).Show();
+                        Mitems.Remove(view.AdapterPosition);
+                        ((MainActivity)mContext).Delete(view.AdapterPosition);
+                        NotifyItemRemoved(view.AdapterPosition);
+                        break;
+
+                    case Resource.Id.edit:
+                        num = view.AdapterPosition + 1;
+                        ((MainActivity)mContext).Edit(view.AdapterPosition, num);
+                        break;
+                }
+            };
+            popup.Show();
+            };
+            //тут кусок кнопки заканчивается
+
             return view;
         }
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
@@ -151,8 +192,9 @@ namespace Pizza_Calculator
             myholder.mpizza_diameter_value.Text = Convert.ToString(Mitems[position].diameter);
             myholder.mpizza_price_value.Text = Convert.ToString(Mitems[position].price);
             myholder.mpizza_weight_value.Text = Convert.ToString(Mitems[position].weight);
-            myholder.mpicture.SetImageResource(Mitems[position].picture);
+            myholder.mpicture.SetImageResource(Mitems[position].picture);      
         }
+               
         public override int ItemCount
         {
             get

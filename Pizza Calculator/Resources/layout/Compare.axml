@@ -1,38 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:id="@+id/scroll" 
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content">
-	<RelativeLayout
-	xmlns:p1="http://schemas.android.com/apk/res/android"
-	p1:id="@+id/relativeLayout1"
-	p1:minWidth="150px"
-	p1:minHeight="150px"
-	p1:layout_height="fill_parent"
-	p1:layout_width="fill_parent">
-<LinearLayout
-    android:orientation=    "vertical"
-    android:layout_width=    "match_parent"
-    android:layout_height=    "230dp"
-	android:id="@+id/LayoutChartArea"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<LinearLayout
-    android:orientation=    "vertical"
-    android:layout_width=    "match_parent"
-    android:layout_height=    "230dp"
-	android:id="@+id/LayoutChartEdgeLength"
-	android:layout_below="@+id/LayoutChartArea"/>
-<LinearLayout
-    android:orientation=    "vertical"
-    android:layout_width=    "match_parent"
-    android:layout_height=    "230dp"
-	android:id="@+id/LayoutChartPriceToArea"
-	android:layout_below="@+id/LayoutChartEdgeLength"/>
-<LinearLayout
-    android:orientation=    "vertical"
-    android:layout_width=    "match_parent"
-    android:layout_height=    "230dp"
-	android:id="@+id/LayoutChartPriceToWeight"
-	android:layout_below="@+id/LayoutChartPriceToArea"/>
-</RelativeLayout>
-</ScrollView> 
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Label"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/label"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/LayoutChartArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/LayoutChartEdgeLength"
+            app:layout_constraintDimensionRatio="1:0.65"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Label" />
+
+        <LinearLayout
+            android:id="@+id/LayoutChartEdgeLength"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/LayoutChartPriceToArea"
+            app:layout_constraintDimensionRatio="1:0.65"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutChartArea" />
+
+        <LinearLayout
+            android:id="@+id/LayoutChartPriceToArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/LayoutChartPriceToWeight"
+            app:layout_constraintDimensionRatio="1:0.65"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutChartEdgeLength" />
+
+        <LinearLayout
+            android:id="@+id/LayoutChartPriceToWeight"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:0.65"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutChartPriceToArea" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+

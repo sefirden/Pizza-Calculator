@@ -14,13 +14,14 @@ using Newtonsoft.Json;
 using Com.Syncfusion.Charts;
 using Android.Views;
 using Android.Content.PM;
+using System.Threading;
 
 
 namespace Pizza_Calculator
 //некоторую часть кода я сам не до конца понимаю, но пока все работает как планировалось
 {
 
-    [Activity(ScreenOrientation = ScreenOrientation.Portrait, Label = "@string/app_name", MainLauncher = true)]
+    [Activity(Theme = "@style/MyTheme.Launcher", ScreenOrientation = ScreenOrientation.Portrait, Label = "@string/app_name", MainLauncher = true)]
 
     public class MainActivity : Activity
 
@@ -33,6 +34,12 @@ namespace Pizza_Calculator
         List<PizzaList> pizza = new List<PizzaList>();
         FloatingActionButton fabAdd;
         FloatingActionButton fabCompare;
+        TextView nodata;
+        int listNumber = 0;  //это номер пиццы в списке для отображения
+        int quantity;
+        double diameter = 0;
+        double price = 0;
+        double weight = 0;
 
         long lastPress;
 
@@ -57,14 +64,20 @@ namespace Pizza_Calculator
 
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Njc1MDVAMzEzNjJlMzQyZTMwa2VZM2hTaE1FNXlyOU0yeUVtVXZmNm5HMnhRQjdWTHNWSk51ZGMxL3p5Zz0="); //лицензия на графики
 
+            SetTheme(Resource.Style.MyTheme);
+
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
             recyclerview = FindViewById<RecyclerView>(Resource.Id.recyclerview);//область прокрутки
+            //текст при пустом списке
+            recyclerview.SetItemAnimator(new DefaultItemAnimator());
 
             //кнопки 
             fabAdd = FindViewById<FloatingActionButton>(Resource.Id.add);
             fabCompare = FindViewById<FloatingActionButton>(Resource.Id.compare);
+            nodata = FindViewById<TextView>(Resource.Id.empty_view); //текст без данных
+            
             //список картинок ниже
 
             string[] photolist = { "pizza1", "pizza2", "pizza3" }; //вписываем названия картинок
@@ -74,14 +87,10 @@ namespace Pizza_Calculator
 
             PizzaListitems = new PizzaListAdapter<PizzaList>(); //это перенес из под кнопки
 
-            // тут дописал----------
-            var listNumber = 0;  //это номер пиццы в списке для отображения
-            int quantity = 0;
-            double diameter = 0;
-            double price = 0;
-            double weight = 0;
+
             int i = 0; // индекс для картинок
             int pic; //для передачи картинки в список
+            int count;
 
             fabAdd.Click += delegate {
                 LayoutInflater layoutInflater = LayoutInflater.From(this);
@@ -128,6 +137,7 @@ namespace Pizza_Calculator
                     pizza.Add(new PizzaList(quantity, diameter, price, weight, pic));
 
                     PizzaListitems.Add(pizza[listNumber]);
+                    recyclerview_adapter.NotifyDataSetChanged();
                     //добаляем елемент в список на позицию 0, и на удивление это сработало :)
 
                     listNumber++; //каждый раз после добавления увеличиваем позицию на 1   
@@ -143,9 +153,18 @@ namespace Pizza_Calculator
                         i = 0; //индекс возвращаем к 0
                     }
 
-                    recyclerview_adapter = new RecyclerAdapter(PizzaListitems);
-                    recyclerview.SetAdapter(recyclerview_adapter);
                     // эти две строки переназначают адаптер, это обновляет список, но не совсем верно. На больших списках не использовать, пофиксить позже
+
+                    //включаем кнопку сравнить и убираем текст заменяя списком
+
+                    count = pizza.Count();
+
+                    if (count <= 1)
+                    {
+                        nodata.Visibility = ViewStates.Gone;
+                        fabCompare.Visibility = ViewStates.Visible;
+                        recyclerview.Visibility = ViewStates.Visible;
+                    }
 
 
 
@@ -161,21 +180,118 @@ namespace Pizza_Calculator
             //конец диалогового окна и добавления пицы в список
 
 
-            fabCompare.Click += Button_Click; //запускаем активити со сравнением                   
+            //fabCompare.Click += Button_Click; //запускаем активити со сравнением   
             
+                    //кусок тут
+        void ShowProgressBar(bool show)
+        {
+            RunOnUiThread(() => {
+                ProgressBar probar = FindViewById<ProgressBar>(Resource.Id.progressbar);
+                probar.Visibility = show ? ViewStates.Visible : ViewStates.Invisible;
+            });
+        }
+            fabCompare.Click += delegate {
+                ShowProgressBar(true);
+                ThreadStart th = new ThreadStart(Button_Click);
+                Thread myThread = new Thread(th);
+                myThread.Start();
+            };
+
+            void Button_Click()
+            {
+                var intent = new Intent(this, typeof(CompareActivity));
+                string listAsString = JsonConvert.SerializeObject(pizza);
+                intent.PutExtra("saved_counter", listAsString);
+                this.StartActivity(intent);
+                ShowProgressBar(false);
+            }
+
+
             recyclerview_layoutmanger = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
             recyclerview.SetLayoutManager(recyclerview_layoutmanger);
-            recyclerview_adapter = new RecyclerAdapter(PizzaListitems);
+            recyclerview_adapter = new RecyclerAdapter(PizzaListitems, this);
             recyclerview.SetAdapter(recyclerview_adapter);
 
         }
 
-        private void Button_Click(object sender, EventArgs e)
+        public void Delete(int position)
         {
-            var intent = new Intent(this, typeof(CompareActivity));
-            string listAsString = JsonConvert.SerializeObject(pizza);
-            intent.PutExtra("saved_counter", listAsString);
-            this.StartActivity(intent);
+            pizza.RemoveAt(position);
+            listNumber--;
+
+            int count = pizza.Count();
+
+            if (count == 0)
+            {
+                nodata.Visibility = ViewStates.Visible;
+                fabCompare.Visibility = ViewStates.Gone;
+                recyclerview.Visibility = ViewStates.Gone;
+            }
         }
+
+        public void Edit(int position, int num)
+        {
+            LayoutInflater layoutInflater = LayoutInflater.From(this);
+            View view = layoutInflater.Inflate(Resource.Layout.user_input_dialog_box, null);
+            Android.Support.V7.App.AlertDialog.Builder alertbuilder = new Android.Support.V7.App.AlertDialog.Builder(this);
+            alertbuilder.SetView(view);
+            var getQuantity = view.FindViewById<EditText>(Resource.Id.edit_Quantity);
+            var getDiameter = view.FindViewById<EditText>(Resource.Id.edit_Diameter);
+            var getPrice = view.FindViewById<EditText>(Resource.Id.edit_Price);
+            var getWeight = view.FindViewById<EditText>(Resource.Id.edit_Weight);
+
+            getQuantity.Text = Convert.ToString(pizza[position].quantity);
+            getDiameter.Text = Convert.ToString(pizza[position].diameter);
+            getPrice.Text = Convert.ToString(pizza[position].price);
+            getWeight.Text = Convert.ToString(pizza[position].weight);
+                                 
+            alertbuilder.SetCancelable(false)
+                .SetPositiveButton("Submit", delegate
+                {
+
+                    //quantity
+                    if (getQuantity.Text == "" || getQuantity.Text == null)
+                    { quantity = 0; }
+                    else { quantity = Convert.ToInt32(getQuantity.Text); }
+
+                    //diameter
+                    if (getDiameter.Text == "" || getDiameter.Text == null)
+                    { diameter = 0; }
+                    else { double.TryParse(getDiameter.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out diameter); }
+
+                    //price
+                    if (getPrice.Text == "" || getPrice.Text == null)
+                    { price = 0; }
+                    else { double.TryParse(getPrice.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out price); }
+
+                    //weight
+                    if (getWeight.Text == "" || getWeight.Text == null)
+                    { weight = 0; }
+                    else { double.TryParse(getWeight.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out weight); }
+
+                    //конец сбора данных
+
+                    pizza[position].Quantity = quantity;
+                    pizza[position].diameter = diameter;
+                    pizza[position].price = price;
+                    pizza[position].weight = weight;
+
+                    Toast.MakeText(Application.Context, "Pizza #" + num.ToString() + " edited!", ToastLength.Short).Show();
+                    recyclerview_adapter.NotifyItemChanged(position);
+
+                    // эти две строки переназначают адаптер, это обновляет список, но не совсем верно. На больших списках не использовать, пофиксить позже
+
+
+
+                })
+                .SetNegativeButton("Cancel", delegate
+                {
+                    alertbuilder.Dispose();
+                });
+            Android.Support.V7.App.AlertDialog dialog = alertbuilder.Create();
+            dialog.Show();
+        }
+
+        //конец диалогового окна и добавления пицы в список
     }
 }

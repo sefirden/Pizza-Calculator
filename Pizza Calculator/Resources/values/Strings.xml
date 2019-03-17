@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">Pizza Calculator</string>
-  <string name="vertical_ellipsis">&#8942;</string>
+   
+    <string name="app_name">Pizza Calculator</string>
+    <!-- menu -->
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <!-- compare activity -->
+    <string name="label">Нажмите на столбец для сравнения в %</string>
+    <!-- main activity -->
+    <string name="no_data_available">Нажмите на + чтобы добавить пиццу в список для сравнения</string>
+    <!-- user input dialog -->
+    <string name="enter_pizza_data">Введите параметры пиццы:</string>
+    <string name="enter_pizza_quantity">Количество, шт</string>
+    <string name="enter_pizza_diameter">Диаметр, см</string>
+    <string name="enter_pizza_price">Цена</string>
+    <string name="enter_pizza_weight">Вес, грамм</string>
+    <!-- pizza list layout -->
+    <string name="num">#</string>
+    <string name="vertical_ellipsis">&#8942;</string>
+    <string name="pizza_quantity">Количество:</string>
+    <string name="pizza_diameter">Диаметр:</string>
+    <string name="pizza_price">Цена:</string>
+    <string name="pizza_weight">Вес:</string>
 </resources>

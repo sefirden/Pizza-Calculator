@@ -15,7 +15,7 @@ using Android.Content.PM;
 
 namespace Pizza_Calculator
 {
-    [Activity(ScreenOrientation = ScreenOrientation.Portrait, Label = "CompareActivity")]
+    [Activity(Theme = "@style/MyTheme", ScreenOrientation = ScreenOrientation.Portrait, Label = "CompareActivity")]
     public class CompareActivity : Activity
     {
         //добавляем расчеты в клас
@@ -36,25 +36,27 @@ namespace Pizza_Calculator
                 pizzanumber++;
             }
 
-            //ниже дикий треш из 4-ч графиков. Принцип у всех одинаковый, меняется только название переменных.
+            //ниже дикий треш из 4-х графиков. Принцип у всех одинаковый, меняется только название переменных.
 
             //------------------------------------------------------------------------первый график 
             SfChart chartArea = new SfChart(this);
 
             //Initializing primary axis
             CategoryAxis primaryAxisArea = new CategoryAxis();
-            primaryAxisArea.Title.Text = "Номер пиццы в списке"; //подпись 
             chartArea.PrimaryAxis = primaryAxisArea;
             chartArea.PrimaryAxis.AutoScrollingDelta = 4; //на графике 4 максимум
             chartArea.PrimaryAxis.AutoScrollingMode = ChartAutoScrollingMode.Start; //стартуем с начала при пролистыавании
             chartArea.PrimaryAxis.Interval = 1;
 
-            chartArea.TooltipCreated += ChartArea_TooltipCreated;
+           /* ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
+            chartArea.Behaviors.Add(tooltipBehavior);
+
+            chartArea.TooltipCreated += ChartArea_TooltipCreated;*/
 
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisArea = new NumericalAxis();
-            secondaryAxisArea.Title.Text = "Площадь, m²";
+            secondaryAxisArea.Title.Text = "Площадь, м²";
             chartArea.SecondaryAxis = secondaryAxisArea;
 
             //Initializing column series
@@ -63,9 +65,9 @@ namespace Pizza_Calculator
             seriesArea.XBindingPath = "Name";
             seriesArea.YBindingPath = "Area";
             seriesArea.ColorModel.ColorPalette = ChartColorPalette.Metro;//цвет
-            seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### m²";//формат чисел
+            seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";//формат чисел
             seriesArea.DataMarkerLabelCreated += SeriesArea_DataMarkerLabelCreated;
-            
+
             seriesArea.DataPointSelectionEnabled = true;//выбрать столбик
 
             //ивент выбора столбика, когда столбюик выбран считаем по методу расчеты в % и показываем их, когда столбик не выбран показываем стадартные рассчеты
@@ -73,9 +75,9 @@ namespace Pizza_Calculator
 
             chartArea.SelectionChanged += Chart_SelectionChanged;
 
-            void Chart_SelectionChanged(object sender, SfChart.SelectionChangedEventArgs e) 
+            void Chart_SelectionChanged(object sender, SfChart.SelectionChangedEventArgs e)
             {
-                
+
                 if (e.P1.SelectedDataPointIndex > -1)
                 {
                     int index = seriesArea.SelectedDataPointIndex;
@@ -86,28 +88,36 @@ namespace Pizza_Calculator
                         {
                             compares[idxArea].InPercent = Math.Round((compares[idxArea].Area / compares[index].Area) * 100 - 100, 2);
                         }
-                        
+
                         idxArea++;
                     }
                     seriesArea.YBindingPath = "InPercent";
                     seriesArea.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
                     secondaryAxisArea.Title.Text = "Сравнение в %";
                     seriesArea.SelectedDataPointIndex = -1;
+                    
+                    //эти 4 строки кусок с тултипом
+                   /* var dataPoint = viewModel.Data[(int)e.Position] as Model;
+                    float xPoint = (float)chartArea.ValueToPoint(chartArea.PrimaryAxis, (int)e.Position);
+                    float yPoint = (float)chartArea.ValueToPoint(chartArea.SecondaryAxis, dataPoint.YValue);
+                    tooltipBehavior.Show(index, 0, true);*/
+                    ////end
                 }
                 else
                 {
-                     idxArea = 0;
-                     seriesArea.YBindingPath = "Area";
-                     seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### m²";//формат чисел
-                     secondaryAxisArea.Title.Text = "Площадь, m²";
+                    idxArea = 0;
+                    seriesArea.YBindingPath = "Area";
+                    seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";//формат чисел
+                    secondaryAxisArea.Title.Text = "Площадь, м²";
+
+                    //вырубаем тултип
+                    /*tooltipBehavior.Hide(true);*/
                 }
             }
 
             seriesArea.DataMarker.ShowLabel = true;
-            seriesArea.Label = "Площадь пиццы, m². Больше - лучше";
-            seriesArea.TooltipEnabled = true;
-            chartArea.Title.Text = "Нажмите на столбец для сравнения в %";
-
+            seriesArea.Label = "Площадь пиццы в м². Больше - лучше";
+            /*seriesArea.TooltipEnabled = true;*/
 
             ChartZoomPanBehavior zoomArea = new ChartZoomPanBehavior();// скрол в сторону
             zoomArea.DoubleTapEnabled = false;
@@ -124,7 +134,7 @@ namespace Pizza_Calculator
                 var data = e.DataMarkerLabel.Data as CompareList;
                 if (data != null && (chartArea.Series[0] as ColumnSeries).YBindingPath == "InPercent" && data.InPercent == 0)
                 {
-                    TextView textArea = new TextView(this) { Text = "0 %"};
+                    TextView textArea = new TextView(this) { Text = "0 %" };
                     textArea.SetTextColor(Color.Black);
                     textArea.Click += TextArea_Click;
                     e.DataMarkerLabel.View = textArea;
@@ -133,26 +143,29 @@ namespace Pizza_Calculator
 
             void TextArea_Click(object sender, EventArgs e)
             {
-                idxArea = 0;              
+                idxArea = 0;
                 seriesArea.YBindingPath = "Area";
-                seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### m²";
+                seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";
                 seriesArea.SelectedDataPointIndex = -1;
-                secondaryAxisArea.Title.Text = "Площадь, m²";
+                secondaryAxisArea.Title.Text = "Площадь, м²";
+
+                //вырубаем тултип
+              /* tooltipBehavior.Hide(true);*/
 
                 var textView = sender as TextView;
                 textView.Text = string.Empty;
                 textView = null;
             }
 
-
+            /*
             //тултип не работает, что-то придумать
             void ChartArea_TooltipCreated(object sender, SfChart.TooltipCreatedEventArgs e)
             {
                 var ser = e.P1.Series;
                 var data = e.P1.Series.ItemsSource as List<PizzaList>;
                 if (ser.SelectedDataPointIndex > -1)
-                    e.P1.Label = "Quantity :" + data[ser.SelectedDataPointIndex].Quantity.ToString() + "\n Diameter :" + data[ser.SelectedDataPointIndex].diameter.ToString();
-            }
+                    e.P1.Label = "Количество:" + data[ser.SelectedDataPointIndex].Quantity.ToString() + "\n Диаметр:" + data[ser.SelectedDataPointIndex].diameter.ToString();
+            }*/
 
             //-------------------------------------------------------------------------конец первого графика
 
@@ -174,7 +187,7 @@ namespace Pizza_Calculator
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisEdgeLength = new NumericalAxis();
-            secondaryAxisEdgeLength.Title.Text = "Длина борта, сm";
+            secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
             chartEdgeLength.SecondaryAxis = secondaryAxisEdgeLength;
 
             //Initializing column series
@@ -183,7 +196,7 @@ namespace Pizza_Calculator
             seriesEdgeLength.XBindingPath = "Name";
             seriesEdgeLength.YBindingPath = "EdgeLength";
             seriesEdgeLength.ColorModel.ColorPalette = ChartColorPalette.Metro;//цвет
-            seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### сm";//формат чисел
+            seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";//формат чисел
             seriesEdgeLength.DataMarkerLabelCreated += SeriesEdgeLength_DataMarkerLabelCreated;
 
             seriesEdgeLength.DataPointSelectionEnabled = true;//выбрать столбик
@@ -218,13 +231,13 @@ namespace Pizza_Calculator
                 {
                     idxEdgeLength = 0;
                     seriesEdgeLength.YBindingPath = "EdgeLength";
-                    seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### сm";//формат чисел
-                    secondaryAxisEdgeLength.Title.Text = "Длина борта, сm";
+                    seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";//формат чисел
+                    secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
                 }
             }
 
             seriesEdgeLength.DataMarker.ShowLabel = true;
-            seriesEdgeLength.Label = "Длина борта, сm.";
+            seriesEdgeLength.Label = "Длина борта, см.";
             seriesEdgeLength.TooltipEnabled = true;
             //chartEdgeLength.Title.Text = "Нажмите на столбец для сравнения в %";
 
@@ -255,9 +268,9 @@ namespace Pizza_Calculator
             {
                 idxEdgeLength = 0;
                 seriesEdgeLength.YBindingPath = "EdgeLength";
-                seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### cm";
+                seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";
                 seriesEdgeLength.SelectedDataPointIndex = -1;
-                secondaryAxisEdgeLength.Title.Text = "Длина борта, сm";
+                secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
 
                 var textView = sender as TextView;
                 textView.Text = string.Empty;

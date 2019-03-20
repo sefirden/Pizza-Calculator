@@ -48,11 +48,7 @@ namespace Pizza_Calculator
             chartArea.PrimaryAxis.AutoScrollingMode = ChartAutoScrollingMode.Start; //стартуем с начала при пролистыавании
             chartArea.PrimaryAxis.Interval = 1;
 
-           /* ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
-            chartArea.Behaviors.Add(tooltipBehavior);
-
-            chartArea.TooltipCreated += ChartArea_TooltipCreated;*/
-
+            primaryAxisArea.Title.Text = " ";
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisArea = new NumericalAxis();
@@ -94,14 +90,11 @@ namespace Pizza_Calculator
                     seriesArea.YBindingPath = "InPercent";
                     seriesArea.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
                     secondaryAxisArea.Title.Text = "Сравнение в %";
+
+                    var number = index + 1;
+                    primaryAxisArea.Title.Text = "Выбрана пицца № " + number.ToString() + ", Количество: " + pizza[index].Quantity.ToString() + ", Диаметр: " + pizza[index].diameter.ToString();//подсказка!!
+
                     seriesArea.SelectedDataPointIndex = -1;
-                    
-                    //эти 4 строки кусок с тултипом
-                   /* var dataPoint = viewModel.Data[(int)e.Position] as Model;
-                    float xPoint = (float)chartArea.ValueToPoint(chartArea.PrimaryAxis, (int)e.Position);
-                    float yPoint = (float)chartArea.ValueToPoint(chartArea.SecondaryAxis, dataPoint.YValue);
-                    tooltipBehavior.Show(index, 0, true);*/
-                    ////end
                 }
                 else
                 {
@@ -109,15 +102,14 @@ namespace Pizza_Calculator
                     seriesArea.YBindingPath = "Area";
                     seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";//формат чисел
                     secondaryAxisArea.Title.Text = "Площадь, м²";
+                    primaryAxisArea.Title.Text = " ";//подсказка!!
 
-                    //вырубаем тултип
-                    /*tooltipBehavior.Hide(true);*/
                 }
             }
 
             seriesArea.DataMarker.ShowLabel = true;
-            seriesArea.Label = "Площадь пиццы в м². Больше - лучше";
-            /*seriesArea.TooltipEnabled = true;*/
+            seriesArea.Label = "Площадь пиццы в м²";
+
 
             ChartZoomPanBehavior zoomArea = new ChartZoomPanBehavior();// скрол в сторону
             zoomArea.DoubleTapEnabled = false;
@@ -148,25 +140,12 @@ namespace Pizza_Calculator
                 seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";
                 seriesArea.SelectedDataPointIndex = -1;
                 secondaryAxisArea.Title.Text = "Площадь, м²";
-
-                //вырубаем тултип
-              /* tooltipBehavior.Hide(true);*/
+                primaryAxisArea.Title.Text = " ";//подсказка!!
 
                 var textView = sender as TextView;
                 textView.Text = string.Empty;
                 textView = null;
             }
-
-            /*
-            //тултип не работает, что-то придумать
-            void ChartArea_TooltipCreated(object sender, SfChart.TooltipCreatedEventArgs e)
-            {
-                var ser = e.P1.Series;
-                var data = e.P1.Series.ItemsSource as List<PizzaList>;
-                if (ser.SelectedDataPointIndex > -1)
-                    e.P1.Label = "Количество:" + data[ser.SelectedDataPointIndex].Quantity.ToString() + "\n Диаметр:" + data[ser.SelectedDataPointIndex].diameter.ToString();
-            }*/
-
             //-------------------------------------------------------------------------конец первого графика
 
             //------------------------------------------------------------------------второй график 
@@ -180,9 +159,7 @@ namespace Pizza_Calculator
             chartEdgeLength.PrimaryAxis.AutoScrollingDelta = 4; //на графике 4 максимум
             chartEdgeLength.PrimaryAxis.AutoScrollingMode = ChartAutoScrollingMode.Start; //стартуем с начала при пролистыавании
             chartEdgeLength.PrimaryAxis.Interval = 1;
-
-
-            chartEdgeLength.TooltipCreated += ChartEdgeLength_TooltipCreated;
+            primaryAxisEdgeLength.Title.Text = " ";
 
 
             //Initializing secondary Axis
@@ -225,7 +202,12 @@ namespace Pizza_Calculator
                     seriesEdgeLength.YBindingPath = "InPercent";
                     seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
                     secondaryAxisEdgeLength.Title.Text = "Сравнение в %";
+
+                    var number = index + 1;
+                    primaryAxisEdgeLength.Title.Text = "Выбрана пицца № " + number.ToString() + ", Количество: " + pizza[index].Quantity.ToString() + ", Диаметр: " + pizza[index].diameter.ToString();//подсказка!!
+
                     seriesEdgeLength.SelectedDataPointIndex = -1;
+
                 }
                 else
                 {
@@ -233,13 +215,14 @@ namespace Pizza_Calculator
                     seriesEdgeLength.YBindingPath = "EdgeLength";
                     seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";//формат чисел
                     secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
+                    primaryAxisEdgeLength.Title.Text = " ";//подсказка!!
                 }
             }
 
             seriesEdgeLength.DataMarker.ShowLabel = true;
             seriesEdgeLength.Label = "Длина борта, см.";
             seriesEdgeLength.TooltipEnabled = true;
-            //chartEdgeLength.Title.Text = "Нажмите на столбец для сравнения в %";
+
 
 
             ChartZoomPanBehavior zoomEdgeLength = new ChartZoomPanBehavior();// скрол в сторону
@@ -271,22 +254,12 @@ namespace Pizza_Calculator
                 seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";
                 seriesEdgeLength.SelectedDataPointIndex = -1;
                 secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
+                primaryAxisEdgeLength.Title.Text = " ";//подсказка!!
 
                 var textView = sender as TextView;
                 textView.Text = string.Empty;
                 textView = null;
             }
-
-
-            //тултип не работает, что-то придумать
-            void ChartEdgeLength_TooltipCreated(object sender, SfChart.TooltipCreatedEventArgs e)
-            {
-                var ser = e.P1.Series;
-                var data = e.P1.Series.ItemsSource as List<PizzaList>;
-                if (ser.SelectedDataPointIndex > -1)
-                    e.P1.Label = "Quantity :" + data[ser.SelectedDataPointIndex].Quantity.ToString() + "\n Diameter :" + data[ser.SelectedDataPointIndex].diameter.ToString();
-            }
-
             //-------------------------------------------------------------------------конец второго графика
 
 
@@ -301,13 +274,12 @@ namespace Pizza_Calculator
             chartPriceToArea.PrimaryAxis.AutoScrollingDelta = 4; //на графике 4 максимум
             chartPriceToArea.PrimaryAxis.AutoScrollingMode = ChartAutoScrollingMode.Start; //стартуем с начала при пролистыавании
             chartPriceToArea.PrimaryAxis.Interval = 1;
-
-            chartPriceToArea.TooltipCreated += ChartPriceToArea_TooltipCreated;
+            primaryAxisPriceToArea.Title.Text = " ";
 
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisPriceToArea = new NumericalAxis();
-            secondaryAxisPriceToArea.Title.Text = "Цена за m²";
+            secondaryAxisPriceToArea.Title.Text = "Цена за м²";
             chartPriceToArea.SecondaryAxis = secondaryAxisPriceToArea;
 
             //Initializing column series
@@ -345,6 +317,10 @@ namespace Pizza_Calculator
                     seriesPriceToArea.YBindingPath = "InPercent";
                     seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
                     secondaryAxisPriceToArea.Title.Text = "Сравнение в %";
+
+                    var number = index + 1;
+                    primaryAxisPriceToArea.Title.Text = "Выбрана пицца № " + number.ToString() + ", Диаметр: " + pizza[index].diameter.ToString() + ", Цена: " + pizza[index].price.ToString();//подсказка!!
+
                     seriesPriceToArea.SelectedDataPointIndex = -1;
                 }
                 else
@@ -352,14 +328,13 @@ namespace Pizza_Calculator
                     idxPriceToArea = 0;
                     seriesPriceToArea.YBindingPath = "PriceToArea";
                     seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.#### $";//формат чисел
-                    secondaryAxisPriceToArea.Title.Text = "Цена за m²";
+                    secondaryAxisPriceToArea.Title.Text = "Цена за м²";
+                    primaryAxisPriceToArea.Title.Text = " ";
                 }
             }
 
             seriesPriceToArea.DataMarker.ShowLabel = true;
-            seriesPriceToArea.Label = "Цена в $ за m²";
-            seriesPriceToArea.TooltipEnabled = true;
-            //chartPriceToArea.Title.Text = "Нажмите на столбец для сравнения в %";
+            seriesPriceToArea.Label = "Цена в $ за м²";
 
 
             ChartZoomPanBehavior zoomPriceToArea = new ChartZoomPanBehavior();// скрол в сторону
@@ -390,22 +365,14 @@ namespace Pizza_Calculator
                 seriesPriceToArea.YBindingPath = "PriceToArea";
                 seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.#### $";
                 seriesPriceToArea.SelectedDataPointIndex = -1;
-                secondaryAxisPriceToArea.Title.Text = "Цена за m²";
+                secondaryAxisPriceToArea.Title.Text = "Цена за м²";
+                primaryAxisPriceToArea.Title.Text = " ";
 
                 var textView = sender as TextView;
                 textView.Text = string.Empty;
                 textView = null;
             }
 
-
-            //тултип не работает, что-то придумать
-            void ChartPriceToArea_TooltipCreated(object sender, SfChart.TooltipCreatedEventArgs e)
-            {
-                var ser = e.P1.Series;
-                var data = e.P1.Series.ItemsSource as List<PizzaList>;
-                if (ser.SelectedDataPointIndex > -1)
-                    e.P1.Label = "Quantity :" + data[ser.SelectedDataPointIndex].Quantity.ToString() + "\n Diameter :" + data[ser.SelectedDataPointIndex].diameter.ToString();
-            }
             //-------------------------------------------------------------------------конец третьего графика
 
             //------------------------------------------------------------------------четвертый график 
@@ -419,9 +386,7 @@ namespace Pizza_Calculator
             chartPriceToWeight.PrimaryAxis.AutoScrollingDelta = 4; //на графике 4 максимум
             chartPriceToWeight.PrimaryAxis.AutoScrollingMode = ChartAutoScrollingMode.Start; //стартуем с начала при пролистыавании
             chartPriceToWeight.PrimaryAxis.Interval = 1;
-
-
-            chartPriceToWeight.TooltipCreated += ChartPriceToWeight_TooltipCreated;
+            primaryAxisPriceToWeight.Title.Text = " ";
 
 
             //Initializing secondary Axis
@@ -464,6 +429,10 @@ namespace Pizza_Calculator
                     seriesPriceToWeight.YBindingPath = "InPercent";
                     seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
                     secondaryAxisPriceToWeight.Title.Text = "Сравнение в %";
+
+                    var number = index + 1;
+                    primaryAxisPriceToWeight.Title.Text = "Выбрана пицца № " + number.ToString() + ", Цена: " + pizza[index].price.ToString() + ", Вес: " + pizza[index].weight.ToString();//подсказка!!
+
                     seriesPriceToWeight.SelectedDataPointIndex = -1;
                 }
                 else
@@ -472,14 +441,12 @@ namespace Pizza_Calculator
                     seriesPriceToWeight.YBindingPath = "PriceToWeight";
                     seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.#### $";//формат чисел
                     secondaryAxisPriceToWeight.Title.Text = "Цена за кг";
+                    primaryAxisPriceToWeight.Title.Text = " ";
                 }
             }
 
             seriesPriceToWeight.DataMarker.ShowLabel = true;
             seriesPriceToWeight.Label = "Цена в $ за 1 кг";
-            seriesPriceToWeight.TooltipEnabled = true;
-            //chartPriceToWeight.Title.Text = "Нажмите на столбец для сравнения в %";
-
 
             ChartZoomPanBehavior zoomPriceToWeight = new ChartZoomPanBehavior();// скрол в сторону
             zoomPriceToWeight.DoubleTapEnabled = false;
@@ -510,20 +477,11 @@ namespace Pizza_Calculator
                 seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.#### $";
                 seriesPriceToWeight.SelectedDataPointIndex = -1;
                 secondaryAxisPriceToWeight.Title.Text = "Цена за кг";
+                primaryAxisPriceToWeight.Title.Text = " ";
 
                 var textView = sender as TextView;
                 textView.Text = string.Empty;
                 textView = null;
-            }
-
-
-            //тултип не работает, что-то придумать
-            void ChartPriceToWeight_TooltipCreated(object sender, SfChart.TooltipCreatedEventArgs e)
-            {
-                var ser = e.P1.Series;
-                var data = e.P1.Series.ItemsSource as List<PizzaList>;
-                if (ser.SelectedDataPointIndex > -1)
-                    e.P1.Label = "Quantity :" + data[ser.SelectedDataPointIndex].Quantity.ToString() + "\n Diameter :" + data[ser.SelectedDataPointIndex].diameter.ToString();
             }
             //-------------------------------------------------------------------------конец четвертого графика
         }

@@ -15,6 +15,8 @@ using Com.Syncfusion.Charts;
 using Android.Views;
 using Android.Content.PM;
 using System.Threading;
+using Refractored.Fab;
+
 
 
 namespace Pizza_Calculator
@@ -32,8 +34,9 @@ namespace Pizza_Calculator
         private RecyclerView.Adapter recyclerview_adapter;
         private PizzaListAdapter<PizzaList> PizzaListitems;
         List<PizzaList> pizza = new List<PizzaList>();
-        FloatingActionButton fabAdd;
-        FloatingActionButton fabCompare;
+        Refractored.Fab.FloatingActionButton fabAdd;
+        Refractored.Fab.FloatingActionButton fabCompare;
+
         TextView nodata;
         int listNumber = 0;  //это номер пиццы в списке для отображения
         int quantity;
@@ -74,13 +77,31 @@ namespace Pizza_Calculator
             recyclerview.SetItemAnimator(new DefaultItemAnimator());
 
             //кнопки 
-            fabAdd = FindViewById<FloatingActionButton>(Resource.Id.add);
-            fabCompare = FindViewById<FloatingActionButton>(Resource.Id.compare);
-            nodata = FindViewById<TextView>(Resource.Id.empty_view); //текст без данных
-            
-            //список картинок ниже
+            fabAdd = FindViewById<Refractored.Fab.FloatingActionButton>(Resource.Id.add);
+            fabAdd.AttachToRecyclerView(recyclerview);
+            fabAdd.Size = FabSize.Normal;
 
-            string[] photolist = { "pizza1", "pizza2", "pizza3" }; //вписываем названия картинок
+            fabCompare = FindViewById<Refractored.Fab.FloatingActionButton>(Resource.Id.compare);
+            //fabCompare.AttachToRecyclerView(recyclerview);
+            fabCompare.Size = FabSize.Normal;
+
+            //---------------------------кусок тут 
+            /* void OnScrollDown()
+             {
+             Toast.MakeText(this, "OnScrollDown", ToastLength.Long).Show();
+             }
+
+             void OnScrollUp()
+             {
+             Toast.MakeText(this, "OnScrollUp", ToastLength.Long).Show();
+             }
+//--------------------------------*/
+            nodata = FindViewById<TextView>(Resource.Id.empty_view); //текст без данных
+        
+
+        //список картинок ниже
+
+        string[] photolist = { "pizza1", "pizza2", "pizza3", "pizza4", "pizza5", "pizza6", "pizza7", "pizza8", "pizza9"}; //вписываем названия картинок
 
             var rnd = new Random();
             photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем список фоток 
@@ -104,7 +125,7 @@ namespace Pizza_Calculator
 
 
             alertbuilder.SetCancelable(false)
-                .SetPositiveButton("Submit", delegate
+                .SetPositiveButton("Добавить", delegate
                 {
                                                          
                     //quantity
@@ -163,13 +184,14 @@ namespace Pizza_Calculator
                     {
                         nodata.Visibility = ViewStates.Gone;
                         fabCompare.Visibility = ViewStates.Visible;
+                        fabCompare.Show();
                         recyclerview.Visibility = ViewStates.Visible;
                     }
 
 
 
                 })
-                .SetNegativeButton("Cancel", delegate
+                .SetNegativeButton("Отмена", delegate
                 {
                     alertbuilder.Dispose();
                 });
@@ -180,9 +202,6 @@ namespace Pizza_Calculator
             //конец диалогового окна и добавления пицы в список
 
 
-            //fabCompare.Click += Button_Click; //запускаем активити со сравнением   
-            
-                    //кусок тут
         void ShowProgressBar(bool show)
         {
             RunOnUiThread(() => {
@@ -213,7 +232,6 @@ namespace Pizza_Calculator
             recyclerview.SetAdapter(recyclerview_adapter);
 
         }
-
         public void Delete(int position)
         {
             pizza.RemoveAt(position);
@@ -224,8 +242,12 @@ namespace Pizza_Calculator
             if (count == 0)
             {
                 nodata.Visibility = ViewStates.Visible;
-                fabCompare.Visibility = ViewStates.Gone;
+                fabCompare.Hide();
                 recyclerview.Visibility = ViewStates.Gone;
+            }
+            else if (count == 2)
+            {
+                fabAdd.Show();
             }
         }
 

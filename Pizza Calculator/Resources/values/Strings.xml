@@ -8,7 +8,7 @@
     <!-- compare activity -->
     <string name="label">Нажмите на столбец для сравнения в %</string>
     <!-- main activity -->
-    <string name="no_data_available">Нажмите на + чтобы добавить пиццу в список для сравнения</string>
+    <string name="no_data_available">Нажмите на + чтобы добавить пиццу в список</string>
     <!-- user input dialog -->
     <string name="enter_pizza_data">Введите параметры пиццы:</string>
     <string name="enter_pizza_quantity">Количество, шт</string>

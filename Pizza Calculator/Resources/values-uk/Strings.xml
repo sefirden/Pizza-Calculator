@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit">Редагувати</string>
+    <string name="delete">Видалити</string>
+    <string name="label">Натисніть на стовпець для порівняння у %</string>
+    <string name="percent_y">Порівняння у%</string>
+    <string name="pizza_sel">Обрана піца №\u0020</string>
+    <string name="pizza_x_q">, Кількість:\u0020</string>
+    <string name="pizza_x_d">, Діаметр:\u0020</string>
+    <string name="pizza_x_p">, Ціна:\u0020</string>
+    <string name="pizza_x_w">, Вага:\u0020</string>
+    <string name="area_y">Площа, м²</string>
+    <string name="area_y_label">#.#### м²</string>
+    <string name="area_title">Площа піци в м²</string>
+    <string name="length_y">Довжина борту, см</string>
+    <string name="length_y_label">#.#### см</string>
+    <string name="length_title">Довжина борту в см</string>
+    <string name="price_area_y">Ціна за м²</string>
+    <string name="price_area_y_label">#.#### грн</string>
+    <string name="price_area_title">Ціна в гривнях за м²</string>
+    <string name="price_weight_y">Ціна за кг</string>
+    <string name="price_weight_y_label">#.#### грн</string>
+    <string name="price_weight_title">Ціна в гривнях за 1 кг</string>
+    <string name="no_data_available">Натисніть на + щоб додати піцу у список</string>
+    <string name="exit_tap">Натисніть ще раз для виходу</string>
+    <string name="dialog_add">Додати</string>
+    <string name="dialog_ok">Застосувати</string>
+    <string name="dialog_canc">Скасувати</string>
+    <string name="piz_num">Піца #</string>
+    <string name="toast_edit">\u0020змінена</string>
+    <string name="toast_del">\u0020видалена</string>
+    <string name="enter_pizza_data">Введіть параметри піци:</string>
+    <string name="enter_pizza_quantity">Кількість, шт</string>
+    <string name="enter_pizza_diameter">Діаметр, см</string>
+    <string name="enter_pizza_price">Ціна, грн</string>
+    <string name="enter_pizza_weight">Вага, грам</string>
+    <string name="pizza_quantity">Кількість:</string>
+    <string name="pizza_diameter">Діаметр:</string>
+    <string name="pizza_price">Ціна:</string>
+    <string name="pizza_weight">Вага:</string>
+</resources>

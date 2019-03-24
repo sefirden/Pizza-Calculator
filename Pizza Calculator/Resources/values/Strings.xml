@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   
-    <string name="app_name">Pizza Calculator</string>
-    <!-- menu -->
-    <string name="edit">Редактировать</string>
-    <string name="delete">Удалить</string>
-    <!-- compare activity -->
-    <string name="label">Нажмите на столбец для сравнения в %</string>
-    <!-- main activity -->
-    <string name="no_data_available">Нажмите на + чтобы добавить пиццу в список</string>
-    <!-- user input dialog -->
-    <string name="enter_pizza_data">Введите параметры пиццы:</string>
-    <string name="enter_pizza_quantity">Количество, шт</string>
-    <string name="enter_pizza_diameter">Диаметр, см</string>
-    <string name="enter_pizza_price">Цена</string>
-    <string name="enter_pizza_weight">Вес, грамм</string>
-    <!-- pizza list layout -->
-    <string name="num">#</string>
-    <string name="vertical_ellipsis">&#8942;</string>
-    <string name="pizza_quantity">Количество:</string>
-    <string name="pizza_diameter">Диаметр:</string>
-    <string name="pizza_price">Цена:</string>
-    <string name="pizza_weight">Вес:</string>
+  <string name="app_name" translatable="false">Pizza Calculator</string>
+  <string name="edit">Edit</string>
+  <string name="delete">Delete</string>
+  <string name="label">Click on the column for comparison in %</string>
+  <string name="percent_y">Comparison in %</string>
+  <string name="pizza_sel">Selected pizza #\u0020</string>
+  <string name="pizza_x_q">, Quantity:\u0020</string>
+  <string name="pizza_x_d">, Diameter:\u0020</string>
+  <string name="pizza_x_p">, Price:\u0020</string>
+  <string name="pizza_x_w">, Weight:\u0020</string>
+  <string name="area_y">Area, m²</string>
+  <string name="area_y_label">#.#### m²</string>
+  <string name="area_title">Pizza area in m²</string>
+  <string name="length_y">Pizza edge length, cm</string>
+  <string name="length_y_label">#.#### cm</string>
+  <string name="length_title">Pizza edge length in cm</string>
+  <string name="price_area_y">Price per m²</string>
+  <string name="price_area_y_label">#.#### $</string>
+  <string name="price_area_title">Price in USD per m²</string>
+  <string name="price_weight_y">Price per kg</string>
+  <string name="price_weight_y_label">#.#### $</string>
+  <string name="price_weight_title">Price in USD per 1 kg</string>
+  <string name="no_data_available">Click + to add pizza to the list</string>
+  <string name="exit_tap">Press again to exit</string>
+  <string name="dialog_add">Add</string>
+  <string name="dialog_ok">Apply</string>
+  <string name="dialog_canc">Cancel</string>
+  <string name="piz_num">Pizza #</string>
+  <string name="toast_edit">\u0020changed</string>
+  <string name="toast_del">\u0020deleted</string>
+  <string name="enter_pizza_data">Enter pizza options:</string>
+  <string name="enter_pizza_quantity">Quantity, pcs</string>
+  <string name="enter_pizza_diameter">Diameter, cm</string>
+  <string name="enter_pizza_price">Price, $</string>
+  <string name="enter_pizza_weight">Weight, gram</string>
+  <string name="pizza_quantity">Quantity:</string>
+  <string name="pizza_diameter">Diameter:</string>
+  <string name="pizza_price">Price:</string>
+  <string name="pizza_weight">Weight:</string>
+  <string name="num" translatable="false">#</string>
+  <string name="vertical_ellipsis" translatable="false">&#8942;</string>
 </resources>

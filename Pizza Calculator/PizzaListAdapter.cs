@@ -165,10 +165,9 @@ namespace Pizza_Calculator
                 switch (args.Item.ItemId)
                 {
                     case Resource.Id.delete:
-                        int num = view.AdapterPosition+1;
-                        Toast.MakeText(Application.Context, "Pizza #" + num.ToString() + " deleted!", ToastLength.Short).Show();
+                        int num = view.AdapterPosition+1;                        
                         Mitems.Remove(view.AdapterPosition);
-                        ((MainActivity)mContext).Delete(view.AdapterPosition);
+                        ((MainActivity)mContext).Delete(view.AdapterPosition, num);
                         NotifyItemRemoved(view.AdapterPosition);
                         break;
 

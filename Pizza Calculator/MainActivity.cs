@@ -16,6 +16,7 @@ using Android.Views;
 using Android.Content.PM;
 using System.Threading;
 using Refractored.Fab;
+using Android.Content.Res;
 
 
 
@@ -36,6 +37,7 @@ namespace Pizza_Calculator
         List<PizzaList> pizza = new List<PizzaList>();
         Refractored.Fab.FloatingActionButton fabAdd;
         Refractored.Fab.FloatingActionButton fabCompare;
+        Context context = Application.Context;
 
         TextView nodata;
         int listNumber = 0;  //это номер пиццы в списке для отображения
@@ -43,6 +45,17 @@ namespace Pizza_Calculator
         double diameter = 0;
         double price = 0;
         double weight = 0;
+
+        //все фразы ниже
+
+        string exit_tap;
+        string dialog_add;
+        string dialog_ok;
+        string dialog_canc;
+        string piz_num;
+        string toast_edit;
+        string toast_del;
+        //
 
         long lastPress;
 
@@ -53,7 +66,7 @@ namespace Pizza_Calculator
 
             if (currentTime - lastPress > 5000)
             {
-                Toast.MakeText(this, "Нажмите еще раз для выхода", ToastLength.Long).Show();
+                Toast.MakeText(this, exit_tap, ToastLength.Long).Show();
                 lastPress = currentTime;
             }
             else
@@ -71,6 +84,14 @@ namespace Pizza_Calculator
 
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
+            
+            exit_tap = context.Resources.GetString(Resource.String.exit_tap);
+            dialog_add = Resources.GetText(Resource.String.dialog_add);
+            dialog_ok = Resources.GetText(Resource.String.dialog_ok);
+            dialog_canc = Resources.GetText(Resource.String.dialog_canc);
+            piz_num = Resources.GetText(Resource.String.piz_num);
+            toast_edit = Resources.GetText(Resource.String.toast_edit);
+            toast_del = Resources.GetText(Resource.String.toast_del);
 
             recyclerview = FindViewById<RecyclerView>(Resource.Id.recyclerview);//область прокрутки
             //текст при пустом списке
@@ -125,7 +146,7 @@ namespace Pizza_Calculator
 
 
             alertbuilder.SetCancelable(false)
-                .SetPositiveButton("Добавить", delegate
+                .SetPositiveButton(dialog_add, delegate
                 {
                                                          
                     //quantity
@@ -191,7 +212,7 @@ namespace Pizza_Calculator
 
 
                 })
-                .SetNegativeButton("Отмена", delegate
+                .SetNegativeButton(dialog_canc, delegate
                 {
                     alertbuilder.Dispose();
                 });
@@ -232,10 +253,11 @@ namespace Pizza_Calculator
             recyclerview.SetAdapter(recyclerview_adapter);
 
         }
-        public void Delete(int position)
+        public void Delete(int position, int num)
         {
             pizza.RemoveAt(position);
             listNumber--;
+            Toast.MakeText(Application.Context, piz_num + num.ToString() + toast_del, ToastLength.Short).Show();
 
             int count = pizza.Count();
 
@@ -268,7 +290,7 @@ namespace Pizza_Calculator
             getWeight.Text = Convert.ToString(pizza[position].weight);
                                  
             alertbuilder.SetCancelable(false)
-                .SetPositiveButton("Submit", delegate
+                .SetPositiveButton(dialog_ok, delegate
                 {
 
                     //quantity
@@ -298,7 +320,7 @@ namespace Pizza_Calculator
                     pizza[position].price = price;
                     pizza[position].weight = weight;
 
-                    Toast.MakeText(Application.Context, "Pizza #" + num.ToString() + " edited!", ToastLength.Short).Show();
+                    Toast.MakeText(Application.Context, piz_num + num.ToString() + toast_edit, ToastLength.Short).Show();
                     recyclerview_adapter.NotifyItemChanged(position);
 
                     // эти две строки переназначают адаптер, это обновляет список, но не совсем верно. На больших списках не использовать, пофиксить позже
@@ -306,7 +328,7 @@ namespace Pizza_Calculator
 
 
                 })
-                .SetNegativeButton("Cancel", delegate
+                .SetNegativeButton(dialog_canc, delegate
                 {
                     alertbuilder.Dispose();
                 });

@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using Com.Syncfusion.Charts;
 using Android.Graphics;
 using Android.Content.PM;
+using Android.Content.Res;
 
 namespace Pizza_Calculator
 {
@@ -19,11 +20,53 @@ namespace Pizza_Calculator
     public class CompareActivity : Activity
     {
         //добавляем расчеты в клас
+        Context context = Application.Context;
+
+        string piz_num;
+        string percent_y;
+        string pizza_sel;
+        string pizza_x_q;
+        string pizza_x_d;
+        string pizza_x_p;
+        string pizza_x_w;
+        string area_y;
+        string area_y_label;
+        string area_title;
+        string length_y;
+        string length_y_label;
+        string length_title;
+        string price_area_y;
+        string price_area_y_label;
+        string price_area_title;
+        string price_weight_y;
+        string price_weight_y_label;
+        string price_weight_title;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Compare);
+
+            //все фразы ниже
+           piz_num = Resources.GetText(Resource.String.piz_num);
+           percent_y = Resources.GetText(Resource.String.percent_y);
+           pizza_sel = Resources.GetText(Resource.String.pizza_sel);
+           pizza_x_q = Resources.GetText(Resource.String.pizza_x_q);
+           pizza_x_d = Resources.GetText(Resource.String.pizza_x_d);
+           pizza_x_p = Resources.GetText(Resource.String.pizza_x_p);
+           pizza_x_w = Resources.GetText(Resource.String.pizza_x_w);
+           area_y = Resources.GetText(Resource.String.area_y);
+           area_y_label = Resources.GetText(Resource.String.area_y_label);
+           area_title = Resources.GetText(Resource.String.area_title);
+           length_y = Resources.GetText(Resource.String.length_y);
+           length_y_label = Resources.GetText(Resource.String.length_y_label);
+           length_title = Resources.GetText(Resource.String.length_title);
+           price_area_y = Resources.GetText(Resource.String.price_area_y);
+           price_area_y_label = Resources.GetText(Resource.String.price_area_y_label);
+           price_area_title = Resources.GetText(Resource.String.price_area_title);
+           price_weight_y = Resources.GetText(Resource.String.price_weight_y);
+           price_weight_y_label = Resources.GetText(Resource.String.price_weight_y_label);
+           price_weight_title = Resources.GetText(Resource.String.price_weight_title);
 
             string listAsString = Intent.GetStringExtra("saved_counter"); //эти две строки передают список пицц в это активити
             List<PizzaList> pizza = JsonConvert.DeserializeObject<List<PizzaList>>(listAsString);
@@ -32,11 +75,10 @@ namespace Pizza_Calculator
             int pizzanumber = 0;
             while (pizzanumber < pizza.Count())
             {
-                compares.Add(new CompareList("Pizza #" + Convert.ToString(pizzanumber + 1), pizza[pizzanumber].GetArea(), pizza[pizzanumber].GetEdgeLength(), pizza[pizzanumber].PriceToArea(), pizza[pizzanumber].PriceToWeight(), 10));
+                compares.Add(new CompareList(piz_num + Convert.ToString(pizzanumber + 1), pizza[pizzanumber].GetArea(), pizza[pizzanumber].GetEdgeLength(), pizza[pizzanumber].PriceToArea(), pizza[pizzanumber].PriceToWeight(), 10));
                 pizzanumber++;
             }
 
-            //ниже дикий треш из 4-х графиков. Принцип у всех одинаковый, меняется только название переменных.
 
             //------------------------------------------------------------------------первый график 
             SfChart chartArea = new SfChart(this);
@@ -52,7 +94,7 @@ namespace Pizza_Calculator
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisArea = new NumericalAxis();
-            secondaryAxisArea.Title.Text = "Площадь, м²";
+            secondaryAxisArea.Title.Text = area_y;
             chartArea.SecondaryAxis = secondaryAxisArea;
 
             //Initializing column series
@@ -61,7 +103,7 @@ namespace Pizza_Calculator
             seriesArea.XBindingPath = "Name";
             seriesArea.YBindingPath = "Area";
             seriesArea.ColorModel.ColorPalette = ChartColorPalette.Metro;//цвет
-            seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";//формат чисел
+            seriesArea.DataMarker.LabelStyle.LabelFormat = area_y_label;//формат чисел
             seriesArea.DataMarkerLabelCreated += SeriesArea_DataMarkerLabelCreated;
 
             seriesArea.DataPointSelectionEnabled = true;//выбрать столбик
@@ -89,10 +131,10 @@ namespace Pizza_Calculator
                     }
                     seriesArea.YBindingPath = "InPercent";
                     seriesArea.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
-                    secondaryAxisArea.Title.Text = "Сравнение в %";
+                    secondaryAxisArea.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisArea.Title.Text = "Выбрана пицца № " + number.ToString() + ", Количество: " + pizza[index].Quantity.ToString() + ", Диаметр: " + pizza[index].diameter.ToString();//подсказка!!
+                    primaryAxisArea.Title.Text = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameter.ToString();//подсказка!!
 
                     seriesArea.SelectedDataPointIndex = -1;
                 }
@@ -100,15 +142,15 @@ namespace Pizza_Calculator
                 {
                     idxArea = 0;
                     seriesArea.YBindingPath = "Area";
-                    seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";//формат чисел
-                    secondaryAxisArea.Title.Text = "Площадь, м²";
+                    seriesArea.DataMarker.LabelStyle.LabelFormat = area_y_label;//формат чисел
+                    secondaryAxisArea.Title.Text = area_y;
                     primaryAxisArea.Title.Text = " ";//подсказка!!
 
                 }
             }
 
             seriesArea.DataMarker.ShowLabel = true;
-            seriesArea.Label = "Площадь пиццы в м²";
+            seriesArea.Label = area_title;
 
 
             ChartZoomPanBehavior zoomArea = new ChartZoomPanBehavior();// скрол в сторону
@@ -137,9 +179,9 @@ namespace Pizza_Calculator
             {
                 idxArea = 0;
                 seriesArea.YBindingPath = "Area";
-                seriesArea.DataMarker.LabelStyle.LabelFormat = "#.#### м²";
+                seriesArea.DataMarker.LabelStyle.LabelFormat = area_y_label;
                 seriesArea.SelectedDataPointIndex = -1;
-                secondaryAxisArea.Title.Text = "Площадь, м²";
+                secondaryAxisArea.Title.Text = area_y;
                 primaryAxisArea.Title.Text = " ";//подсказка!!
 
                 var textView = sender as TextView;
@@ -164,7 +206,7 @@ namespace Pizza_Calculator
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisEdgeLength = new NumericalAxis();
-            secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
+            secondaryAxisEdgeLength.Title.Text = length_y;
             chartEdgeLength.SecondaryAxis = secondaryAxisEdgeLength;
 
             //Initializing column series
@@ -173,7 +215,7 @@ namespace Pizza_Calculator
             seriesEdgeLength.XBindingPath = "Name";
             seriesEdgeLength.YBindingPath = "EdgeLength";
             seriesEdgeLength.ColorModel.ColorPalette = ChartColorPalette.Metro;//цвет
-            seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";//формат чисел
+            seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = length_y_label;//формат чисел
             seriesEdgeLength.DataMarkerLabelCreated += SeriesEdgeLength_DataMarkerLabelCreated;
 
             seriesEdgeLength.DataPointSelectionEnabled = true;//выбрать столбик
@@ -201,10 +243,10 @@ namespace Pizza_Calculator
                     }
                     seriesEdgeLength.YBindingPath = "InPercent";
                     seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
-                    secondaryAxisEdgeLength.Title.Text = "Сравнение в %";
+                    secondaryAxisEdgeLength.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisEdgeLength.Title.Text = "Выбрана пицца № " + number.ToString() + ", Количество: " + pizza[index].Quantity.ToString() + ", Диаметр: " + pizza[index].diameter.ToString();//подсказка!!
+                    primaryAxisEdgeLength.Title.Text = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameter.ToString();//подсказка!!
 
                     seriesEdgeLength.SelectedDataPointIndex = -1;
 
@@ -213,14 +255,14 @@ namespace Pizza_Calculator
                 {
                     idxEdgeLength = 0;
                     seriesEdgeLength.YBindingPath = "EdgeLength";
-                    seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";//формат чисел
-                    secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
+                    seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = length_y_label;//формат чисел
+                    secondaryAxisEdgeLength.Title.Text = length_y;
                     primaryAxisEdgeLength.Title.Text = " ";//подсказка!!
                 }
             }
 
             seriesEdgeLength.DataMarker.ShowLabel = true;
-            seriesEdgeLength.Label = "Длина борта, см.";
+            seriesEdgeLength.Label = length_title;
             seriesEdgeLength.TooltipEnabled = true;
 
 
@@ -251,9 +293,9 @@ namespace Pizza_Calculator
             {
                 idxEdgeLength = 0;
                 seriesEdgeLength.YBindingPath = "EdgeLength";
-                seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = "#.#### см";
+                seriesEdgeLength.DataMarker.LabelStyle.LabelFormat = length_y_label;
                 seriesEdgeLength.SelectedDataPointIndex = -1;
-                secondaryAxisEdgeLength.Title.Text = "Длина борта, см";
+                secondaryAxisEdgeLength.Title.Text = length_y;
                 primaryAxisEdgeLength.Title.Text = " ";//подсказка!!
 
                 var textView = sender as TextView;
@@ -279,7 +321,7 @@ namespace Pizza_Calculator
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisPriceToArea = new NumericalAxis();
-            secondaryAxisPriceToArea.Title.Text = "Цена за м²";
+            secondaryAxisPriceToArea.Title.Text = price_area_y;
             chartPriceToArea.SecondaryAxis = secondaryAxisPriceToArea;
 
             //Initializing column series
@@ -288,7 +330,7 @@ namespace Pizza_Calculator
             seriesPriceToArea.XBindingPath = "Name";
             seriesPriceToArea.YBindingPath = "PriceToArea";
             seriesPriceToArea.ColorModel.ColorPalette = ChartColorPalette.Metro;//цвет
-            seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.#### $";//формат чисел
+            seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = price_area_y_label;//формат чисел
             seriesPriceToArea.DataMarkerLabelCreated += SeriesPriceToArea_DataMarkerLabelCreated;
 
             seriesPriceToArea.DataPointSelectionEnabled = true;//выбрать столбик
@@ -316,10 +358,10 @@ namespace Pizza_Calculator
                     }
                     seriesPriceToArea.YBindingPath = "InPercent";
                     seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
-                    secondaryAxisPriceToArea.Title.Text = "Сравнение в %";
+                    secondaryAxisPriceToArea.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisPriceToArea.Title.Text = "Выбрана пицца № " + number.ToString() + ", Диаметр: " + pizza[index].diameter.ToString() + ", Цена: " + pizza[index].price.ToString();//подсказка!!
+                    primaryAxisPriceToArea.Title.Text = pizza_sel + number.ToString() + pizza_x_d + pizza[index].diameter.ToString() + pizza_x_p + pizza[index].price.ToString();//подсказка!!
 
                     seriesPriceToArea.SelectedDataPointIndex = -1;
                 }
@@ -327,14 +369,14 @@ namespace Pizza_Calculator
                 {
                     idxPriceToArea = 0;
                     seriesPriceToArea.YBindingPath = "PriceToArea";
-                    seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.#### $";//формат чисел
-                    secondaryAxisPriceToArea.Title.Text = "Цена за м²";
+                    seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = price_area_y_label;//формат чисел
+                    secondaryAxisPriceToArea.Title.Text = price_area_y;
                     primaryAxisPriceToArea.Title.Text = " ";
                 }
             }
 
             seriesPriceToArea.DataMarker.ShowLabel = true;
-            seriesPriceToArea.Label = "Цена в $ за м²";
+            seriesPriceToArea.Label = price_area_title;
 
 
             ChartZoomPanBehavior zoomPriceToArea = new ChartZoomPanBehavior();// скрол в сторону
@@ -363,9 +405,9 @@ namespace Pizza_Calculator
             {
                 idxPriceToArea = 0;
                 seriesPriceToArea.YBindingPath = "PriceToArea";
-                seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = "#.#### $";
+                seriesPriceToArea.DataMarker.LabelStyle.LabelFormat = price_area_y_label;
                 seriesPriceToArea.SelectedDataPointIndex = -1;
-                secondaryAxisPriceToArea.Title.Text = "Цена за м²";
+                secondaryAxisPriceToArea.Title.Text = price_area_y;
                 primaryAxisPriceToArea.Title.Text = " ";
 
                 var textView = sender as TextView;
@@ -391,7 +433,7 @@ namespace Pizza_Calculator
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxisPriceToWeight = new NumericalAxis();
-            secondaryAxisPriceToWeight.Title.Text = "Цена за кг";
+            secondaryAxisPriceToWeight.Title.Text = price_weight_y;
             chartPriceToWeight.SecondaryAxis = secondaryAxisPriceToWeight;
 
             //Initializing column series
@@ -400,7 +442,7 @@ namespace Pizza_Calculator
             seriesPriceToWeight.XBindingPath = "Name";
             seriesPriceToWeight.YBindingPath = "PriceToWeight";
             seriesPriceToWeight.ColorModel.ColorPalette = ChartColorPalette.Metro;//цвет
-            seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.#### $";//формат чисел
+            seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = price_weight_y_label;//формат чисел
             seriesPriceToWeight.DataMarkerLabelCreated += SeriesPriceToWeight_DataMarkerLabelCreated;
 
             seriesPriceToWeight.DataPointSelectionEnabled = true;//выбрать столбик
@@ -428,10 +470,10 @@ namespace Pizza_Calculator
                     }
                     seriesPriceToWeight.YBindingPath = "InPercent";
                     seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.##'%'";//формат чисел
-                    secondaryAxisPriceToWeight.Title.Text = "Сравнение в %";
+                    secondaryAxisPriceToWeight.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisPriceToWeight.Title.Text = "Выбрана пицца № " + number.ToString() + ", Цена: " + pizza[index].price.ToString() + ", Вес: " + pizza[index].weight.ToString();//подсказка!!
+                    primaryAxisPriceToWeight.Title.Text = pizza_sel + number.ToString() + pizza_x_p + pizza[index].price.ToString() + pizza_x_w + pizza[index].weight.ToString();//подсказка!!
 
                     seriesPriceToWeight.SelectedDataPointIndex = -1;
                 }
@@ -439,14 +481,14 @@ namespace Pizza_Calculator
                 {
                     idxPriceToWeight = 0;
                     seriesPriceToWeight.YBindingPath = "PriceToWeight";
-                    seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.#### $";//формат чисел
-                    secondaryAxisPriceToWeight.Title.Text = "Цена за кг";
+                    seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = price_weight_y_label;//формат чисел
+                    secondaryAxisPriceToWeight.Title.Text = price_weight_y;
                     primaryAxisPriceToWeight.Title.Text = " ";
                 }
             }
 
             seriesPriceToWeight.DataMarker.ShowLabel = true;
-            seriesPriceToWeight.Label = "Цена в $ за 1 кг";
+            seriesPriceToWeight.Label = price_weight_title;
 
             ChartZoomPanBehavior zoomPriceToWeight = new ChartZoomPanBehavior();// скрол в сторону
             zoomPriceToWeight.DoubleTapEnabled = false;
@@ -474,9 +516,9 @@ namespace Pizza_Calculator
             {
                 idxPriceToWeight = 0;
                 seriesPriceToWeight.YBindingPath = "PriceToWeight";
-                seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = "#.#### $";
+                seriesPriceToWeight.DataMarker.LabelStyle.LabelFormat = price_weight_y_label;
                 seriesPriceToWeight.SelectedDataPointIndex = -1;
-                secondaryAxisPriceToWeight.Title.Text = "Цена за кг";
+                secondaryAxisPriceToWeight.Title.Text = price_weight_y;
                 primaryAxisPriceToWeight.Title.Text = " ";
 
                 var textView = sender as TextView;

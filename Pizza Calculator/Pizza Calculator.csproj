@@ -50,7 +50,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AotAssemblies>false</AotAssemblies>
@@ -119,6 +119,9 @@
     <Reference Include="Xamarin.Android.Support.Transition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Android.Support.Transition.28.0.0.1\lib\monoandroid81\Xamarin.Android.Support.Transition.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.28.0.0.1\lib\monoandroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.28.0.0.1\lib\monoandroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
@@ -140,6 +143,7 @@
     <Compile Include="PizzaListAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScrollFabBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -153,6 +157,10 @@
     <AndroidResource Include="Resources\layout\PizzaListLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\font\NotoSans_Bold.ttf" />
+    <AndroidResource Include="Resources\font\NotoSans_BoldItalic.ttf" />
+    <AndroidResource Include="Resources\font\NotoSans_Italic.ttf" />
+    <AndroidResource Include="Resources\font\NotoSans_Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -162,9 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Style.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\values.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Compare.axml">
@@ -440,6 +445,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values-ru\Strings.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\font\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\font\notosans.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Annotations.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -462,6 +473,7 @@
     <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets'))" />
     <Error Condition="!Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.AppCompat.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.v7.AppCompat.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.AppCompat.targets'))" />
     <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Design.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Design.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Design.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Design.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Android.Support.v4.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v4.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.v4.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v4.targets'))" />
   </Target>
   <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.1\build\monoandroid81\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.1\build\monoandroid81\Xamarin.Android.Arch.Core.Common.targets')" />
   <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.1.1.1\build\monoandroid81\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.1.1.1\build\monoandroid81\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
@@ -478,6 +490,7 @@
   <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Design.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.Design.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v4.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v4.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.
 		<Target Name="BeforeBuild">

@@ -134,16 +134,17 @@
             <Button
                 android:id="@+id/menuButton"
                 style="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:layout_width="30dp"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@android:color/transparent"
                 android:backgroundTintMode="screen"
-                android:gravity="end"
+                android:gravity="center"
                 android:text="@string/vertical_ellipsis"
                 android:textColor="#ff757575"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/pizza_diameter_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toTopOf="@+id/guideline" />
 
             <android.support.constraint.Guideline
@@ -161,11 +162,11 @@
                 app:layout_constraintGuide_percent="0.0371" />
 
             <android.support.constraint.Guideline
-                android:id="@+id/guideline4"
+                android:id="@+id/guideline3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.9629" />
+                app:layout_constraintGuide_percent="0.92" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline1"

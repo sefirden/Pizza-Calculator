@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.Support.V7.App;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ using Android.Content.Res;
 namespace Pizza_Calculator
 {
     [Activity(Theme = "@style/MyTheme", ScreenOrientation = ScreenOrientation.Portrait, Label = "CompareActivity")]
-    public class CompareActivity : Activity
+    public class CompareActivity : AppCompatActivity
     {
         //добавляем расчеты в клас
         Context context = Application.Context;
@@ -44,6 +45,7 @@ namespace Pizza_Calculator
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Compare);
 

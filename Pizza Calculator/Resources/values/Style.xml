@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
   <!-- Ваша AppTheme или другие темы и стили здесь -->
-  <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+  <style name="MyTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
   </style>
 
   <style name="MyTheme" parent="MyTheme.Base">
-    <!-- <item name="android:fontFamily">@font/notosans</item> -->
+    <item name="android:fontFamily">@font/notosans</item>
+    <item name="fontFamily">@font/notosans</item>
     <item name="colorAccent">#ff4caf50</item>
+    <item name="colorPrimaryDark">#388E3C</item>
+    
   </style>
   
   <!-- Кастомная AppTheme.Launcher. Устанавливает в качестве фона вашу drawable -->
@@ -17,8 +19,8 @@
     <item name="colorPrimaryDark">@android:color/white</item>
   </style>
 
-  <!-- <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
+  <!--<style name="customfontstyle" parent="@android:style/TextAppearance.Small">
     <item name="android:fontFamily">@font/notosans</item>
-</style> -->
+  </style>  -->
 
 </resources>

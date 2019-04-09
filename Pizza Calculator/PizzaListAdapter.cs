@@ -9,6 +9,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System;
+using System.Globalization;
+using Android.Content.Res;
 
 
 
@@ -114,6 +116,12 @@ namespace Pizza_Calculator
                 set;
             }
 
+            public TextView mpizza_edge_info
+            {
+                get;
+                set;
+            }
+
             public ImageView mpicture
             {
                 get;
@@ -136,10 +144,10 @@ namespace Pizza_Calculator
             TextView pizza_diameter_value = listitem.FindViewById<TextView>(Resource.Id.pizza_diameter_value);
             TextView pizza_price_value = listitem.FindViewById<TextView>(Resource.Id.pizza_price_value);
             TextView pizza_weight_value = listitem.FindViewById<TextView>(Resource.Id.pizza_weight_value);
+            TextView pizza_edge_info = listitem.FindViewById<TextView>(Resource.Id.InfoEdge);
             ImageView Pizza_image = listitem.FindViewById<ImageView>(Resource.Id.Pizza_image);
             Button menu = listitem.FindViewById<Button>(Resource.Id.menuButton);
 
-           // List<PizzaList> pizza = new List<PizzaList>();
 
             MyView view = new MyView(listitem)
             {
@@ -148,6 +156,7 @@ namespace Pizza_Calculator
                 mpizza_diameter_value = pizza_diameter_value,
                 mpizza_price_value = pizza_price_value,
                 mpizza_weight_value = pizza_weight_value,
+                mpizza_edge_info = pizza_edge_info,
                 mpicture = Pizza_image,
                 mmenu = menu
             };
@@ -188,10 +197,21 @@ namespace Pizza_Calculator
             MyView myholder = holder as MyView;
             myholder.mpizza_number_value.Text = Convert.ToString(position + 1);
             myholder.mpizza_quantity_value.Text = Convert.ToString(Mitems[position].Quantity);
-            myholder.mpizza_diameter_value.Text = Convert.ToString(Mitems[position].diameter);
-            myholder.mpizza_price_value.Text = Convert.ToString(Mitems[position].price);
-            myholder.mpizza_weight_value.Text = Convert.ToString(Mitems[position].weight);
-            myholder.mpicture.SetImageResource(Mitems[position].picture);      
+            myholder.mpizza_diameter_value.Text = Mitems[position].diameter.ToString(CultureInfo.InvariantCulture);
+            myholder.mpizza_price_value.Text = Mitems[position].price.ToString(CultureInfo.InvariantCulture);
+            myholder.mpizza_weight_value.Text = Mitems[position].weight.ToString(CultureInfo.InvariantCulture);
+            myholder.mpicture.SetImageResource(Mitems[position].picture);
+
+            string info="";
+
+            if (Mitems[position].edge != 0)
+            {
+                info = ((MainActivity)mContext).Info(position, info);
+               // info = "lol test"; //Resources.GetText(Resource.String.InfoEdge);
+            }
+
+            myholder.mpizza_edge_info.Text = info;
+
         }
                
         public override int ItemCount

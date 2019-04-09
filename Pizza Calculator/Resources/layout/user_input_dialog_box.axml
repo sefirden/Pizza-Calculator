@@ -1,117 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/dialogTitle"
-        style="@android:style/TextAppearance.DeviceDefault.Medium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/enter_pizza_data"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<TextView
+    android:id="@+id/dialogTitle"
+    style="@android:style/TextAppearance.DeviceDefault.Medium"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:text="@string/enter_pizza_data"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text_Quantity"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/enter_pizza_quantity"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Quantity"
-        app:layout_constraintStart_toStartOf="parent" />
+<TextView
+    android:id="@+id/text_Quantity"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="@string/enter_pizza_quantity"
+    app:layout_constraintBaseline_toBaselineOf="@+id/edit_Quantity"
+    app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/text_Diameter"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/enter_pizza_diameter"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Diameter"
-        app:layout_constraintStart_toStartOf="parent" />
+<TextView
+    android:id="@+id/text_Diameter"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="@string/enter_pizza_diameter"
+    app:layout_constraintBaseline_toBaselineOf="@+id/edit_Diameter"
+    app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/text_Price"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/enter_pizza_price"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Price"
-        app:layout_constraintStart_toStartOf="parent" />
+<TextView
+    android:id="@+id/text_Price"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="@string/enter_pizza_price"
+    app:layout_constraintBaseline_toBaselineOf="@+id/edit_Price"
+    app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/text_Weight"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/enter_pizza_weight"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_Weight"
-        app:layout_constraintStart_toStartOf="parent" />
+<TextView
+    android:id="@+id/text_Weight"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="@string/enter_pizza_weight"
+    app:layout_constraintBaseline_toBaselineOf="@+id/edit_Weight"
+    app:layout_constraintStart_toStartOf="parent" />
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="right"
-        app:constraint_referenced_ids="text_Quantity,text_Diameter,text_Price,text_Weight"
-        tools:layout_editor_absoluteX="411dp" />
+<TextView
+    android:id="@+id/text_Edge"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="@string/enter_switchEdge"
+	android:textColor="#FF5722"
+	android:visibility="gone"
+    app:layout_constraintBaseline_toBaselineOf="@+id/edit_Edge"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<android.support.constraint.Barrier
+    android:id="@+id/barrier4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:barrierDirection="right"
+    app:constraint_referenced_ids="text_Weight,text_Price,text_Diameter,text_Quantity,text_Edge"
+    tools:layout_editor_absoluteX="411dp" />
+
+<EditText
+    android:id="@+id/edit_Quantity"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="75.0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:inputType="number"
+    android:maxLength="4"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@+id/barrier4"
+    app:layout_constraintTop_toBottomOf="@+id/edit_Edge" />
+
+<EditText
+    android:id="@+id/edit_Diameter"
+    android:layout_width="75.0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:inputType="numberDecimal"
+    android:maxLength="7"
+    android:textStyle="bold"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    app:layout_constraintStart_toEndOf="@+id/barrier4"
+    app:layout_constraintTop_toBottomOf="@+id/edit_Quantity" />
+
+<EditText
+    android:id="@+id/edit_Price"
+    android:layout_width="75.0dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:inputType="numberDecimal"
+    android:maxLength="7"
+    android:textStyle="bold"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    app:layout_constraintStart_toEndOf="@+id/barrier4"
+    app:layout_constraintTop_toBottomOf="@+id/edit_Diameter" />
+
+<EditText
+    android:id="@+id/edit_Weight"
+    android:layout_width="75.0dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:inputType="numberDecimal"
+    android:maxLength="7"
+    android:textStyle="bold"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    app:layout_constraintStart_toEndOf="@+id/barrier4"
+    app:layout_constraintTop_toBottomOf="@+id/edit_Price" />
 
     <EditText
-        android:id="@+id/edit_Quantity"
-        android:layout_width="75.0dp"
+        android:id="@+id/edit_Edge"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:inputType="number"
-        android:maxLength="4"
-		android:textStyle="bold"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        app:layout_constraintStart_toEndOf="@+id/barrier4"
-        app:layout_constraintTop_toBottomOf="@+id/dialogTitle" />
-
-    <EditText
-        android:id="@+id/edit_Diameter"
-        android:layout_width="75.0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:inputType="numberDecimal"
         android:maxLength="7"
-		android:textStyle="bold"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
+		android:textColor="#FF5722"
+		android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/barrier4"
-        app:layout_constraintTop_toBottomOf="@+id/edit_Quantity" />
+        app:layout_constraintTop_toBottomOf="@+id/switchInfo" />
 
-    <EditText
-        android:id="@+id/edit_Price"
-        android:layout_width="75.0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:inputType="numberDecimal"
-        android:maxLength="7"
-		android:textStyle="bold"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        app:layout_constraintStart_toEndOf="@+id/barrier4"
-        app:layout_constraintTop_toBottomOf="@+id/edit_Diameter" />
+<Switch
+    android:id="@+id/switchInput"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:checked="true"
+    android:text="@string/enter_pizza_edge"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dialogTitle" />
 
-    <EditText
-        android:id="@+id/edit_Weight"
-        android:layout_width="75.0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:inputType="numberDecimal"
-        android:maxLength="7"
-		android:textStyle="bold"
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        app:layout_constraintStart_toEndOf="@+id/barrier4"
-        app:layout_constraintTop_toBottomOf="@+id/edit_Price" />
+<TextView
+    android:id="@+id/switchInfo"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:text="@string/enter_switchInfo"
+    android:textColor="#FF5722"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/switchInput" />
 
 </android.support.constraint.ConstraintLayout>

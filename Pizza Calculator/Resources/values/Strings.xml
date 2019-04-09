@@ -31,6 +31,7 @@
   <string name="toast_edit">\u0020changed</string>
   <string name="toast_del">\u0020deleted</string>
   <string name="enter_pizza_data">Enter pizza options:</string>
+  <string name="enter_pizza_edge">I eat pizza edge</string>
   <string name="enter_pizza_quantity">Quantity, pcs</string>
   <string name="enter_pizza_diameter">Diameter, cm</string>
   <string name="enter_pizza_price">Price, $</string>
@@ -41,4 +42,8 @@
   <string name="pizza_weight">Weight:</string>
   <string name="num" translatable="false">#</string>
   <string name="vertical_ellipsis" translatable="false">&#8942;</string>
+
+  <string name="enter_switchInfo">If you do not eating a pizza edge, we will take away its weight and area in the calculations!</string>
+  <string name="enter_switchEdge">Edge width, cm</string>
+  <string name="InfoEdge">Pizza without edge, its width {0} cm. \nDiameter {1} cm, Weight {2} gram</string>
 </resources>

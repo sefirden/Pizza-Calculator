@@ -30,6 +30,7 @@
     <string name="toast_edit">\u0020змінена</string>
     <string name="toast_del">\u0020видалена</string>
     <string name="enter_pizza_data">Введіть параметри піци:</string>
+    <string name="enter_pizza_edge">Я їм бортик піцци</string>
     <string name="enter_pizza_quantity">Кількість, шт</string>
     <string name="enter_pizza_diameter">Діаметр, см</string>
     <string name="enter_pizza_price">Ціна, грн</string>
@@ -38,4 +39,8 @@
     <string name="pizza_diameter">Діаметр:</string>
     <string name="pizza_price">Ціна:</string>
     <string name="pizza_weight">Вага:</string>
+
+  <string name="enter_switchInfo">Якщо Ви не їсте бортик, ми віднімемо його вагу і площу в розрахунках!</string>
+  <string name="enter_switchEdge">Ширина бортика, см</string>
+  <string name="InfoEdge">Піца без бортику шириною {0} см. \nДіаметр {1} см, Вага {2} грам</string>
 </resources>

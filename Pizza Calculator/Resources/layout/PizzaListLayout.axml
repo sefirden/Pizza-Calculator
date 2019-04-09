@@ -131,6 +131,27 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/pizza_price_text"
                 app:layout_constraintStart_toEndOf="@+id/pizza_weight_text" />
 
+			<TextView
+                      android:id="@+id/InfoEdge"
+                      style="@android:style/TextAppearance.DeviceDefault.Small"
+                      android:layout_width="0dp"
+                      android:layout_height="0dp"
+                      android:layout_marginStart="16dp"
+                      android:layout_marginEnd="8dp"
+                      android:gravity="center|left"
+                      android:text="@string/InfoEdge"
+                      android:textColor="#FF5722"
+                      android:visibility="visible"
+                      app:autoSizeTextType="uniform"
+                      app:autoSizeMinTextSize="12sp"
+                      app:autoSizeMaxTextSize="60sp"
+                      app:autoSizeStepGranularity="2sp"
+                      app:layout_constraintBottom_toTopOf="@+id/pizza_diameter_text"
+                      app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                      app:layout_constraintStart_toEndOf="@+id/pizza_number_value"
+                      app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+
             <Button
                 android:id="@+id/menuButton"
                 style="@android:style/TextAppearance.DeviceDefault.Medium"

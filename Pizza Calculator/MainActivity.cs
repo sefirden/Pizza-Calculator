@@ -54,6 +54,7 @@ namespace Pizza_Calculator
         double diameter = 0;
         double price = 0;
         double weight = 0;
+        double edge = 0;//написать 0
 
         //все фразы, которые используются в коде объявляем ниже, далее в коде тянем их из @string/
         string exit_tap;
@@ -108,7 +109,7 @@ namespace Pizza_Calculator
             recyclerview = FindViewById<RecyclerView>(Resource.Id.recyclerview);
             //добавляем recyckerview стандартную анимацию
             recyclerview.SetItemAnimator(new DefaultItemAnimator());
-           
+
             //прогресбар при смене на активити с графиками
             probar = FindViewById<ProgressBar>(Resource.Id.progressbar);
             //кнопки добавить и сравнить
@@ -143,80 +144,112 @@ namespace Pizza_Calculator
                 var getDiameter = view.FindViewById<EditText>(Resource.Id.edit_Diameter);
                 var getPrice = view.FindViewById<EditText>(Resource.Id.edit_Price);
                 var getWeight = view.FindViewById<EditText>(Resource.Id.edit_Weight);
+                var switchInput = view.FindViewById<Switch>(Resource.Id.switchInput);
+                var info = view.FindViewById<TextView>(Resource.Id.switchInfo);
+                var textEdge = view.FindViewById<TextView>(Resource.Id.text_Edge);
+                var getEdge = view.FindViewById<EditText>(Resource.Id.edit_Edge);
 
+                string tempEdge = "1.3";
+
+                switchInput.CheckedChange += delegate (object sender, CompoundButton.CheckedChangeEventArgs e) {
+
+                    if (e.IsChecked)
+                    {
+                        info.Visibility = ViewStates.Gone;
+                        textEdge.Visibility = ViewStates.Gone;
+                        getEdge.Visibility = ViewStates.Gone;
+                        tempEdge = "0";
+                        getEdge.Text = tempEdge;
+                    }
+                    else
+                    {
+                        info.Visibility = ViewStates.Visible;
+                        textEdge.Visibility = ViewStates.Visible;
+                        getEdge.Visibility = ViewStates.Visible;
+                        tempEdge = "1.3";
+                        getEdge.Text = tempEdge;
+                        getEdge.RequestFocus();
+                        
+                    }
+                };
 
                 alertbuilder.SetCancelable(false)
                     //ниже код если пользователь нажал OK в диалоговом окне
                     .SetPositiveButton(dialog_add, delegate
                     {
-                    ///если поля пустые, то присваиваем переменным значение 0                                   
-                    //получаем значение поля getQuantity и присваиваем его переменной quantity (класс Pizza если 0 присвоит 1 в любом случае) 
-                    if (getQuantity.Text == "" || getQuantity.Text == null)
+                        ///если поля пустые, то присваиваем переменным значение 0                                   
+                        //получаем значение поля getQuantity и присваиваем его переменной quantity (класс Pizza если 0 присвоит 1 в любом случае) 
+                        if (getQuantity.Text == "" || getQuantity.Text == null)
                         { quantity = 0; }
                         else { quantity = Convert.ToInt32(getQuantity.Text); }
-                    //получаем значение поля getDiameter и присваиваем его переменной diameter
-                    if (getDiameter.Text == "" || getDiameter.Text == null)
+                        //получаем значение поля getDiameter и присваиваем его переменной diameter
+                        if (getDiameter.Text == "" || getDiameter.Text == null)
                         { diameter = 0; }
                         else { double.TryParse(getDiameter.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out diameter); }
-                    //получаем значение поля getPrice и присваиваем его переменной price
-                    if (getPrice.Text == "" || getPrice.Text == null)
+                        //получаем значение поля getPrice и присваиваем его переменной price
+                        if (getPrice.Text == "" || getPrice.Text == null)
                         { price = 0; }
                         else { double.TryParse(getPrice.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out price); }
-                    //получаем значение поля getWeight и присваиваем его переменной weight
-                    if (getWeight.Text == "" || getWeight.Text == null)
+                        //получаем значение поля getWeight и присваиваем его переменной weight
+                        if (getWeight.Text == "" || getWeight.Text == null)
                         { weight = 0; }
                         else { double.TryParse(getWeight.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out weight); }
-                    ///конец сбора введенных в диалоговом окне данных
+                        //получаем значение поля getEdge и присваиваем его переменной edge
+                        if (getEdge.Text == "" || getWeight.Text == null)
+                        { edge = 0; }
+                        else { double.TryParse(getEdge.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out edge); }
 
-                    //присваиваем string'овой переменной pictureName текстовое значение (название картинки) из перемешенного масива фоток photolist 
-                    string pictureName = photolist[i];
-                    //присваиваем параметру pic картинку, используя ее название из перемешенного масива фоток photolist
-                    pic = Resources.GetIdentifier(pictureName, "drawable", PackageName);
+                        ///конец сбора введенных в диалоговом окне данных
+
+                        //присваиваем string'овой переменной pictureName текстовое значение (название картинки) из перемешенного масива фоток photolist 
+                        string pictureName = photolist[i];
+                        //присваиваем параметру pic картинку, используя ее название из перемешенного масива фоток photolist
+                        pic = Resources.GetIdentifier(pictureName, "drawable", PackageName);
 
 
-                    ///из полученных введенных данных и картинки создаем обьект масива pizza
-                    pizza.Add(new PizzaList(quantity, diameter, price, weight, pic));
-                    //добавляем созданную пиццу с индексом listNumber в масив для recycler adapter
-                    PizzaListitems.Add(pizza[listNumber]);
-                    //говорим адаптеру, что масив PizzaListitems обновился и надо обновить view
-                    recyclerview_adapter.NotifyDataSetChanged();
-                    //каждый раз после добавления увеличиваем listNumber на 1, для того чтобы новая пицца добавлялась второй, третьей и тд, а не переписывала первую
-                    listNumber++;
+                        ///из полученных введенных данных и картинки создаем обьект масива pizza
+                        pizza.Add(new PizzaList(quantity, diameter, price, weight, pic, edge));
+                        //добавляем созданную пиццу с индексом listNumber в масив для recycler adapter
+                        PizzaListitems.Add(pizza[listNumber]);
+                        //говорим адаптеру, что масив PizzaListitems обновился и надо обновить view
+                        recyclerview_adapter.NotifyDataSetChanged();
+                        //каждый раз после добавления увеличиваем listNumber на 1, для того чтобы новая пицца добавлялась второй, третьей и тд, а не переписывала первую
+                        listNumber++;
 
-                    //также и с фоткой пиццы
-                    //если количество обьектов в масиве pizza будет больше чем количество фоток пиццы, то еще раз перемешиваем масив фоток photolist
-                    if (i < photolist.Length - 1)
+                        //также и с фоткой пиццы
+                        //если количество обьектов в масиве pizza будет больше чем количество фоток пиццы, то еще раз перемешиваем масив фоток photolist
+                        if (i < photolist.Length - 1)
                         {
                             i++; //следующая фотка из списка
-                    }
+                        }
                         else
                         {
                             rnd = new Random();
                             photolist = photolist.OrderBy(s => rnd.Next()).ToArray();//перемешивем масив фоток photolist
-                        i = 0; //индекс возвращаем к 0
-                    }
+                            i = 0; //индекс возвращаем к 0
+                        }
 
-                    //количество пицц в масиве pizza
-                    count = pizza.Count();
+                        //количество пицц в масиве pizza
+                        count = pizza.Count();
 
-                    //когда добавили пиццу, и если она первая в recyclerview
-                    if (count <= 1)
+                        //когда добавили пиццу, и если она первая в recyclerview
+                        if (count <= 1)
                         {
                             nodata.Visibility = ViewStates.Invisible; //выключаем текст-подсказку nodata
-                        fabCompare.Show(); //показываем кнопку сравнить fabCompare
-                        recyclerview.Visibility = ViewStates.Visible; //показываем recyclerview
-                    }
+                            fabCompare.Show(); //показываем кнопку сравнить fabCompare
+                            recyclerview.Visibility = ViewStates.Visible; //показываем recyclerview
+                        }
 
                     })
                     .SetNegativeButton(dialog_canc, delegate //кнопка отменить диалоговое окно
-                {
+                    {
                         alertbuilder.Dispose();
                     });
                 Android.Support.V7.App.AlertDialog dialog = alertbuilder.Create();
                 dialog.Show();
             };
             ///конец диалогового окна и добавления пицы в recyclerview
-            
+
             //определяем adapter и layout manager для recyclerview, если добавить до кнопки добавить то не работает что-то, хз почему
             recyclerview_layoutmanger = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
             recyclerview.SetLayoutManager(recyclerview_layoutmanger);
@@ -271,6 +304,42 @@ namespace Pizza_Calculator
             }
         }
 
+        public string Info (int position, string info)
+        {
+            string info_diameter_text;
+            string info_weight_text;
+            string info_edge_text = pizza[position].edge.ToString(CultureInfo.InvariantCulture);
+
+            if (pizza[position].diameter <= pizza[position].edge * 2)
+            {
+                info_diameter_text = "0";
+            }
+            else
+            {
+                double info_diameter = Math.Round(pizza[position].diameter - (pizza[position].edge * 2), 2);
+                info_diameter_text = info_diameter.ToString(CultureInfo.InvariantCulture);
+            }
+
+            if (pizza[position].weight <= 0)
+            {
+                info_weight_text = "0";
+            }
+            else if (pizza[position].diameter <= pizza[position].edge * 2) //типа если ввели диаметр 5 а борт 3, тогда борт не учитываем
+            {
+                info_weight_text = pizza[position].weight.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                double info_weight = Math.Round((pizza[position].weight / pizza[position].diameter) * (pizza[position].diameter - (pizza[position].edge * 2)), 2);
+                info_weight_text = info_weight.ToString(CultureInfo.InvariantCulture);
+            }
+
+            info = Resources.GetText(Resource.String.InfoEdge);
+            info = string.Format(info, info_edge_text, info_diameter_text, info_weight_text);
+            return info;
+        }
+
+
         //метод для контекстного меню "Редактировать" position и num передаем из recyclerview_adapter
         public void Edit(int position, int num)
         {
@@ -285,12 +354,54 @@ namespace Pizza_Calculator
             var getDiameter = view.FindViewById<EditText>(Resource.Id.edit_Diameter);
             var getPrice = view.FindViewById<EditText>(Resource.Id.edit_Price);
             var getWeight = view.FindViewById<EditText>(Resource.Id.edit_Weight);
+            var switchInput = view.FindViewById<Switch>(Resource.Id.switchInput);
+            var info = view.FindViewById<TextView>(Resource.Id.switchInfo);
+            var textEdge = view.FindViewById<TextView>(Resource.Id.text_Edge);
+            var getEdge = view.FindViewById<EditText>(Resource.Id.edit_Edge);
+            
+            double tempEdge = pizza[position].edge;
 
+            if (tempEdge > 0)
+            {
+                switchInput.Checked = false;
+                info.Visibility = ViewStates.Visible;
+                textEdge.Visibility = ViewStates.Visible;
+                getEdge.Visibility = ViewStates.Visible;
+                getEdge.Text = tempEdge.ToString(CultureInfo.InvariantCulture);
+                getEdge.RequestFocus();
+            }
             //присваиваем переменным значения пиццы в позиции position масива pizza
             getQuantity.Text = Convert.ToString(pizza[position].quantity);
-            getDiameter.Text = Convert.ToString(pizza[position].diameter);
-            getPrice.Text = Convert.ToString(pizza[position].price);
-            getWeight.Text = Convert.ToString(pizza[position].weight);
+
+            //pizza[position].diameter.ToString(CultureInfo.InvariantCulture);
+            getDiameter.Text = pizza[position].diameter.ToString(CultureInfo.InvariantCulture);
+            getPrice.Text = pizza[position].price.ToString(CultureInfo.InvariantCulture);
+            getWeight.Text = pizza[position].weight.ToString(CultureInfo.InvariantCulture);
+            getEdge.Text = pizza[position].edge.ToString(CultureInfo.InvariantCulture);
+
+            switchInput.CheckedChange += delegate (object sender, CompoundButton.CheckedChangeEventArgs e) {
+
+                if (e.IsChecked)
+                {
+                    info.Visibility = ViewStates.Gone;
+                    textEdge.Visibility = ViewStates.Gone;
+                    getEdge.Visibility = ViewStates.Gone;
+                    tempEdge = 0;
+                    getEdge.Text = tempEdge.ToString(CultureInfo.InvariantCulture);
+                }
+                else
+                {
+                    info.Visibility = ViewStates.Visible;
+                    textEdge.Visibility = ViewStates.Visible;
+                    getEdge.Visibility = ViewStates.Visible;
+                    if (tempEdge == 0) { tempEdge = 1.3; } else { tempEdge = pizza[position].edge; }
+                    getEdge.Text = tempEdge.ToString(CultureInfo.InvariantCulture);
+                    getEdge.RequestFocus();
+
+                }
+            };
+
+
 
             alertbuilder.SetCancelable(false)
             //ниже код если пользователь нажал OK в диалоговом окне
@@ -314,6 +425,10 @@ namespace Pizza_Calculator
                     if (getWeight.Text == "" || getWeight.Text == null)
                     { weight = 0; }
                     else { double.TryParse(getWeight.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out weight); }
+                    //получаем значение поля getEdge и присваиваем его переменной edge
+                    if (getEdge.Text == "" || getWeight.Text == null)
+                    { edge = 0; }
+                    else { double.TryParse(getEdge.Text, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out edge); }
                     ///конец сбора введенных в диалоговом окне данных
 
                     //присваиваем пицце в позиции position масива pizza значение выше собранных переменных
@@ -321,6 +436,7 @@ namespace Pizza_Calculator
                     pizza[position].diameter = diameter;
                     pizza[position].price = price;
                     pizza[position].weight = weight;
+                    pizza[position].edge = edge;
 
                     //сообщение о том что пицца № num изменена
                     Toast.MakeText(this, piz_num + num.ToString() + toast_edit, ToastLength.Short).Show();
@@ -349,6 +465,5 @@ namespace Pizza_Calculator
             ShowProgressBar(false);
             base.OnStop();
         }
-
     }
 }

@@ -35,6 +35,7 @@
   <string name="toast_del">\u0020удалена</string>
   <!-- user input dialog -->
   <string name="enter_pizza_data">Введите параметры пиццы:</string>
+  <string name="enter_pizza_edge">Я ем бортик пиццы</string>
   <string name="enter_pizza_quantity">Количество, шт</string>
   <string name="enter_pizza_diameter">Диаметр, см</string>
   <string name="enter_pizza_price">Цена, руб</string>
@@ -44,4 +45,9 @@
   <string name="pizza_diameter">Диаметр:</string>
   <string name="pizza_price">Цена:</string>
   <string name="pizza_weight">Вес:</string>
+  <string name="switchEdge">Бортик</string>
+
+  <string name="enter_switchInfo">Если Вы не едите бортик, мы отнимем его вес и площадь в расчетах!</string>
+  <string name="enter_switchEdge">Ширина борта, см</string>
+  <string name="InfoEdge">Пицца без борта шириной {0} см. \nДиаметр {1} см, Вес {2} грамм</string>
 </resources>

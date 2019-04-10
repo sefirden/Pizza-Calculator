@@ -129,7 +129,7 @@ weightnoedge	0	0	1	0 */
             {
                 return 0;
             }
-            else if (diameterNoEdge > 0)
+            else
             {   
             //вес делим на площадь пиццы с бортом и умножаем на площадь без борта    
                 return Math.Round((weight / ((Math.Pow(diameter, 2) * Math.PI) / 40000)) * ((Math.Pow(diameterNoEdge, 2) * Math.PI) / 40000) , 0);
@@ -163,4 +163,4 @@ weightnoedge	0	0	1	0 */
                 }
             }
         }
-    }
+}

@@ -5,7 +5,8 @@
   <string name="delete">Delete</string>
   <string name="label">Click on the column for comparison in %</string>
   <string name="percent_y">Comparison in %</string>
-  <string name="pizza_sel">Selected pizza #\u0020</string>
+  <string name="pizza_sel">Pizza #\u0020</string>
+  <string name="pizza_sel_no_edge">Without edge #\u0020</string>
   <string name="pizza_x_q">, Quantity:\u0020</string>
   <string name="pizza_x_d">, Diameter:\u0020</string>
   <string name="pizza_x_p">, Price:\u0020</string>

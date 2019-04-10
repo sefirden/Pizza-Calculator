@@ -54,6 +54,20 @@ namespace Pizza_Calculator
             set;
         }
 
+// от сюда
+        public double diameterNoEdge
+        {
+            get;
+            set;
+        }
+
+        public double weightNoEdge
+        {
+            get;
+            set;
+        }
+
+
         public PizzaList(int q, double d, double p, double w, int pic, double ed)//в таком порядке заполняем данные для пиццы
         {
             Quantity = q;
@@ -63,44 +77,89 @@ namespace Pizza_Calculator
             picture = pic;
             edge = ed;
         }
-        //считаем площадь пиццы
-        public double GetArea()
+        
+        //diameterNoEdge
+        public double GetDiameterNoEdge()
         {
-            if (diameter <= edge * 2)
+            if (diameter <= edge*2)
             {
                 return 0;
             }
-            else
+            else 
             {
-                return Math.Round(Quantity * ((Math.Pow(diameter - (edge * 2), 2) * Math.PI) / 40000), 4);
+                return Math.Round(diameter - (edge*2), 2);
+            }
+        }        
+//до сюда        
+        //считаем площадь пиццы
+        public double GetArea()
+        {
+            if (diameterNoEdge <= 0 & diameter <= 0)
+            {
+                return 0;
+            }
+            else if (diameterNoEdge > 0)
+            {
+                return Math.Round(Quantity * ((Math.Pow(diameterNoEdge, 2) * Math.PI) / 40000), 4);
+            }
+            else 
+            {
+                return Math.Round(Quantity * ((Math.Pow(diameter, 2) * Math.PI) / 40000), 4);
             }
         }
-            //считаем блину борта, для тех пицц где он бывает с сыром или мясом
-            public double GetEdgeLength()
+
+/*diameter	    0	1	3	1
+edge 		    1	2	1	0
+diameterNoEdge 	0	0	1	0
+
+Area 		    0	0	1	1
+
+
+diameter	    2	1	2	0
+edge 		    1	2	1	0
+diameterNoEdge 	1	0	1	0
+weight		    0	1	1	0
+
+weightnoedge	0	0	1	0 */
+
+        //weightNoEdge
+        public double GetWeightNoEdge()
+        {
+            if (weight <= 0 || diameterNoEdge <= 0)
+            {
+                return 0;
+            }
+            else if (diameterNoEdge > 0)
+            {   
+            //вес делим на площадь пиццы с бортом и умножаем на площадь без борта    
+                return Math.Round((weight / ((Math.Pow(diameter, 2) * Math.PI) / 40000)) * ((Math.Pow(diameterNoEdge, 2) * Math.PI) / 40000) , 0);
+            }
+        }
+        //считаем блину борта, для тех пицц где он бывает с сыром или мясом
+        public double GetEdgeLength()
             {
                 return (diameter <= 0) ? 0 : Math.Round(Quantity * (Math.PI * diameter), 2);//см выше про  GetArea
             }
-            //считаем соотношение цены к площади, сколько $ надо заплатить за м²
-            public double PriceToArea()
+        //считаем соотношение цены к площади, сколько $ надо заплатить за м²
+        public double PriceToArea()
             {
                 double x = GetArea();
                 return (price <= 0) ? 0 : Math.Round((Quantity * price) / x, 2);//см выше про GetArea
             }
-            //считаем соотношение цены к весу, сколько $ надо заплатить за 1 кг
-            public double PriceToWeight()
+        //считаем соотношение цены к весу, сколько $ надо заплатить за 1 кг
+        public double PriceToWeight()
             {
                 if (price <= 0 || weight <= 0)
                 {
                     return 0;
                 }
-                else if (diameter <= edge * 2) //типа если ввели диаметр 5 а борт 3, тогда борт не учитываем
+                else if (weightNoEdge > 0) //типа если ввели диаметр 5 а борт 3, тогда борт не учитываем
                 {
-                    return Math.Round((price / weight) * 1000, 2);//см выше про GetArea
+                    return Math.Round((price / weightNoEdge) * 1000, 2);//см выше про GetArea
                 }
                 else
                 {
-                    double weightEdge = (weight / diameter) * (diameter - (edge * 2));
-                    return Math.Round((price / weightEdge) * 1000, 2);//см выше про GetArea                
+                    return Math.Round((price / weight) * 1000, 2);//см выше про GetArea                
                 }
             }
         }

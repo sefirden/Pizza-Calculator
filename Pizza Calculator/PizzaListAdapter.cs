@@ -207,7 +207,6 @@ namespace Pizza_Calculator
             if (Mitems[position].edge != 0)
             {
                 info = ((MainActivity)mContext).Info(position, info);
-               // info = "lol test"; //Resources.GetText(Resource.String.InfoEdge);
             }
 
             myholder.mpizza_edge_info.Text = info;

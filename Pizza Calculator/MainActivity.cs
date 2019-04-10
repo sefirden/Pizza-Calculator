@@ -209,6 +209,12 @@ namespace Pizza_Calculator
 
                         ///из полученных введенных данных и картинки создаем обьект масива pizza
                         pizza.Add(new PizzaList(quantity, diameter, price, weight, pic, edge));
+
+
+
+                        pizza[listNumber].diameterNoEdge = pizza[listNumber].GetDiameterNoEdge();
+                        pizza[listNumber].weightNoEdge = pizza[listNumber].GetWeightNoEdge();
+
                         //добавляем созданную пиццу с индексом listNumber в масив для recycler adapter
                         PizzaListitems.Add(pizza[listNumber]);
                         //говорим адаптеру, что масив PizzaListitems обновился и надо обновить view
@@ -306,11 +312,11 @@ namespace Pizza_Calculator
 
         public string Info (int position, string info)
         {
-            string info_diameter_text;
-            string info_weight_text;
+            string info_diameter_text = pizza[position].diameterNoEdge.ToString(CultureInfo.InvariantCulture);
+            string info_weight_text = pizza[position].weightNoEdge.ToString(CultureInfo.InvariantCulture);;
             string info_edge_text = pizza[position].edge.ToString(CultureInfo.InvariantCulture);
 
-            if (pizza[position].diameter <= pizza[position].edge * 2)
+            /*/if (pizza[position].diameter <= pizza[position].edge * 2)
             {
                 info_diameter_text = "0";
             }
@@ -332,7 +338,7 @@ namespace Pizza_Calculator
             {
                 double info_weight = Math.Round((pizza[position].weight / pizza[position].diameter) * (pizza[position].diameter - (pizza[position].edge * 2)), 2);
                 info_weight_text = info_weight.ToString(CultureInfo.InvariantCulture);
-            }
+            }*/
 
             info = Resources.GetText(Resource.String.InfoEdge);
             info = string.Format(info, info_edge_text, info_diameter_text, info_weight_text);
@@ -437,6 +443,11 @@ namespace Pizza_Calculator
                     pizza[position].price = price;
                     pizza[position].weight = weight;
                     pizza[position].edge = edge;
+
+
+                    pizza[position].diameterNoEdge = pizza[position].GetDiameterNoEdge();
+                    pizza[position].weightNoEdge = pizza[position].GetWeightNoEdge();
+
 
                     //сообщение о том что пицца № num изменена
                     Toast.MakeText(this, piz_num + num.ToString() + toast_edit, ToastLength.Short).Show();

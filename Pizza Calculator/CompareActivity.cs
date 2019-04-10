@@ -136,7 +136,17 @@ namespace Pizza_Calculator
                     secondaryAxisArea.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisArea.Title.Text = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameter.ToString();//подсказка!!
+
+                    string text_info;
+                    if (pizza[index].diameterNoEdge > 0)
+                    {
+                        text_info = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameterNoEdge.ToString();
+                    }
+                    else
+                    {
+                        text_info = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameter.ToString();  
+                    }
+                    primaryAxisArea.Title.Text = text_info;//подсказка!!
 
                     seriesArea.SelectedDataPointIndex = -1;
                 }
@@ -363,7 +373,17 @@ namespace Pizza_Calculator
                     secondaryAxisPriceToArea.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisPriceToArea.Title.Text = pizza_sel + number.ToString() + pizza_x_d + pizza[index].diameter.ToString() + pizza_x_p + pizza[index].price.ToString();//подсказка!!
+
+                    string text_info;
+                    if (pizza[index].diameterNoEdge > 0)
+                    {
+                        text_info = pizza_sel + number.ToString() + pizza_x_d + pizza[index].diameterNoEdge.ToString() + pizza_x_p + pizza[index].price.ToString();
+                    }
+                    else
+                    {
+                        text_info = pizza_sel + number.ToString() + pizza_x_d + pizza[index].diameter.ToString() + pizza_x_p + pizza[index].price.ToString();  
+                    }
+                    primaryAxisArea.Title.Text = text_info;//подсказка!!
 
                     seriesPriceToArea.SelectedDataPointIndex = -1;
                 }
@@ -475,7 +495,17 @@ namespace Pizza_Calculator
                     secondaryAxisPriceToWeight.Title.Text = percent_y;
 
                     var number = index + 1;
-                    primaryAxisPriceToWeight.Title.Text = pizza_sel + number.ToString() + pizza_x_p + pizza[index].price.ToString() + pizza_x_w + pizza[index].weight.ToString();//подсказка!!
+
+                    string text_info;
+                    if (pizza[index].weightNoEdge > 0)
+                    {
+                        text_info = pizza_sel + number.ToString() + pizza_x_p + pizza[index].price.ToString() + pizza_x_w + pizza[index].weightNoEdge.ToString();
+                    }
+                    else
+                    {
+                        text_info = pizza_sel + number.ToString() + pizza_x_p + pizza[index].price.ToString() + pizza_x_w + pizza[index].weight.ToString();  
+                    }
+                    primaryAxisArea.Title.Text = text_info;//подсказка!!
 
                     seriesPriceToWeight.SelectedDataPointIndex = -1;
                 }

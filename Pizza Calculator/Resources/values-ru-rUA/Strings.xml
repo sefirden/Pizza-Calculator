@@ -46,7 +46,6 @@
     <string name="pizza_diameter">Диаметр:</string>
     <string name="pizza_price">Цена:</string>
     <string name="pizza_weight">Вес:</string>
-    <string name="switchEdge">Бортик</string>
 
   <string name="enter_switchInfo">Если Вы не едите бортик, мы отнимем его вес и площадь в расчетах!</string>
   <string name="enter_switchEdge">Ширина борта, см</string>

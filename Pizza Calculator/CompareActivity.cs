@@ -48,6 +48,8 @@ namespace Pizza_Calculator
         {
 
             base.OnCreate(savedInstanceState);
+            //лицензия на графики из второго активити
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Njc1MDVAMzEzNjJlMzQyZTMwa2VZM2hTaE1FNXlyOU0yeUVtVXZmNm5HMnhRQjdWTHNWSk51ZGMxL3p5Zz0=");
             SetContentView(Resource.Layout.Compare);
 
             //все фразы ниже

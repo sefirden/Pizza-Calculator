@@ -94,7 +94,7 @@ namespace Pizza_Calculator
         //считаем площадь пиццы
         public double GetArea()
         {
-            if (diameterNoEdge <= 0 & diameter <= 0)
+            if (diameterNoEdge <= 0 & diameter <= 0 || diameter <= edge*2)
             {
                 return 0;
             }
@@ -144,7 +144,14 @@ weightnoedge	0	0	1	0 */
         public double PriceToArea()
             {
                 double x = GetArea();
-                return (price <= 0) ? 0 : Math.Round((Quantity * price) / x, 2);//см выше про GetArea
+                if (x <= 0 || price <= 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return Math.Round((Quantity * price) / x, 2);//см выше про GetArea
+                }
             }
         //считаем соотношение цены к весу, сколько $ надо заплатить за 1 кг
         public double PriceToWeight()

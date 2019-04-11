@@ -7,7 +7,7 @@
     <string name="label">Нажмите на столбец для сравнения в %</string>
     <string name="percent_y">Сравнение в %</string>
     <string name="pizza_sel">Пицца №\u0020</string>
-    <string name="pizza_sel_no_edge">Без борта №\u0020</string>
+    <string name="sel_no_edge">Без борта №\u0020</string>
     <string name="pizza_x_q">, Количество:\u0020</string>
     <string name="pizza_x_d">, Диаметр:\u0020</string>
     <string name="pizza_x_p">, Цена:\u0020</string>

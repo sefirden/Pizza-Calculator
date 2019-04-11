@@ -4686,9 +4686,6 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0c0035
 			public const int pizza_sel = 2131492917;
 			
-			// aapt resource value: 0x7f0c0036
-			public const int pizza_sel_no_edge = 2131492918;
-			
 			// aapt resource value: 0x7f0c0058
 			public const int pizza_weight = 2131492952;
 			
@@ -4730,6 +4727,9 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f0c0011
 			public const int search_menu_title = 2131492881;
+			
+			// aapt resource value: 0x7f0c0036
+			public const int sel_no_edge = 2131492918;
 			
 			// aapt resource value: 0x7f0c002e
 			public const int sfchart_close_label = 2131492910;

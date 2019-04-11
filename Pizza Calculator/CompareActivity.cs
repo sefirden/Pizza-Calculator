@@ -141,16 +141,14 @@ namespace Pizza_Calculator
 
                     var number = index + 1;
 
-                    string text_info;
                     if (pizza[index].diameterNoEdge > 0)
                     {
-                        text_info = pizza_sel_no_edge + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameterNoEdge.ToString();
+                        primaryAxisArea.Title.Text = pizza_sel_no_edge + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameterNoEdge.ToString();
                     }
                     else
                     {
-                        text_info = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameter.ToString();  
+                        primaryAxisArea.Title.Text = pizza_sel + number.ToString() + pizza_x_q + pizza[index].Quantity.ToString() + pizza_x_d + pizza[index].diameter.ToString();  
                     }
-                    primaryAxisArea.Title.Text = text_info;//подсказка!!
 
                     seriesArea.SelectedDataPointIndex = -1;
                 }

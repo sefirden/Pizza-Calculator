@@ -7,7 +7,7 @@
   <string name="label">Нажмите на столбец для сравнения в %</string>
   <string name="percent_y">Сравнение в %</string>
   <string name="pizza_sel">Пицца №\u0020</string>
-  <string name="sel_no_edge">Без борта №\u0020</string>
+  <string name="sel_no_edge">Пицца без корки №\u0020</string>
   <string name="pizza_x_q">, Количество:\u0020</string>
   <string name="pizza_x_d">, Диаметр:\u0020</string>
   <string name="pizza_x_p">, Цена:\u0020</string>
@@ -15,9 +15,9 @@
   <string name="area_y">Площадь, м²</string>
   <string name="area_y_label">#.#### м²</string>
   <string name="area_title">Площадь пиццы в м²</string>
-  <string name="length_y">Длина борта, см</string>
+  <string name="length_y">Длина корки пиццы, см</string>
   <string name="length_y_label">#.#### см</string>
-  <string name="length_title">Длина борта в см</string>
+  <string name="length_title">Длина корки пиццы в см</string>
   <string name="price_area_y">Цена за м²</string>
   <string name="price_area_y_label">#.#### руб</string>
   <string name="price_area_title">Цена в рублях за м²</string>
@@ -36,7 +36,7 @@
   <string name="toast_del">\u0020удалена</string>
   <!-- user input dialog -->
   <string name="enter_pizza_data">Введите параметры пиццы:</string>
-  <string name="enter_pizza_edge">Я ем бортик пиццы</string>
+  <string name="enter_pizza_edge">Я ем корочку пиццы</string>
   <string name="enter_pizza_quantity">Количество, шт</string>
   <string name="enter_pizza_diameter">Диаметр, см</string>
   <string name="enter_pizza_price">Цена, руб</string>
@@ -47,7 +47,7 @@
   <string name="pizza_price">Цена:</string>
   <string name="pizza_weight">Вес:</string>
 
-  <string name="enter_switchInfo">Если Вы не едите бортик, мы отнимем его вес и площадь в расчетах!</string>
-  <string name="enter_switchEdge">Ширина борта, см</string>
-  <string name="InfoEdge">Пицца без борта шириной {0} см. \nДиаметр {1} см, Вес {2} грамм</string>
+  <string name="enter_switchInfo">Если Вы не едите корочку пиццы, мы отнимем ее вес и площадь в расчетах!</string>
+  <string name="enter_switchEdge">Ширина корки, см</string>
+  <string name="InfoEdge">Пицца без корочки шириной {0} см. \nДиаметр {1} см, Вес {2} грамм</string>
 </resources>

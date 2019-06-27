@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- menu -->
+  <string name="edit">Modifica</string>
+  <string name="delete">Cancellare</string>
+  <!-- compare activity -->
+  <string name="label">Fai clic sulla colonna per il confronto in %</string>
+  <string name="percent_y">Confronto in %</string>
+  <string name="pizza_sel">Pizza #\u0020</string>
+  <string name="sel_no_edge">Pizza senza crosta #\u0020</string>
+  <string name="pizza_x_q">, Quantita:\u0020</string>
+  <string name="pizza_x_d">, Diametro:\u0020</string>
+  <string name="pizza_x_p">, Prezzo:\u0020</string>
+  <string name="pizza_x_w">, Peso:\u0020</string>
+  <string name="area_y">Area, m²</string>
+  <string name="area_y_label">#.#### m²</string>
+  <string name="area_title">Area di pizza m²</string>
+  <string name="length_y">Lunghezza della crosta, cm</string>
+  <string name="length_y_label">#.#### cm</string>
+  <string name="length_title">Lunghezza della crosta in cm</string>
+  <string name="price_area_y">Prezzo al m²</string>
+  <string name="price_area_y_label">#.#### euro</string>
+  <string name="price_area_title">Prezzo in euro al m²</string>
+  <string name="price_weight_y">"Prezzo al kg</string>
+  <string name="price_weight_y_label">#.#### euro</string>
+  <string name="price_weight_title">Prezzo in euro al 1 kg</string>
+
+  <!-- main activity -->
+  <string name="no_data_available">Fai clic su + per aggiungere pizza alla lista</string>
+  <string name="exit_tap">Premere di nuovo per uscire</string>
+  <string name="dialog_add">Aggiungere</string>
+  <string name="dialog_ok">Applicare</string>
+  <string name="dialog_canc">Annulla</string>
+  <string name="piz_num">Pizza #</string>
+  <string name="toast_edit">\u0020cambiata</string>
+  <string name="toast_del">\u0020rimossa</string>
+  <!-- user input dialog -->
+  <string name="enter_pizza_data">Inserisci le opzioni per la pizza:</string>
+  <string name="enter_pizza_edge">Io mangio la crosta della pizza</string>
+  <string name="enter_pizza_quantity">Quantità, pezzi</string>
+  <string name="enter_pizza_diameter">Diametro, cm</string>
+  <string name="enter_pizza_price">Prezzo, euro</string>
+  <string name="enter_pizza_weight">Peso, grammi</string>
+  <!-- pizza list layout -->
+  <string name="pizza_quantity">Quantita:</string>
+  <string name="pizza_diameter">Diametro:</string>
+  <string name="pizza_price">Prezzo:</string>
+  <string name="pizza_weight">Peso:</string>
+
+  <string name="enter_switchInfo">Se non mangi la crosta della pizza, noi, togliamo il peso e l'area nei calcoli!</string>
+  <string name="enter_switchEdge">Larghezza della crosta, cm</string>
+  <string name="InfoEdge">Pizza senza crosta {0} cm. \nDiametro {1} cm, Peso {2} grammi</string>
+</resources>

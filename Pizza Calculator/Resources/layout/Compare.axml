@@ -3,6 +3,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
@@ -36,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/LayoutChartEdgeLength"
+                app:layout_constraintBottom_toTopOf="@+id/LayoutChartPriceToArea"
                 app:layout_constraintDimensionRatio="1:0.65"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -44,31 +45,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/LayoutChartEdgeLength"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_below="@+id/LayoutChartArea"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/LayoutChartPriceToArea"
-                app:layout_constraintDimensionRatio="1:0.65"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/LayoutChartArea" />
-
-            <LinearLayout
                 android:id="@+id/LayoutChartPriceToArea"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_below="@+id/LayoutChartEdgeLength"
+                android:layout_below="@+id/LayoutChartArea"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toTopOf="@+id/LayoutChartPriceToWeight"
                 app:layout_constraintDimensionRatio="1:0.65"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/LayoutChartEdgeLength" />
+                app:layout_constraintTop_toBottomOf="@+id/LayoutChartArea" />
 
             <LinearLayout
                 android:id="@+id/LayoutChartPriceToWeight"
@@ -77,12 +64,27 @@
                 android:layout_below="@+id/LayoutChartPriceToArea"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/LayoutChartEdgeLength"
                 app:layout_constraintDimensionRatio="1:0.65"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LayoutChartPriceToArea" />
+
+            <LinearLayout
+                android:id="@+id/LayoutChartEdgeLength"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/LayoutChartPriceToWeight"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:0.65"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutChartPriceToWeight" />
+
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

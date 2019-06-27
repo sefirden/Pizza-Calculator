@@ -3373,14 +3373,14 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0900bb
 			public const int LayoutChartArea = 2131296443;
 			
+			// aapt resource value: 0x7f0900be
+			public const int LayoutChartEdgeLength = 2131296446;
+			
 			// aapt resource value: 0x7f0900bc
-			public const int LayoutChartEdgeLength = 2131296444;
+			public const int LayoutChartPriceToArea = 2131296444;
 			
 			// aapt resource value: 0x7f0900bd
-			public const int LayoutChartPriceToArea = 2131296445;
-			
-			// aapt resource value: 0x7f0900be
-			public const int LayoutChartPriceToWeight = 2131296446;
+			public const int LayoutChartPriceToWeight = 2131296445;
 			
 			// aapt resource value: 0x7f090035
 			public const int META = 2131296309;
@@ -4748,9 +4748,6 @@ namespace Pizza_Calculator
 			
 			// aapt resource value: 0x7f0c0026
 			public const int status_bar_notification_info_overflow = 2131492902;
-			
-			// aapt resource value: 0x7f0c005e
-			public const int switchEdge = 2131492958;
 			
 			// aapt resource value: 0x7f0c004e
 			public const int toast_del = 2131492942;

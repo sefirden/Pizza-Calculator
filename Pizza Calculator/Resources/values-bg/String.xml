@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <!-- menu -->
-  <string name="edit">Редактировать</string>
-  <string name="delete">Удалить</string>
-  <!-- compare activity -->
-  <string name="label">Нажмите на столбец для сравнения в %</string>
+  <!-- menu-->
+  
+  <string name="edit">Редактирате</string>
+  <string name="delete">Премахнете</string>
+  <!-- compare activity-->
+  <string name="label">Кликните върху колона за сравнение в %</string>
   <string name="percent_y">Сравнение в %</string>
-  <string name="pizza_sel">Пицца №\u0020</string>
-  <string name="sel_no_edge">Без борта №\u0020</string>
+  <string name="pizza_sel">Пица №\u0020</string>
+  <string name="sel_no_edge">Без борда №\u0020</string>
   <string name="pizza_x_q">, Количество:\u0020</string>
-  <string name="pizza_x_d">, Диаметр:\u0020</string>
+  <string name="pizza_x_d">, Диаметър:\u0020</string>
   <string name="pizza_x_p">, Цена:\u0020</string>
-  <string name="pizza_x_w">, Вес:\u0020</string>
-  <string name="area_y">Площадь, м²</string>
+  <string name="pizza_x_w">, Тегло:\u0020</string>
+  <string name="area_y">Повърхнина, м²</string>
   <string name="area_y_label">#.#### м²</string>
-  <string name="area_title">Площадь пиццы в м²</string>
-  <string name="length_y">Длина борта, см</string>
+  <string name="area_title">Повърхнина за пица в м²</string>
+  <string name="length_y">Дължина на борта, см</string>
   <string name="length_y_label">#.#### см</string>
-  <string name="length_title">Длина борта в см</string>
-  <string name="price_area_y">Цена за м²</string>
+  <string name="length_title">Дължина на борта в см</string>
+  <string name="price_area_y">Цена на м²</string>
   <string name="price_area_y_label">#.#### руб</string>
   <string name="price_area_title">Цена в рублях за м²</string>
-  <string name="price_weight_y">"Цена за кг</string>
+  <string name="price_weight_y">"Цена на кг</string>
   <string name="price_weight_y_label">#.#### руб</string>
-  <string name="price_weight_title">Цена в рублях за 1 кг</string>
-
+  <string name="price_weight_title">Цена в лева на 1 кг</string>
+  
   <!-- main activity -->
-  <string name="no_data_available">Нажмите на + чтобы добавить пиццу в список</string>
-  <string name="exit_tap">Нажмите еще раз для выхода</string>
-  <string name="dialog_add">Добавить</string>
-  <string name="dialog_ok">Применить</string>
-  <string name="dialog_canc">Отмена</string>
-  <string name="piz_num">Пицца #</string>
-  <string name="toast_edit">\u0020изменена</string>
-  <string name="toast_del">\u0020удалена</string>
+  <string name="no_data_available">Кликните върху + за добавяне пицата към списъка <string>
+  <string name="exit_tap">Кликните отново за излизане</string>
+  <string name="dialog_add">Добави</string>
+  <string name="dialog_ok">Запази</string>
+  <string name="dialog_canc">Анулиране</string>
+  <string name="piz_num">Пица #</string>
+  <string name="toast_edit">\u0020Промяняна</string>
+  <string name="toast_del">\u0020Премахната</string>
   <!-- user input dialog -->
-  <string name="enter_pizza_data">Введите параметры пиццы:</string>
-  <string name="enter_pizza_edge">Я ем бортик пиццы</string>
-  <string name="enter_pizza_quantity">Количество, шт</string>
-  <string name="enter_pizza_diameter">Диаметр, см</string>
-  <string name="enter_pizza_price">Цена, руб</string>
-  <string name="enter_pizza_weight">Вес, грамм</string>
+  <string name="enter_pizza_data">Въведете опциите за пица:</string>
+  <string name="enter_pizza_edge">Ям борд за пицата</string>
+  <string name="enter_pizza_quantity">Количество, нещо</string>
+  <string name="enter_pizza_diameter">Диаметър, см</string>
+  <string name="enter_pizza_price">Цена, лева</string>
+  <string name="enter_pizza_weight">Тегло, грам</string>
   <!-- pizza list layout -->
   <string name="pizza_quantity">Количество:</string>
-  <string name="pizza_diameter">Диаметр:</string>
+  <string name="pizza_diameter">Диаметър:</string>
   <string name="pizza_price">Цена:</string>
-  <string name="pizza_weight">Вес:</string>
+  <string name="pizza_weight">Тегло:</string>
 
-  <string name="enter_switchInfo">Если Вы не едите бортик, мы отнимем его вес и площадь в расчетах!</string>
-  <string name="enter_switchEdge">Ширина борта, см</string>
-  <string name="InfoEdge">Пицца без борта шириной {0} см. \nДиаметр {1} см, Вес {2} грамм</string>
+  <string name="enter_switchInfo">Ако не ядите борд, ние отнемем теглото и повърхнина в изчисленията!</string>
+  <string name="enter_switchEdge">Широчина на борд, см</string>
+  <string name="InfoEdge">Пицца бъз борд широчина {0} см. \nДиаметър {1} см, Тегло {2} грамм</string>
 </resources>

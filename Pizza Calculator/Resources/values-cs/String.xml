@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- menu -->
+  <string name="edit">Upravit</string>
+  <string name="delete">Smazat</string>
+  <!-- compare activity -->
+  <string name="label">Zmačkněte sloupec pro porovnání v %</string>
+  <string name="percent_y">Porovnání v %</string>
+  <string name="pizza_sel">Pizza #\u0020</string>
+  <string name="sel_no_edge">Bez pizza krusty #\u0020</string>
+  <string name="pizza_x_q">, Počet:\u0020</string>
+  <string name="pizza_x_d">, Diametr:\u0020</string>
+  <string name="pizza_x_p">, Cena:\u0020</string>
+  <string name="pizza_x_w">, Hmotnost:\u0020</string>
+  <string name="area_y">Velikost, m²</string>
+  <string name="area_y_label">#.#### m²</string>
+  <string name="area_title">Velikost pizzy v m²</string>
+  <string name="length_y">Delka pizza krusty, cm</string>
+  <string name="length_y_label">#.#### cm</string>
+  <string name="length_title">Delka pizza krusty v cm</string>
+  <string name="price_area_y">Cena za m²</string>
+  <string name="price_area_y_label">#.#### kč</string>
+  <string name="price_area_title">Cena v českých korunách za m²</string>
+  <string name="price_weight_y">"Cena za kg</string>
+  <string name="price_weight_y_label">#.#### kč</string>
+  <string name="price_weight_title">Cena v českých korunách za 1 kg</string>
+
+  <!-- main activity -->
+  <string name="no_data_available">Klikněte + aby přidat pizzu do seznamu</string>
+  <string name="exit_tap">Klikněte ještě jednou aby zavřit</string>
+  <string name="dialog_add">Přidat</string>
+  <string name="dialog_ok">Pokračovat</string>
+  <string name="dialog_canc">Zrušit</string>
+  <string name="piz_num">Pizza #</string>
+  <string name="toast_edit">\u0020se změnilo</string>
+  <string name="toast_del">\u0020odstraněna</string>
+  <!-- user input dialog -->
+  <string name="enter_pizza_data">Zadejte parametry pizzy:</string>
+  <string name="enter_pizza_edge">Já jím pizza krusty</string>
+  <string name="enter_pizza_quantity">Počet, ks</string>
+  <string name="enter_pizza_diameter">Diametr, cm</string>
+  <string name="enter_pizza_price">Cena, kč</string>
+  <string name="enter_pizza_weight">Hmotnost, g</string>
+  <!-- pizza list layout -->
+  <string name="pizza_quantity">Počet:</string>
+  <string name="pizza_diameter">Diametr:</string>
+  <string name="pizza_price">Cena:</string>
+  <string name="pizza_weight">Hmotnost:</string>
+
+  <string name="enter_switchInfo">V případě, že vý nejíte pizza krusty my odečteme jeho hmotnost ve výpočtech!</string>
+  <string name="enter_switchEdge">Šířka pizza krusty, cm</string>
+  <string name="InfoEdge">Pizza bez krusty {0} cm. \nDiametr {1} cm, Hmotnost {2} gram</string>
+</resources>

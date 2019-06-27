@@ -47,7 +47,7 @@
   <string name="pizza_price">Prezzo:</string>
   <string name="pizza_weight">Peso:</string>
 
-  <string name="enter_switchInfo">Se non mangi la crosta della pizza, noi, togliamo il peso e l'area nei calcoli!</string>
+  <string name="enter_switchInfo">Se non mangi la crosta della pizza, noi, togliamo il peso e l\'area nei calcoli!</string>
   <string name="enter_switchEdge">Larghezza della crosta, cm</string>
   <string name="InfoEdge">Pizza senza crosta {0} cm. \nDiametro {1} cm, Peso {2} grammi</string>
 </resources>

@@ -27,7 +27,7 @@
   <string name="price_weight_title">Цена в лева на 1 кг</string>
   
   <!-- main activity -->
-  <string name="no_data_available">Кликните върху + за добавяне пицата към списъка <string>
+  <string name="no_data_available">Кликните върху + за добавяне пицата към списъка </string>
   <string name="exit_tap">Кликните отново за излизане</string>
   <string name="dialog_add">Добави</string>
   <string name="dialog_ok">Запази</string>

@@ -4482,8 +4482,8 @@ namespace Pizza_Calculator
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f0c005d
-			public const int InfoEdge = 2131492957;
+			// aapt resource value: 0x7f0c005a
+			public const int InfoEdge = 2131492954;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int abc_action_bar_home_description = 2131492864;
@@ -4572,20 +4572,20 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0c0010
 			public const int abc_toolbar_collapse_description = 2131492880;
 			
-			// aapt resource value: 0x7f0c0030
-			public const int app_name = 2131492912;
+			// aapt resource value: 0x7f0c005b
+			public const int app_name = 2131492955;
 			
 			// aapt resource value: 0x7f0c001e
 			public const int appbar_scrolling_view_behavior = 2131492894;
 			
-			// aapt resource value: 0x7f0c003d
-			public const int area_title = 2131492925;
+			// aapt resource value: 0x7f0c003c
+			public const int area_title = 2131492924;
+			
+			// aapt resource value: 0x7f0c003a
+			public const int area_y = 2131492922;
 			
 			// aapt resource value: 0x7f0c003b
-			public const int area_y = 2131492923;
-			
-			// aapt resource value: 0x7f0c003c
-			public const int area_y_label = 2131492924;
+			public const int area_y_label = 2131492923;
 			
 			// aapt resource value: 0x7f0c001f
 			public const int bottom_sheet_behavior = 2131492895;
@@ -4593,65 +4593,65 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0c0020
 			public const int character_counter_pattern = 2131492896;
 			
-			// aapt resource value: 0x7f0c0032
-			public const int delete = 2131492914;
-			
-			// aapt resource value: 0x7f0c0049
-			public const int dialog_add = 2131492937;
-			
-			// aapt resource value: 0x7f0c004b
-			public const int dialog_canc = 2131492939;
-			
-			// aapt resource value: 0x7f0c004a
-			public const int dialog_ok = 2131492938;
-			
 			// aapt resource value: 0x7f0c0031
-			public const int edit = 2131492913;
-			
-			// aapt resource value: 0x7f0c004f
-			public const int enter_pizza_data = 2131492943;
-			
-			// aapt resource value: 0x7f0c0052
-			public const int enter_pizza_diameter = 2131492946;
-			
-			// aapt resource value: 0x7f0c0050
-			public const int enter_pizza_edge = 2131492944;
-			
-			// aapt resource value: 0x7f0c0053
-			public const int enter_pizza_price = 2131492947;
-			
-			// aapt resource value: 0x7f0c0051
-			public const int enter_pizza_quantity = 2131492945;
-			
-			// aapt resource value: 0x7f0c0054
-			public const int enter_pizza_weight = 2131492948;
-			
-			// aapt resource value: 0x7f0c005c
-			public const int enter_switchEdge = 2131492956;
-			
-			// aapt resource value: 0x7f0c005b
-			public const int enter_switchInfo = 2131492955;
+			public const int delete = 2131492913;
 			
 			// aapt resource value: 0x7f0c0048
-			public const int exit_tap = 2131492936;
+			public const int dialog_add = 2131492936;
 			
-			// aapt resource value: 0x7f0c0033
-			public const int label = 2131492915;
+			// aapt resource value: 0x7f0c004a
+			public const int dialog_canc = 2131492938;
 			
-			// aapt resource value: 0x7f0c0040
-			public const int length_title = 2131492928;
+			// aapt resource value: 0x7f0c0049
+			public const int dialog_ok = 2131492937;
 			
-			// aapt resource value: 0x7f0c003e
-			public const int length_y = 2131492926;
+			// aapt resource value: 0x7f0c0030
+			public const int edit = 2131492912;
 			
-			// aapt resource value: 0x7f0c003f
-			public const int length_y_label = 2131492927;
+			// aapt resource value: 0x7f0c004e
+			public const int enter_pizza_data = 2131492942;
 			
-			// aapt resource value: 0x7f0c0047
-			public const int no_data_available = 2131492935;
+			// aapt resource value: 0x7f0c0051
+			public const int enter_pizza_diameter = 2131492945;
+			
+			// aapt resource value: 0x7f0c004f
+			public const int enter_pizza_edge = 2131492943;
+			
+			// aapt resource value: 0x7f0c0052
+			public const int enter_pizza_price = 2131492946;
+			
+			// aapt resource value: 0x7f0c0050
+			public const int enter_pizza_quantity = 2131492944;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int enter_pizza_weight = 2131492947;
 			
 			// aapt resource value: 0x7f0c0059
-			public const int num = 2131492953;
+			public const int enter_switchEdge = 2131492953;
+			
+			// aapt resource value: 0x7f0c0058
+			public const int enter_switchInfo = 2131492952;
+			
+			// aapt resource value: 0x7f0c0047
+			public const int exit_tap = 2131492935;
+			
+			// aapt resource value: 0x7f0c0032
+			public const int label = 2131492914;
+			
+			// aapt resource value: 0x7f0c003f
+			public const int length_title = 2131492927;
+			
+			// aapt resource value: 0x7f0c003d
+			public const int length_y = 2131492925;
+			
+			// aapt resource value: 0x7f0c003e
+			public const int length_y_label = 2131492926;
+			
+			// aapt resource value: 0x7f0c0046
+			public const int no_data_available = 2131492934;
+			
+			// aapt resource value: 0x7f0c005c
+			public const int num = 2131492956;
 			
 			// aapt resource value: 0x7f0c0021
 			public const int password_toggle_content_description = 2131492897;
@@ -4668,56 +4668,56 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0c0025
 			public const int path_password_strike_through = 2131492901;
 			
-			// aapt resource value: 0x7f0c0034
-			public const int percent_y = 2131492916;
+			// aapt resource value: 0x7f0c0033
+			public const int percent_y = 2131492915;
 			
-			// aapt resource value: 0x7f0c004c
-			public const int piz_num = 2131492940;
-			
-			// aapt resource value: 0x7f0c0056
-			public const int pizza_diameter = 2131492950;
-			
-			// aapt resource value: 0x7f0c0057
-			public const int pizza_price = 2131492951;
+			// aapt resource value: 0x7f0c004b
+			public const int piz_num = 2131492939;
 			
 			// aapt resource value: 0x7f0c0055
-			public const int pizza_quantity = 2131492949;
+			public const int pizza_diameter = 2131492949;
 			
-			// aapt resource value: 0x7f0c0035
-			public const int pizza_sel = 2131492917;
+			// aapt resource value: 0x7f0c0056
+			public const int pizza_price = 2131492950;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int pizza_weight = 2131492952;
+			// aapt resource value: 0x7f0c0054
+			public const int pizza_quantity = 2131492948;
 			
-			// aapt resource value: 0x7f0c0038
-			public const int pizza_x_d = 2131492920;
+			// aapt resource value: 0x7f0c0034
+			public const int pizza_sel = 2131492916;
 			
-			// aapt resource value: 0x7f0c0039
-			public const int pizza_x_p = 2131492921;
+			// aapt resource value: 0x7f0c0057
+			public const int pizza_weight = 2131492951;
 			
 			// aapt resource value: 0x7f0c0037
-			public const int pizza_x_q = 2131492919;
+			public const int pizza_x_d = 2131492919;
 			
-			// aapt resource value: 0x7f0c003a
-			public const int pizza_x_w = 2131492922;
+			// aapt resource value: 0x7f0c0038
+			public const int pizza_x_p = 2131492920;
 			
-			// aapt resource value: 0x7f0c0043
-			public const int price_area_title = 2131492931;
+			// aapt resource value: 0x7f0c0036
+			public const int pizza_x_q = 2131492918;
 			
-			// aapt resource value: 0x7f0c0041
-			public const int price_area_y = 2131492929;
+			// aapt resource value: 0x7f0c0039
+			public const int pizza_x_w = 2131492921;
 			
 			// aapt resource value: 0x7f0c0042
-			public const int price_area_y_label = 2131492930;
+			public const int price_area_title = 2131492930;
 			
-			// aapt resource value: 0x7f0c0046
-			public const int price_weight_title = 2131492934;
+			// aapt resource value: 0x7f0c0040
+			public const int price_area_y = 2131492928;
 			
-			// aapt resource value: 0x7f0c0044
-			public const int price_weight_y = 2131492932;
+			// aapt resource value: 0x7f0c0041
+			public const int price_area_y_label = 2131492929;
 			
 			// aapt resource value: 0x7f0c0045
-			public const int price_weight_y_label = 2131492933;
+			public const int price_weight_title = 2131492933;
+			
+			// aapt resource value: 0x7f0c0043
+			public const int price_weight_y = 2131492931;
+			
+			// aapt resource value: 0x7f0c0044
+			public const int price_weight_y_label = 2131492932;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int q = 2131492904;
@@ -4728,8 +4728,8 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0c0011
 			public const int search_menu_title = 2131492881;
 			
-			// aapt resource value: 0x7f0c0036
-			public const int sel_no_edge = 2131492918;
+			// aapt resource value: 0x7f0c0035
+			public const int sel_no_edge = 2131492917;
 			
 			// aapt resource value: 0x7f0c002e
 			public const int sfchart_close_label = 2131492910;
@@ -4749,14 +4749,14 @@ namespace Pizza_Calculator
 			// aapt resource value: 0x7f0c0026
 			public const int status_bar_notification_info_overflow = 2131492902;
 			
-			// aapt resource value: 0x7f0c004e
-			public const int toast_del = 2131492942;
-			
 			// aapt resource value: 0x7f0c004d
-			public const int toast_edit = 2131492941;
+			public const int toast_del = 2131492941;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int vertical_ellipsis = 2131492954;
+			// aapt resource value: 0x7f0c004c
+			public const int toast_edit = 2131492940;
+			
+			// aapt resource value: 0x7f0c005d
+			public const int vertical_ellipsis = 2131492957;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int w = 2131492906;

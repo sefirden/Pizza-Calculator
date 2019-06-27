@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!-- menu -->
   <string name="app_name" translatable="false">Pizza Calculator</string>
   <string name="edit">Edit</string>
   <string name="delete">Delete</string>
+
+  <!-- compare activity -->
   <string name="label">Click on the column for comparison in %</string>
   <string name="percent_y">Comparison in %</string>
   <string name="pizza_sel">Pizza #\u0020</string>
-  <string name="sel_no_edge">Without edge #\u0020</string>
+  <string name="sel_no_edge">Pizza without crust #\u0020</string>
   <string name="pizza_x_q">, Quantity:\u0020</string>
   <string name="pizza_x_d">, Diameter:\u0020</string>
   <string name="pizza_x_p">, Price:\u0020</string>
@@ -14,15 +17,17 @@
   <string name="area_y">Area, m²</string>
   <string name="area_y_label">#.#### m²</string>
   <string name="area_title">Pizza area in m²</string>
-  <string name="length_y">Pizza edge length, cm</string>
+  <string name="length_y">Pizza crust length, cm</string>
   <string name="length_y_label">#.#### cm</string>
-  <string name="length_title">Pizza edge length in cm</string>
+  <string name="length_title">Pizza crust length in cm</string>
   <string name="price_area_y">Price per m²</string>
   <string name="price_area_y_label">#.#### $</string>
   <string name="price_area_title">Price in USD per m²</string>
   <string name="price_weight_y">Price per kg</string>
   <string name="price_weight_y_label">#.#### $</string>
   <string name="price_weight_title">Price in USD per 1 kg</string>
+  
+  <!-- main activity -->
   <string name="no_data_available">Click + to add pizza to the list</string>
   <string name="exit_tap">Press again to exit</string>
   <string name="dialog_add">Add</string>
@@ -31,12 +36,14 @@
   <string name="piz_num">Pizza #</string>
   <string name="toast_edit">\u0020changed</string>
   <string name="toast_del">\u0020deleted</string>
+  <!-- user input dialog -->
   <string name="enter_pizza_data">Enter pizza options:</string>
-  <string name="enter_pizza_edge">I eat pizza edge</string>
+  <string name="enter_pizza_edge">I eat pizza crust</string>
   <string name="enter_pizza_quantity">Quantity, pcs</string>
   <string name="enter_pizza_diameter">Diameter, cm</string>
   <string name="enter_pizza_price">Price, $</string>
   <string name="enter_pizza_weight">Weight, gram</string>
+  <!-- pizza list layout -->
   <string name="pizza_quantity">Quantity:</string>
   <string name="pizza_diameter">Diameter:</string>
   <string name="pizza_price">Price:</string>
@@ -44,7 +51,7 @@
   <string name="num" translatable="false">#</string>
   <string name="vertical_ellipsis" translatable="false">&#8942;</string>
 
-  <string name="enter_switchInfo">If you do not eating a pizza edge, we will take away its weight and area in the calculations!</string>
-  <string name="enter_switchEdge">Edge width, cm</string>
-  <string name="InfoEdge">Pizza without edge, its width {0} cm. \nDiameter {1} cm, Weight {2} gram</string>
+  <string name="enter_switchInfo">If you do not eating a pizza crust, we will take away its weight and area in the calculations!</string>
+  <string name="enter_switchEdge">Pizza crust width, cm</string>
+  <string name="InfoEdge">Pizza without crust, its width {0} cm. \nDiameter {1} cm, Weight {2} gram</string>
 </resources>

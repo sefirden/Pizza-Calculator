@@ -7,7 +7,7 @@
   <string name="label">Zmačkněte sloupec pro porovnání v %</string>
   <string name="percent_y">Porovnání v %</string>
   <string name="pizza_sel">Pizza #\u0020</string>
-  <string name="sel_no_edge">Bez pizza krusty #\u0020</string>
+  <string name="sel_no_edge">Bez okraje pizzy #\u0020</string>
   <string name="pizza_x_q">, Počet:\u0020</string>
   <string name="pizza_x_d">, Diametr:\u0020</string>
   <string name="pizza_x_p">, Cena:\u0020</string>
@@ -36,7 +36,7 @@
   <string name="toast_del">\u0020odstraněna</string>
   <!-- user input dialog -->
   <string name="enter_pizza_data">Zadejte parametry pizzy:</string>
-  <string name="enter_pizza_edge">Já jím pizza krusty</string>
+  <string name="enter_pizza_edge">Já jím okraje pizzy</string>
   <string name="enter_pizza_quantity">Počet, ks</string>
   <string name="enter_pizza_diameter">Diametr, cm</string>
   <string name="enter_pizza_price">Cena, kč</string>
@@ -47,7 +47,7 @@
   <string name="pizza_price">Cena:</string>
   <string name="pizza_weight">Hmotnost:</string>
 
-  <string name="enter_switchInfo">V případě, že vý nejíte pizza krusty my odečteme jeho hmotnost ve výpočtech!</string>
-  <string name="enter_switchEdge">Šířka pizza krusty, cm</string>
+  <string name="enter_switchInfo">V případě, že vý nejíte okraje pizzy my odečteme jeho hmotnost ve výpočtech!</string>
+  <string name="enter_switchEdge">Šířka okraje pizzy, cm</string>
   <string name="InfoEdge">Pizza bez krusty {0} cm. \nDiametr {1} cm, Hmotnost {2} gram</string>
 </resources>

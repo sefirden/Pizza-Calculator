@@ -49,5 +49,5 @@
 
   <string name="enter_switchInfo">V případě, že vý nejíte okraje pizzy my odečteme jeho hmotnost ve výpočtech!</string>
   <string name="enter_switchEdge">Šířka okraje pizzy, cm</string>
-  <string name="InfoEdge">Pizza bez krusty {0} cm. \nDiametr {1} cm, Hmotnost {2} gram</string>
+  <string name="InfoEdge">Pizza bez okraje {0} cm. \nDiametr {1} cm, Hmotnost {2} gram</string>
 </resources>

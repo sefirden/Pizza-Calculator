@@ -195,11 +195,30 @@ namespace Pizza_Calculator
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             MyView myholder = holder as MyView;
-            myholder.mpizza_number_value.Text = Convert.ToString(position + 1);
-            myholder.mpizza_quantity_value.Text = Convert.ToString(Mitems[position].Quantity);
-            myholder.mpizza_diameter_value.Text = Mitems[position].diameter.ToString(CultureInfo.InvariantCulture);
-            myholder.mpizza_price_value.Text = Mitems[position].price.ToString(CultureInfo.InvariantCulture);
-            myholder.mpizza_weight_value.Text = Mitems[position].weight.ToString(CultureInfo.InvariantCulture);
+
+            //хитрая фигня с выводом текста и значений в одну ячейку textview
+            string Quantity_text;
+            string Diameter_text;
+            string Price_text;
+            string Weight_text;
+            string Num_text;
+
+            Quantity_text = mContext.Resources.GetText(Resource.String.pizza_quantity);
+            Diameter_text = mContext.Resources.GetText(Resource.String.pizza_diameter);
+            Price_text = mContext.Resources.GetText(Resource.String.pizza_price);
+            Weight_text = mContext.Resources.GetText(Resource.String.pizza_weight);
+            Num_text = mContext.Resources.GetText(Resource.String.num);
+
+            //Android.Text.ISpanned FromHtml(string source, Android.Text.FromHtmlOptions flags);
+            Num_text = string.Format(Num_text, Convert.ToString(position + 1));
+
+            //присваивание textview значений
+            //myholder.mpizza_number_value.Text = Num_text + "\u0020" + Convert.ToString(position + 1);
+            myholder.mpizza_number_value.Text = Num_text;
+            myholder.mpizza_quantity_value.Text = Quantity_text + "\u0020" + Convert.ToString(Mitems[position].Quantity);
+            myholder.mpizza_diameter_value.Text = Diameter_text + "\u0020" + Mitems[position].diameter.ToString(CultureInfo.InvariantCulture);
+            myholder.mpizza_price_value.Text = Price_text + "\u0020" + Mitems[position].price.ToString(CultureInfo.InvariantCulture);
+            myholder.mpizza_weight_value.Text = Weight_text + "\u0020" + Mitems[position].weight.ToString(CultureInfo.InvariantCulture);
             myholder.mpicture.SetImageResource(Mitems[position].picture);
 
             string info="";

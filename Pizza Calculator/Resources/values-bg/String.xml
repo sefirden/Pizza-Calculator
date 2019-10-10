@@ -20,10 +20,10 @@
   <string name="length_y_label">#.#### см</string>
   <string name="length_title">Дължина на борта в см</string>
   <string name="price_area_y">Цена на м²</string>
-  <string name="price_area_y_label">#.#### руб</string>
-  <string name="price_area_title">Цена в рублях за м²</string>
+  <string name="price_area_y_label">#.#### лева</string>
+  <string name="price_area_title">Цена в лева на м²</string>
   <string name="price_weight_y">"Цена на кг</string>
-  <string name="price_weight_y_label">#.#### руб</string>
+  <string name="price_weight_y_label">#.#### лева</string>
   <string name="price_weight_title">Цена в лева на 1 кг</string>
   
   <!-- main activity -->

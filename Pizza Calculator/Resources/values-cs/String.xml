@@ -15,9 +15,9 @@
   <string name="area_y">Velikost, m²</string>
   <string name="area_y_label">#.#### m²</string>
   <string name="area_title">Velikost pizzy v m²</string>
-  <string name="length_y">Delka pizza krusty, cm</string>
+  <string name="length_y">Delka pizza okraje, cm</string>
   <string name="length_y_label">#.#### cm</string>
-  <string name="length_title">Delka pizza krusty v cm</string>
+  <string name="length_title">Delka pizza okraje v cm</string>
   <string name="price_area_y">Cena za m²</string>
   <string name="price_area_y_label">#.#### kč</string>
   <string name="price_area_title">Cena v českých korunách za m²</string>

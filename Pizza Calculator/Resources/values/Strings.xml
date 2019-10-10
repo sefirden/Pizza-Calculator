@@ -44,7 +44,7 @@
   <string name="enter_pizza_price">Price, $</string>
   <string name="enter_pizza_weight">Weight, gram</string>
   <!-- pizza list layout -->
-  <string name="pizza_quantity">Quantity:</string>
+  <string name="pizza_quantity"><b>Quantity:\u0020</b></string>
   <string name="pizza_diameter">Diameter:</string>
   <string name="pizza_price">Price:</string>
   <string name="pizza_weight">Weight:</string>

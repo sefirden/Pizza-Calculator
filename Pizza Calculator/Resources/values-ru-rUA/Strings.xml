@@ -42,10 +42,10 @@
     <string name="enter_pizza_price">Цена, грн</string>
     <string name="enter_pizza_weight">Вес, грамм</string>
     <!-- pizza list layout -->
-    <string name="pizza_quantity">Количество:</string>
-    <string name="pizza_diameter">Диаметр:</string>
-    <string name="pizza_price">Цена:</string>
-    <string name="pizza_weight">Вес:</string>
+    <string name="pizza_quantity">Количество: {0}</string>
+    <string name="pizza_diameter">Диаметр: {0}</string>
+    <string name="pizza_price">Цена: {0}</string>
+    <string name="pizza_weight">Вес: {0}</string>
 
   <string name="enter_switchInfo">Если Вы не едите бортик, мы отнимем его вес и площадь в расчетах!</string>
   <string name="enter_switchEdge">Ширина борта, см</string>

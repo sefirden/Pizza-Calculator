@@ -44,11 +44,11 @@
   <string name="enter_pizza_price">Price, $</string>
   <string name="enter_pizza_weight">Weight, gram</string>
   <!-- pizza list layout -->
-  <string name="pizza_quantity"><b>Quantity:</b></string>
-  <string name="pizza_diameter"><b>Diameter:</b></string>
-  <string name="pizza_price"><b>Price:</b></string>
-  <string name="pizza_weight"><b>Weight:</b></string>
-  <string name="num" translatable="false"><![CDATA[<b>#</b> {0}]]></string>
+  <string name="pizza_quantity">Quantity: {0}</string>
+  <string name="pizza_diameter">Diameter: {0}</string>
+  <string name="pizza_price">Price: {0}</string>
+  <string name="pizza_weight">Weight: {0}</string>
+  <string name="num" translatable="false"># {0}</string>
   <string name="vertical_ellipsis" translatable="false"><b>&#8942;</b></string>
 
   <string name="enter_switchInfo">If you do not eating a pizza crust, we will take away its weight and area in the calculations!</string>

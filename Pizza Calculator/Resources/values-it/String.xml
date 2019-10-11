@@ -42,10 +42,10 @@
   <string name="enter_pizza_price">Prezzo, euro</string>
   <string name="enter_pizza_weight">Peso, grammi</string>
   <!-- pizza list layout -->
-  <string name="pizza_quantity">Quantita:</string>
-  <string name="pizza_diameter">Diametro:</string>
-  <string name="pizza_price">Prezzo:</string>
-  <string name="pizza_weight">Peso:</string>
+  <string name="pizza_quantity">Quantita: {0}</string>
+  <string name="pizza_diameter">Diametro: {0}</string>
+  <string name="pizza_price">Prezzo: {0}</string>
+  <string name="pizza_weight">Peso: {0}</string>
 
   <string name="enter_switchInfo">Se non mangi la crosta della pizza, noi, togliamo il peso e l\'area nei calcoli!</string>
   <string name="enter_switchEdge">Larghezza della crosta, cm</string>

@@ -43,10 +43,10 @@
   <string name="enter_pizza_price">Цена, лева</string>
   <string name="enter_pizza_weight">Тегло, грам</string>
   <!-- pizza list layout -->
-  <string name="pizza_quantity">Количество:</string>
-  <string name="pizza_diameter">Диаметър:</string>
-  <string name="pizza_price">Цена:</string>
-  <string name="pizza_weight">Тегло:</string>
+  <string name="pizza_quantity">Количество: {0}</string>
+  <string name="pizza_diameter">Диаметър: {0}</string>
+  <string name="pizza_price">Цена: {0}</string>
+  <string name="pizza_weight">Тегло: {0}</string>
 
   <string name="enter_switchInfo">Ако не ядите борд, ние отнемем теглото и повърхнина в изчисленията!</string>
   <string name="enter_switchEdge">Широчина на борд, см</string>

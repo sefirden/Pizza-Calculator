@@ -11,6 +11,11 @@ using Android.Widget;
 using System;
 using System.Globalization;
 using Android.Content.Res;
+using Android.Text.Method;
+using Android.Text.Style;
+using Android.Graphics;
+using Android.Text;
+
 
 
 
@@ -197,28 +202,39 @@ namespace Pizza_Calculator
             MyView myholder = holder as MyView;
 
             //хитрая фигня с выводом текста и значений в одну ячейку textview
-            string Quantity_text;
-            string Diameter_text;
-            string Price_text;
-            string Weight_text;
-            string Num_text;
 
-            Quantity_text = mContext.Resources.GetText(Resource.String.pizza_quantity);
-            Diameter_text = mContext.Resources.GetText(Resource.String.pizza_diameter);
-            Price_text = mContext.Resources.GetText(Resource.String.pizza_price);
-            Weight_text = mContext.Resources.GetText(Resource.String.pizza_weight);
-            Num_text = mContext.Resources.GetText(Resource.String.num);
+            //присваиваем переменной значение из string
+            string Quantity_text = mContext.Resources.GetText(Resource.String.pizza_quantity);
+            //создаем новый spannable и первой переменной добавляем к нему значение количества
+            SpannableString Quantity_text_span = new SpannableString(string.Format(Quantity_text, Convert.ToString(Mitems[position].Quantity)));
+            //применяем жирный шрифт по длине переменной из string и вычитаем 4, из-за пробела и {0}
+            Quantity_text_span.SetSpan(new StyleSpan(TypefaceStyle.Bold), 0, Quantity_text.Length-4, SpanTypes.ExclusiveExclusive);
 
-            //Android.Text.ISpanned FromHtml(string source, Android.Text.FromHtmlOptions flags);
-            Num_text = string.Format(Num_text, Convert.ToString(position + 1));
+
+            //также как и выше для всех переменных        
+            string Diameter_text = mContext.Resources.GetText(Resource.String.pizza_diameter);
+            SpannableString Diameter_text_span = new SpannableString(string.Format(Diameter_text, Mitems[position].diameter.ToString(CultureInfo.InvariantCulture)));
+            Diameter_text_span.SetSpan(new StyleSpan(TypefaceStyle.Bold), 0, Diameter_text.Length - 4, SpanTypes.ExclusiveExclusive);
+
+            string Price_text = mContext.Resources.GetText(Resource.String.pizza_price);
+            SpannableString Price_text_span = new SpannableString(string.Format(Price_text, Mitems[position].price.ToString(CultureInfo.InvariantCulture)));
+            Price_text_span.SetSpan(new StyleSpan(TypefaceStyle.Bold), 0, Price_text.Length - 4, SpanTypes.ExclusiveExclusive);
+
+            string Weight_text = mContext.Resources.GetText(Resource.String.pizza_weight);
+            SpannableString Weight_text_span = new SpannableString(string.Format(Weight_text, Mitems[position].weight.ToString(CultureInfo.InvariantCulture)));
+            Weight_text_span.SetSpan(new StyleSpan(TypefaceStyle.Bold), 0, Weight_text.Length - 4, SpanTypes.ExclusiveExclusive);
+
+            string Num_text = mContext.Resources.GetText(Resource.String.num);
+            SpannableString Num_text_span = new SpannableString(string.Format(Num_text, Convert.ToString(position + 1)));
+            Num_text_span.SetSpan(new StyleSpan(TypefaceStyle.Bold), 0, Num_text.Length - 4, SpanTypes.ExclusiveExclusive);
 
             //присваивание textview значений
-            //myholder.mpizza_number_value.Text = Num_text + "\u0020" + Convert.ToString(position + 1);
-            myholder.mpizza_number_value.Text = Num_text;
-            myholder.mpizza_quantity_value.Text = Quantity_text + "\u0020" + Convert.ToString(Mitems[position].Quantity);
-            myholder.mpizza_diameter_value.Text = Diameter_text + "\u0020" + Mitems[position].diameter.ToString(CultureInfo.InvariantCulture);
-            myholder.mpizza_price_value.Text = Price_text + "\u0020" + Mitems[position].price.ToString(CultureInfo.InvariantCulture);
-            myholder.mpizza_weight_value.Text = Weight_text + "\u0020" + Mitems[position].weight.ToString(CultureInfo.InvariantCulture);
+
+            myholder.mpizza_number_value.TextFormatted = Num_text_span;
+            myholder.mpizza_quantity_value.TextFormatted = Quantity_text_span;
+            myholder.mpizza_diameter_value.TextFormatted = Diameter_text_span;
+            myholder.mpizza_price_value.TextFormatted = Price_text_span;
+            myholder.mpizza_weight_value.TextFormatted = Weight_text_span;
             myholder.mpicture.SetImageResource(Mitems[position].picture);
 
             string info="";

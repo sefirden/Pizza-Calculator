@@ -42,10 +42,10 @@
   <string name="enter_pizza_price">Cena, kč</string>
   <string name="enter_pizza_weight">Hmotnost, g</string>
   <!-- pizza list layout -->
-  <string name="pizza_quantity">Počet:</string>
-  <string name="pizza_diameter">Diametr:</string>
-  <string name="pizza_price">Cena:</string>
-  <string name="pizza_weight">Hmotnost:</string>
+  <string name="pizza_quantity">Počet: {0}</string>
+  <string name="pizza_diameter">Diametr: {0}</string>
+  <string name="pizza_price">Cena: {0}</string>
+  <string name="pizza_weight">Hmotnost: {0}</string>
 
   <string name="enter_switchInfo">V případě, že vý nejíte okraje pizzy my odečteme jeho hmotnost ve výpočtech!</string>
   <string name="enter_switchEdge">Šířka okraje pizzy, cm</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <!-- menu-->
-  
+  <string name="app_name">Калкулатор за Пица</string>
   <string name="edit">Редактирате</string>
   <string name="delete">Премахнете</string>
   <!-- compare activity-->

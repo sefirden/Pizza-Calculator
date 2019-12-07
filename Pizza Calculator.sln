@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2011
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza Calculator", "Pizza Calculator\Pizza Calculator.csproj", "{F8730843-40CE-49F3-B523-8FDC406F71C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza_Calculator", "Pizza Calculator\Pizza_Calculator.csproj", "{F8730843-40CE-49F3-B523-8FDC406F71C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

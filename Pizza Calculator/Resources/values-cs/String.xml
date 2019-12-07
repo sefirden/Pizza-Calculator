@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <!-- menu -->
+  <string name="app_name">Pizza Kalkulačka</string>
   <string name="edit">Upravit</string>
   <string name="delete">Smazat</string>
   <!-- compare activity -->

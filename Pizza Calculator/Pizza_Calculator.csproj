@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Pizza_Calculator</RootNamespace>
-    <AssemblyName>Pizza Calculator</AssemblyName>
+    <AssemblyName>Pizza_Calculator</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -24,6 +24,7 @@
     <AndroidSigningKeyStore>C:\Users\Sephiroth\AppData\Local\Xamarin\Mono for Android\Keystore\sefir.den - 2\sefir.den.keystore</AndroidSigningKeyStore>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,6 +57,12 @@
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
+    <EnableProguard>false</EnableProguard>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <MandroidI18n />
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

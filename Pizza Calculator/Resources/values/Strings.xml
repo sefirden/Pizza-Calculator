@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <!-- menu -->
-  <string name="app_name" translatable="false">Pizza Calculator</string>
+  <string name="app_name">Pizza Calculator</string>
   <string name="edit">Edit</string>
   <string name="delete">Delete</string>
 
